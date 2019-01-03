@@ -32,18 +32,168 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 23 Aug 2018 | 14 Nov 2018 | 23 Feb 2020 |
+| 23 Aug 2018 | 6.5 release (14 Nov 2018) | 23 Feb 2020 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-4-0-released)
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
+| B | Dissect processor | A new processor that's fast and performant, and brings more processing power to the edge device |  |
+| L | Azure module | Monitoring your Azure cloud environment using the Elastic Stack is a single command away | [blog post](https://www.elastic.co/blog/azure-cloud-monitoring-with-the-elastic-stack) |
 | APM | ML integration | Click a button in the APM app to enable Machine Learning jobs and start detecting anomalies on performance and errors |  |
 | APM | Java & Go agents | New APM agents for Java and Go |  |
 | ES | Kerberos auth | Use Kerberos as authentication realm |  |
 | ES | FIPS 140-2 | Elasticsearch now has the ability to run with a FIPS 140-2 enabled JVM |  |
 | ES | Field alias | Create aliases on fields, no need to reindex anymore. Good to get prepared for [ECS](https://github.com/elastic/ecs) |  |
 | ML | Custom rules | Custom rules for fine tuning machine learning results (to avoid learning or alerting on specific conditions) |  |
+
+## 6.3
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 13 Jun 2018 | 6.4 release (23 Aug 2018) | 13 Dec 2019 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-3-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically |  |
+| B | syslog input | Send logs to Filebeat using syslog over UDP or TCP |  |
+| L | Connecting pipelines | Multi-staged processing pipelines can connect pipelines within a Logstash process |  |
+| APM | Watcher integration | Receive alerts on errors (in APM data) |  |
+| ES | SQL | Query Elasticsearch using the SQL language, coming with a JDBC driver |  |
+| ES | Rollups | Take historic data and generate aggregate statistics. Very useful for metrics in particular. |  |
+| ML | CCS support | Machine Learning jobs now support Cross Cluster Search |  |
+| K | Auto complete | Auto complete added in the Kibana Discover query bar |  |
+| K | Index Management UI | Browse indices, see details about an individual, and change some options (close, force merge, clear cache, etc.) directly from the UI |  |
+
+## 6.2
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 6 Feb 2018 | 6.3 release (13 Jun 2018) | 6 Aug 2019 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-2-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | Monitoring | Monitor Beats health in a new Kibana UI |  |
+| B | Keystore | Hide passwords from configuration files using a secure keystore |  |
+| L | Keystore | Hide passwords from configuration files using a secure keystore |  |
+| L | JDBC static filter |  |  |
+| ES | Rank Evaluation | Track how rankings of expected results is measured against specific queries |  |
+| ES | SAML support | Get access to the Elastic Stack with the introduction of SAML support |  |
+| ML | Calendar setting | Skip analyzing the data during scheduled events (entered manually or imported via ics) |  |
+| K | Vega | Support for Vega & Vega lite visualizations |  |
+
+## 6.1
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 13 Dec 2017 | 6.2 release (6 Feb 2018) | 13 Jun 2019 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-1-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | TLS support | Packetbeat adds support for the TLS protocol to inspect the TLS enveloppe |  |
+| L | Ruby filter | Complex modification of events in Logstash is now possible via the Logstash Ruby filter |  |
+| APM | New! | APM released, with server, agents and UI | [blog post](https://www.elastic.co/blog/elastic-apm-beta-released) |
+| ES | Split | Each original primary shard is split into two, or more, primary shards in the new index, as a companion to the Shrink Index API |  |
+| ES | Composite agg | The composite aggregation is designed to return all terms and sorted in 'natural order' |  |
+| ML | Forecasting | Based on the past, what values would you expect in the future |  |
+| K | Input control | Input control visualization components allow users to select particular values and guide to important filtering values for a dashboard |  |
+
+## 6.0
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 14 Nov 2017 | 6.1 release (13 Dec 2017) | 14 May 2019 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-0-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+
+## 5.6
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 11 Sep 2017 | 7.0 release | 11 Mar 2019 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-5-6-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| L | Modules | Logstash modules enable easy setup of Logstash configuration, index mapping in Elasticsearch & Kibana dashboards. Starting with two modules for Netflow and Arcsight  |  |
+| ES | Rolling upgrade | Upgrade a cluster without a cluster restart |  |
+| K | Migration assistant | Prepare upgrades by inspecting breaking changes to index, cluster settings, etc |  |
+
+## 5.5
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 6 Jul 2017 | 5.6 release (11 Sep 2017) | 6 Jan 2019 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-5-5-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| L | Queueing | Dead Letter Queues enables local queueing in Logstash (when using Elasticsearch output) |  |
+| ES | MSI installer | Windows MSI Installer for Elasticsearch with both GUI and silent installation support |  |
+| ML | Monitoring | Monitor assigned nodes, number of processed documents, and a job's state over time |  |
+| K | Filter editor | New filter editors (drop-downs, text-boxes) in Discover |  |
+| K | Regions in maps | The Elastic Maps Service now supports region maps |  |
+| K | Grok debugger | Debug grok patterns (from Logstash or ingest pipelines) in Kibana |  |
+
+
+## 5.4
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 4 May 2017 | 5.5 release (6 Jul 2017) | 4 Nov 2018 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-5-4-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ML | New! | Machine Learning makes it easy to detect anomalies (spot infrastructure problems, cyber attacks, or business issues) by automatically modeling the normal behavior of time series data |  |
+| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data |  |
+| K | Watcher UI | 
+
+## 5.3
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 28 Mar 2017 | 5.4 release (4 May 2017) | 28 Sep 2018 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-5-3-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+
+## 5.2
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 31 Jan 2017 | 5.3 release (28 Mar 2017) | 31 Jul 2018 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-5-2-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+
+## 5.1
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 5 Dec 2016 | 5.2 release (31 Jan 2017) | 8 Jun 2018 |
+
+## 5.0
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 26 Oct 2016 | 5.1 release (5 Dec 2016) | 26 Apr 2018 |
 
 
 ## Authors
