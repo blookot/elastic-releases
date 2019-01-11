@@ -114,6 +114,20 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
+| B | Docker & K8S | Logs and metrics out of Kubernetes and Docker | [Blog post](https://www.elastic.co/blog/enrich-docker-logs-with-filebeat) |
+| B | Auditbeat | A new beat to capture auditd (based on the Linux audit framework) |  |
+| L | Pipelines | Run multiple pipelines concurrently for different use cases in the same instance, with centralized pipeline management, pipeline viewer and a conversion tool from ingest pipelines! | [doc](https://www.elastic.co/guide/en/logstash/6.0/multiple-pipelines.html), [Multiple pipelines](https://www.elastic.co/blog/logstash-multiple-pipelines), [Management UI](https://www.elastic.co/blog/logstash-centralized-pipeline-management), [Pipeline viewer](https://www.elastic.co/guide/en/logstash/6.0/logstash-pipeline-viewer.html) and [Conversion tool](https://www.elastic.co/blog/ingest-node-to-logstash-configuration-converter) |
+| ES | Rolling upgrade | Upgrade a cluster without a cluster restart (from 5.6.3 to 6.x) |  |
+| ES | Faster restart | Faster Restarts and Recoveries using operations-based shard recovery (using sequence IDs) |  |
+| ES | Sparse data | sparse fields (with no data) in doc-values will be significantly smaller |  |
+| ES | Distributed alerting | Distributed watch execution moves watch execution to the nodes that hold the shards of the watcher index | [Blog post](https://www.elastic.co/blog/distributed-watch-execution-elasticsearch-6.0) |
+| ES | Removal of types | Indices now have only a single mapping type | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.html) |
+| ES | Security | We no longer use `changeme` as a default password! And TLS/SSL between nodes is required when security is enabled |  | 
+| K | Kuery Language | Try out the new Kibana Query Language | [Blog post](https://www.elastic.co/blog/building-a-better-search-experience-in-kibana) |
+| K | CSV export | Search in Discovery then export matching documents as a CSV file via the reporting menu |  |
+| K | Watcher UI | New UI for creating and editing alerts based on thresholds |  |
+| K | Full screen & dashboard only | Enter full screen mode when viewing a dashboard and only share dashboards to users | [Blog post](https://www.elastic.co/blog/kibana-dashboard-only-mode) |
+| K | Cluster Alerts | Alerts on Monitoring Email Notifications and License Expiration |  |
 
 ## 5.6
 
@@ -126,7 +140,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | L | Modules | Logstash modules enable easy setup of Logstash configuration, index mapping in Elasticsearch & Kibana dashboards. Starting with two modules for Netflow and Arcsight  |  |
-| ES | Rolling upgrade | Upgrade a cluster without a cluster restart |  |
+| ES | Rolling upgrade | Upgrade a cluster without a cluster restart (starting from 5.6.3) |  |
 | K | Migration assistant | Prepare upgrades by inspecting breaking changes to index, cluster settings, etc |  |
 
 ## 5.5
