@@ -243,14 +243,20 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | B | Metricbeat | Metricbeat replaces Topbeat as the primary tool for collecting metrics |  |
+| B | Kafka output | Native Kafka output support in Beats |  |
 | L | Monitoring | New monitoring feature provides runtime visibility into the Logstash pipeline  |  |
 | ES | Ingest node | Ingest Node is an Elasticsearch node type enabling some data enrichment capabilities at index time | [blog post](https://www.elastic.co/blog/new-way-to-ingest-part-1) |
 | ES | Painless scripting | New scripting language for query, alert, reindex, or in an ingest node for a powerful way to manipulate documents | [blog post](https://www.elastic.co/blog/painless-a-new-scripting-language) |
 | ES | Keyword field | Analyzed and not-analysed string fields have been replaced by dedicated `text` fields for full text search, and `keyword` fields for string identifier search, sorting, and aggregations |  |
 | ES | Shrink API | Shrink an existing index into a new index with fewer primary shards |  |
 | ES | Rollover API | Rolls an alias over to a new index when too large or too old | [blog post](https://www.elastic.co/blog/managing-time-based-indices-efficiently) |
+| ES | Java Low-level client | A simple low-level Java HTTP/REST client |  |
 | ES | Benchmarking | We open sourced our Elasticsearch benchmarking tool Rally | [doc](https://github.com/elastic/rally) |
-| K | Timelion |  |  |
+| K | Timelion | New visualization tool with query DSL and interesting math functions and rendering capabilities |  |
+| K | Console | Build free-form requests to Elasticsearch from Kibana (replacing Sense) |  |
+| K | Security UI | Management UI in Kibana for creating and managing both users and roles |  |
+| K | Kibana monitoring | Monitoring for Kibana as part of the monitoring (Marvel) UI |  |
+| K | Scripted fields | Create computed scripted fields in Kibana using Painless |  |
 
 ## Authors
 
