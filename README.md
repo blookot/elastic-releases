@@ -117,18 +117,18 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Docker & K8S | Logs and metrics out of Kubernetes and Docker | [blog post](https://www.elastic.co/blog/enrich-docker-logs-with-filebeat), [5mn video](https://youtu.be/4E3-k0eFcj0) |
-| B | Auditbeat | A new beat to capture auditd (based on the Linux audit framework) |  |
-| L | Multiple pipelines | Run multiple pipelines concurrently for different use cases in the same instance, with centralized pipeline management, pipeline viewer and a conversion tool from ingest pipelines! | [doc](https://www.elastic.co/guide/en/logstash/6.0/multiple-pipelines.html), [blog post](https://www.elastic.co/blog/logstash-multiple-pipelines), [management UI](https://www.elastic.co/blog/logstash-centralized-pipeline-management), [pipeline viewer](https://www.elastic.co/guide/en/logstash/6.0/logstash-pipeline-viewer.html) and [conversion tool](https://www.elastic.co/blog/ingest-node-to-logstash-configuration-converter) |
+| B | Docker & K8S | Logs and metrics out of Kubernetes and Docker | [docker](https://www.elastic.co/blog/enrich-docker-logs-with-filebeat), [kubernetes](https://www.elastic.co/blog/shipping-kubernetes-logs-to-elasticsearch-with-filebeat), [5mn video](https://youtu.be/4E3-k0eFcj0) |
+| B | Auditbeat | A new beat to capture auditd (based on the Linux audit framework) | [blog post](https://www.elastic.co/blog/introducing-auditbeat-ship-linux-audit-logs-to-elasticsearch) |
+| L | Multiple pipelines | Run multiple pipelines concurrently for different use cases in the same instance, with centralized pipeline management, pipeline viewer and a conversion tool from ingest pipelines! | [blog post](https://www.elastic.co/blog/logstash-multiple-pipelines), [management UI](https://www.elastic.co/blog/logstash-centralized-pipeline-management), [pipeline viewer](https://www.elastic.co/blog/logstash-pipeline-viewer-6-0) and [conversion tool](https://www.elastic.co/blog/ingest-node-to-logstash-configuration-converter), [doc](https://www.elastic.co/guide/en/logstash/6.0/multiple-pipelines.html) |
 | ES | Rolling upgrade | Upgrade a cluster without a cluster restart (from 5.6.3 to 6.x) |  |
-| ES | Faster restart | Faster Restarts and Recoveries using operations-based shard recovery (using sequence IDs) |  |
-| ES | Sparse data | sparse fields (with no data) in doc-values will be significantly smaller |  |
+| ES | Faster restart | Faster Restarts and Recoveries using operations-based shard recovery (using sequence IDs) | [blog post](https://www.elastic.co/blog/elasticsearch-sequence-ids-6-0) |
+| ES | Sparse data | sparse fields (with no data) in doc-values will be significantly smaller | [blog post](https://www.elastic.co/blog/minimize-index-storage-size-elasticsearch-6-0) |
 | ES | Distributed alerting | Distributed watch execution moves watch execution to the nodes that hold the shards of the watcher index | [Blog post](https://www.elastic.co/blog/distributed-watch-execution-elasticsearch-6.0) |
-| ES | Removal of types | Indices now have only a single mapping type | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.html) |
-| ES | Security | We no longer use `changeme` as a default password! And TLS/SSL between nodes is required when security is enabled |  | 
+| ES | Removal of types | Indices now have only a single mapping type | [blog post](https://www.elastic.co/blog/removal-of-mapping-types-elasticsearch), [another](https://www.elastic.co/blog/kibana-6-removal-of-mapping-types), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.html) |
+| ES | Security | We no longer use `changeme` as a default password! And TLS/SSL between nodes is required when security is enabled | [blog post](https://www.elastic.co/blog/default-security-for-elasticsearch-and-the-elastic-stack), [another](https://www.elastic.co/blog/default-password-removal-elasticsearch-and-x-pack-6-0), [TLS](https://www.elastic.co/blog/tls-elastic-stack-elasticsearch-kibana-logstash-filebeat) | 
 | K | Kuery Language | Try out the new Kibana Query Language | [blog post](https://www.elastic.co/blog/building-a-better-search-experience-in-kibana) |
 | K | CSV export | Search in Discovery then export matching documents as a CSV file via the reporting menu | [video](https://youtu.be/Jd8-A3fIGjo) |
-| K | Watcher UI | New UI for creating and editing alerts based on thresholds |  |
+| K | Watcher UI | New UI for creating and editing alerts based on thresholds | [blog post](https://www.elastic.co/blog/creating-a-threshold-alert-in-elasticsearch-is-simpler-than-ever) |
 | K | Full screen & dashboard only | Enter full screen mode when viewing a dashboard and only share dashboards to users | [blog post](https://www.elastic.co/blog/kibana-dashboard-only-mode), [video](https://youtu.be/lZoSL1usU_Y) |
 | K | Cluster Alerts | Alerts on Monitoring Email Notifications and License Expiration |  |
 
@@ -142,9 +142,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| L | Modules | Logstash modules enable easy setup of Logstash configuration, index mapping in Elasticsearch & Kibana dashboards. Starting with two modules for Netflow and Arcsight  | [doc](https://www.elastic.co/guide/en/logstash/5.6/logstash-modules.html) |
+| L | Modules | Logstash modules enable easy setup of Logstash configuration, index mapping in Elasticsearch & Kibana dashboards. Starting with two modules for Netflow and Arcsight  | [Arcsight module](https://www.elastic.co/blog/integrating-elasticsearch-with-arcsight-siem-part-1), [doc](https://www.elastic.co/guide/en/logstash/5.6/logstash-modules.html) |
 | ES | Rolling upgrade | Upgrade a cluster without a cluster restart (starting from 5.6.3) |  |
-| ES | Java High-level client | New Java high-level REST client (built on top of the low-level client) accepts objects for the most important APIs |  |
+| ES | Java High-level client | New Java high-level REST client (built on top of the low-level client) accepts objects for the most important APIs | [blog post](https://www.elastic.co/blog/the-elasticsearch-java-high-level-rest-client-is-out) |
 | ES | Join datatype | New way to specify parent/child relationships without needing types | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/parent-join.html) |
 | K | Migration assistant | Prepare upgrades by inspecting breaking changes to index, cluster settings, etc |  |
 
@@ -162,7 +162,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | MSI installer | Windows MSI Installer for Elasticsearch with both GUI and silent installation support |  |
 | ML | Monitoring | Monitor assigned nodes, number of processed documents, and a job's state over time |  |
 | K | Filter editor | New filter editors (drop-downs, text-boxes) in Discover |  |
-| K | Regions in maps | The Elastic Maps Service now supports region maps | [blog post](https://www.elastic.co/blog/visualizing-france-salary-data-with-region-maps-in-kibana) |
+| K | Regions in maps | The Elastic Maps Service now supports region maps | [blog post](https://www.elastic.co/blog/visualizing-france-salary-data-with-region-maps-in-kibana), [another](https://www.elastic.co/blog/region-maps-gauge-kibana) |
 | K | Grok debugger | Debug grok patterns (from Logstash or ingest pipelines) in Kibana | [video](https://youtu.be/SKSqPRwDfns) |
 | K | CCS support | Index Patterns can now point to indices from remote clusters using cross cluster search feature |  |
 
@@ -178,8 +178,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | B | Modules | Modules for JMX (using Jolokia) to monitor Java applications, Linux auditd and system authentication logs | [blog post](https://www.elastic.co/blog/monitoring-java-applications-with-metricbeat-and-jolokia) |
-| ML | New! | Machine Learning makes it easy to detect anomalies (spot infrastructure problems, cyber attacks, or business issues) by automatically modeling the normal behavior of time series data |  |
-| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw) |
+| ML | New! | Machine Learning makes it easy to detect anomalies (spot infrastructure problems, cyber attacks, or business issues) by automatically modeling the normal behavior of time series data | [blog post](https://www.elastic.co/blog/introducing-machine-learning-for-the-elastic-stack), [scoring](https://www.elastic.co/blog/machine-learning-anomaly-scoring-elasticsearch-how-it-works), [span](https://www.elastic.co/blog/explaining-the-bucket-span-in-machine-learning-for-elasticsearch), [sizing](https://www.elastic.co/blog/sizing-machine-learning-with-elasticsearch) |
+| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [getting started](https://www.elastic.co/blog/master-time-with-kibanas-new-time-series-visual-builder), [annotations](https://www.elastic.co/blog/time-series-annotations-and-anomalies-with-kibana), [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw) |
 | K | Watcher UI | Watcher UI allows you to do basic operations on watches |  |
 
 ## 5.3
@@ -194,7 +194,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Filebeat modules | Introducing modules (filebeat config, ES template and K dashboards) for Apache2, MySQL, Nginx, and System | [video](https://youtu.be/K-jVrLMOd-g) |
 | B | Dynamic config reload | Dynamic configuration reloading makes it possible to change any module configuration on the fly without restarting the Beat |  |
-| ES | CCS | Cross-cluster search, aka searching across multiple clusters, replacing the tribe node |  |
+| ES | CCS | Cross-cluster search, aka searching across multiple clusters, replacing the tribe node | [blog post](https://www.elastic.co/blog/tribe-nodes-and-cross-cluster-search-the-future-of-federated-search-in-elasticsearch) |
 
 
 ## 5.2
@@ -209,8 +209,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Heartbeat | Heartbeat periodically checks the status of services (availability and round-trip-time) | [blog post](https://www.elastic.co/blog/uptime-monitoring-with-heartbeat-and-the-elastic-stack) |
 | B | Prometheus exporter | Prometheus module that collects metrics from the Prometheus exporters |  |
-| K | LS Monitoring UI | New monitoring UI with nice graphs and historical data to track changes in your production Logstash instances |  [video](https://youtu.be/Ahfymloitjk) |
-| K | Heatmaps | Heatmaps are great to pick out an area of high or low volume in time series data |  |
+| K | LS Monitoring UI | New monitoring UI with nice graphs and historical data to track changes in your production Logstash instances |  [blog post](https://www.elastic.co/blog/monitoring-logstash-filters), [video](https://youtu.be/Ahfymloitjk) |
+| K | Heatmaps | Heatmaps are great to pick out an area of high or low volume in time series data | [blog post](https://www.elastic.co/blog/awesome-new-kibana-visualizations-heatmap-and-point-series) |
 
 ## 5.1
 
@@ -222,9 +222,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Docker module | Periodically collect container metrics from cgroup | [blog post](https://www.elastic.co/blog/monitoring_container_resource_usage_with_metricbeat) |
+| B | Docker module | Periodically collect container metrics from cgroup | [blog post](https://www.elastic.co/blog/monitoring_container_resource_usage_with_metricbeat), [metadata enrichment](https://www.elastic.co/blog/brewing-in-beats-enrich-events-with-docker-metadata) |
 | B | Kafka module | Connects to the local Kafka node and reads periodically details about the partitions |  |
-| L | Presistent queues | Inbuilt persistent queues enable Logstash to persist events before processing them |  |
+| L | Presistent queues | Inbuilt persistent queues enable Logstash to persist events before processing them | [blog post](https://www.elastic.co/blog/logstash-persistent-queue) |
 | L | Truncate | Truncate is a new filter that allows you to truncate fields longer than a given byte-length |  |
 | ES | Faster reindexing | Reindex can now perform their tasks in parallel automatically |  |
 | K | Tag cloud | New visualization displaying tags (words) as a cloud |  |
@@ -246,14 +246,14 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Metricbeat | Metricbeat replaces Topbeat as the primary tool for collecting metrics |  |
 | B | Kafka output | Native Kafka output support in Beats |  |
 | L | Monitoring | New monitoring feature provides runtime visibility into the Logstash pipeline  |  |
-| ES | Ingest node | Ingest Node is an Elasticsearch node type enabling some data enrichment capabilities at index time | [blog post](https://www.elastic.co/blog/new-way-to-ingest-part-1) |
+| ES | Ingest node | Ingest Node is an Elasticsearch node type enabling some data enrichment capabilities at index time | [blog post](https://www.elastic.co/blog/new-way-to-ingest-part-1), [CSV ingest](https://www.elastic.co/blog/indexing-csv-elasticsearch-ingest-node) |
 | ES | Painless scripting | New scripting language for query, alert, reindex, or in an ingest node for a powerful way to manipulate documents | [blog post](https://www.elastic.co/blog/painless-a-new-scripting-language), [video](https://youtu.be/3FLEJJ8PsM4) |
 | ES | Keyword field | Analyzed and not-analysed string fields have been replaced by dedicated `text` fields for full text search, and `keyword` fields for string identifier search, sorting, and aggregations |  |
 | ES | Shrink API | Shrink an existing index into a new index with fewer primary shards |  |
 | ES | Rollover API | Rolls an alias over to a new index when too large or too old | [blog post](https://www.elastic.co/blog/managing-time-based-indices-efficiently) |
 | ES | Java Low-level client | A simple low-level Java HTTP/REST client |  |
 | ES | Benchmarking | We open sourced our Elasticsearch benchmarking tool Rally | [doc](https://github.com/elastic/rally) |
-| K | Timelion | New visualization tool with query DSL and interesting math functions and rendering capabilities | [video](https://youtu.be/cfTehOJScL4) |
+| K | Timelion | New visualization tool with query DSL and interesting math functions and rendering capabilities | [getting started](https://www.elastic.co/blog/timelion-tutorial-from-zero-to-hero), [blog post](https://www.elastic.co/blog/sparse-timeseries-and-timelion), [another](https://www.elastic.co/blog/mining-earthquake-data-with-kibana-5-and-timelion), [video](https://youtu.be/cfTehOJScL4) |
 | K | Console | Build free-form requests to Elasticsearch from Kibana (replacing Sense) |  |
 | K | Security UI | Management UI in Kibana for creating and managing both users and roles |  |
 | K | Kibana monitoring | Monitoring for Kibana as part of the monitoring (Marvel) UI |  |
