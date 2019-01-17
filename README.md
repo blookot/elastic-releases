@@ -14,20 +14,20 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Central management | Enroll, configure, and manage Beats deployments from a central place using either the UI or API |  |
-| B | Functionbeat | Functionbeat is a new Beat that deploys as a function in serverless platform, and streams cloud infrastructure data to Elasticsearch |  |
+| B | Central management | Enroll, configure, and manage Beats deployments from a central place using either the UI or API | [blog post](https://www.elastic.co/blog/introducing-beats-central-management-in-the-elastic-stack) |
+| B | Functionbeat | Functionbeat is a new Beat that deploys as a function in serverless platform, and streams cloud infrastructure data to Elasticsearch | [blog post](https://www.elastic.co/blog/functionbeat-serverless-ingestion-for-elasticsearch) |
 | APM | Distributed tracing | Distributed tracing gives an end-to-end trace on a request as it traverses multiple services | [video](https://youtu.be/Bz41KzRCM4g) |
 | APM | Monitoring | APM monitoring lets you track the health of your Elastic APM deployments from the Kibana Monitoring app |  |
 | ES | Cross Cluster Replication | Synchronization of indices across clusters | [doc](https://www.elastic.co/guide/en/elastic-stack-overview/6.5/ccr-getting-started.html) |
 | ES | ODBC | Query Elasticsearch using the SQL API and the ODBC driver |  |
-| ML | Multi-bucket span | Detect anomalies that span multiple buckets and adjust anomaly score accordingly |  |
-| K | Canvas | Create and share live infographic style presentations of your Elasticsearch data | [demo video](https://youtu.be/fxA5GE1-V50), [preview at Elastic{ON}](https://youtu.be/NhJi-9DkvdI) |
-| K | Spaces | Kibana Spaces organize your Kibana objects (for eg. visualizations and dashboards) into separate "spaces", and use RBAC to control which users have access to which space | [5mn video](https://youtu.be/RUMi5HUsWxM) |
+| ML | Multi-bucket span | Detect anomalies that span multiple buckets and adjust anomaly score accordingly | [blog post](https://www.elastic.co/blog/changes-to-elastic-machine-learning-anomaly-scoring-in-6-5) |
+| K | Canvas | Create and share live infographic style presentations of your Elasticsearch data | [getting started](https://www.elastic.co/blog/getting-started-with-canvas-in-kibana), [metrics and markdown](https://www.elastic.co/blog/kibana-canvas-metric-and-markdown-elements), [airport security](https://www.elastic.co/blog/monitoring-airport-security-operations-with-canvas-and-elasticsearch), [tables and debug](https://www.elastic.co/blog/kibana-canvas-data-table-and-debug-elements), [AMA booth](https://www.elastic.co/blog/elasticon-kibana-canvas-story-ama), [coffee machine](https://www.elastic.co/blog/elasticon-kibana-canvas-story-elasticoffee), [demo video](https://youtu.be/fxA5GE1-V50), [preview at Elastic{ON}](https://youtu.be/NhJi-9DkvdI) |
+| K | Spaces | Kibana Spaces organize your Kibana objects (for eg. visualizations and dashboards) into separate "spaces", and use RBAC to control which users have access to which space | [intro](https://www.elastic.co/blog/introducing-kibana-spaces-for-organization-and-security), [migration](https://www.elastic.co/blog/how-to-migrate-to-kibana-spaces), [5mn video](https://youtu.be/RUMi5HUsWxM) |
 | K | Sample data | Several datasets (with dashboard, canvas, etc) are available to start playing around in Kibana! | [5mn video](https://youtu.be/qg5_k4ogpzY), [another one](https://youtu.be/32NbRQHHAYQ), the [flights dataset](https://youtu.be/hMFWu1NfNMU) and the [e-commerce dataset](https://youtu.be/6_DrY9_bVDY) |
-| K | Rollup UI | Management UI to configure and manage and visualize rollup indices (for metrics) |  |
+| K | Rollup UI | Management UI to configure and manage and visualize rollup indices (for metrics) | [blog post](https://www.elastic.co/blog/how-to-create-manage-and-visualize-elasticsearch-rollup-data-in-kibana) |
 | K | Data visualizer | This new UI (in ML tab) finds the structure of an uploaded file, generates the grok, ingest pipeline and mapping to eventually import data in Elasticsearch |  |
-| K | Infra UI | The Infrastructure solution allows to easily navigate between logs and metrics activity on any specific host, pod, or container | [6mn video](https://youtu.be/t4Ny-tcMES4), [preview at Elastic{ON}](https://youtu.be/NzHGDyAQ2_Y) |
-| K | Logs UI | The Logs UI in Kibana displays live trail, like a `tail -f` combined with a grep |  |
+| K | Infra UI | The Infrastructure solution allows to easily navigate between logs and metrics activity on any specific host, pod, or container | [blog post](https://www.elastic.co/blog/infrastructure-and-logs-ui-new-ways-for-ops-to-interact-with-elasticsearch), [6mn video](https://youtu.be/t4Ny-tcMES4), [preview at Elastic{ON}](https://youtu.be/NzHGDyAQ2_Y) |
+| K | Logs UI | The Logs UI in Kibana displays live trail, like a `tail -f` combined with a grep | [blog post](https://www.elastic.co/blog/infrastructure-and-logs-ui-new-ways-for-ops-to-interact-with-elasticsearch) |
 
 ## 6.4
 
@@ -42,9 +42,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Dissect processor | A new processor that's fast and performant, and brings more processing power to the edge device |  |
 | L | Azure module | Monitoring your Azure cloud environment using the Elastic Stack is a single command away | [blog post](https://www.elastic.co/blog/azure-cloud-monitoring-with-the-elastic-stack) |
 | APM | ML integration | Click a button in the APM app to enable Machine Learning jobs and start detecting anomalies on performance and errors |  |
-| APM | Java & Go agents | New APM agents for Java and Go | [5mn video](https://youtu.be/mm0sdldjeo0) |
-| ES | Kerberos auth | Use Kerberos as authentication realm |  |
-| ES | FIPS 140-2 | Elasticsearch now has the ability to run with a FIPS 140-2 enabled JVM |  |
+| APM | Java & Go agents | New APM agents for Java and Go | [java](https://www.elastic.co/blog/elastic-apm-java-agent-beta-released), [5mn video](https://youtu.be/mm0sdldjeo0) |
+| ES | Kerberos auth | Use Kerberos as authentication realm | [blog post](https://www.elastic.co/blog/how-to-secure-your-elasticsearch-clusters-using-kerberos) |
+| ES | FIPS 140-2 | Elasticsearch now has the ability to run with a FIPS 140-2 enabled JVM | [blog post](https://www.elastic.co/blog/configuring-elasticsearch-in-a-fips-140-2-environment) |
 | ES | Field alias | Create aliases on fields, no need to reindex anymore. Good to get prepared for [ECS](https://github.com/elastic/ecs) |  |
 | ML | Custom rules | Custom rules for fine tuning machine learning results (to avoid learning or alerting on specific conditions) |  |
 
@@ -60,14 +60,14 @@ Opening the code of X-Pack: [Webpage](https://www.elastic.co/products/x-pack/ope
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically | [blog post](https://www.elastic.co/blog/docker-and-kubernetes-hints-based-autodiscover-with-beats), [video](https://youtu.be/1-iUoWGfByE) |
-| B | syslog input | Send logs to Filebeat using syslog over UDP or TCP |  |
+| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically | [blog post](https://www.elastic.co/blog/docker-and-kubernetes-hints-based-autodiscover-with-beats), [another one](https://www.elastic.co/blog/monitoring-kubernetes-and-docker-containers-with-beats-logs-metrics-and-metadata), [video](https://youtu.be/1-iUoWGfByE) |
+| B | syslog input | Send logs to Filebeat using syslog over UDP or TCP | [blog post](https://www.elastic.co/blog/brewing-in-beats-syslog-input-in-filebeat) |
 | L | Connecting pipelines | Multi-staged processing pipelines can connect pipelines within a Logstash process |  |
 | APM | Watcher integration | Receive alerts on errors (in APM data) |  |
-| ES | SQL | Query Elasticsearch using the SQL language, coming with a JDBC driver |  |
+| ES | SQL | Query Elasticsearch using the SQL language, coming with a JDBC driver | [part 1](https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-1) and [part 2](https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-2) |
 | ES | Rollups | Take historic data and generate aggregate statistics. Very useful for metrics in particular | [video](https://youtu.be/I5-9x_pQ-Y0) |
 | ML | CCS support | Machine Learning jobs now support Cross Cluster Search |  |
-| K | Auto complete | Auto complete added in the Kibana Discover query bar |  |
+| K | Auto complete | Auto complete added in the Kibana Discover query bar | [blog post](https://www.elastic.co/blog/improving-kibanas-query-language) |
 | K | Index Management UI | Browse indices, see details about an individual, and change some options (close, force merge, clear cache, etc.) directly from the UI |  |
 
 ## 6.2
@@ -81,13 +81,13 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | B | Monitoring | Monitor Beats health in a new Kibana UI |  |
-| B | Keystore | Hide passwords from configuration files using a secure keystore |  |
+| B | Keystore | Hide passwords from configuration files using a secure keystore | [blog post](https://www.elastic.co/blog/brewing-in-beats-password-keystore) |
 | L | Keystore | Hide passwords from configuration files using a secure keystore |  |
 | L | JDBC static filter |  |  |
-| ES | Rank Evaluation | Track how rankings of expected results is measured against specific queries |  |
-| ES | SAML support | Get access to the Elastic Stack with the introduction of SAML support |  |
+| ES | Rank Evaluation | Track how rankings of expected results is measured against specific queries | [blog post](https://www.elastic.co/blog/made-to-measure-how-to-use-the-ranking-evaluation-api-in-elasticsearch) |
+| ES | SAML support | Get access to the Elastic Stack with the introduction of SAML support | [blog post](https://www.elastic.co/blog/how-to-enable-saml-authentication-in-kibana-and-elasticsearch), [SAML on Azure](https://www.elastic.co/blog/saml-based-single-sign-on-with-elasticsearch-and-azure-active-directory) |
 | ML | Calendar setting | Skip analyzing the data during scheduled events (entered manually or imported via ics) |  |
-| K | Vega | Support for Vega & Vega lite visualizations |  |
+| K | Vega | Support for Vega & Vega lite visualizations | [getting started](https://www.elastic.co/blog/getting-started-with-vega-visualizations-in-kibana), [blog post](https://www.elastic.co/blog/custom-vega-visualizations-in-kibana), [sankey viz](https://www.elastic.co/blog/sankey-visualization-with-vega-in-kibana) |
 
 ## 6.1
 
@@ -101,11 +101,11 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | TLS support | Packetbeat adds support for the TLS protocol to inspect the TLS enveloppe |  |
 | L | Ruby filter | Complex modification of events in Logstash is now possible via the Logstash Ruby filter |  |
-| APM | New! | APM released, with server, agents and UI | [blog post](https://www.elastic.co/blog/elastic-apm-beta-released) |
+| APM | New! | APM released, with server, agents and UI | [blog post](https://www.elastic.co/blog/elastic-apm-beta-released), [python agent](https://www.elastic.co/blog/creating-custom-framework-integrations-with-the-elastic-apm-python-agent) |
 | ES | Split API | Each original primary shard is split into two, or more, primary shards in the new index, as a companion to the Shrink Index API |  |
-| ES | Composite agg | The composite aggregation is designed to return all terms and sorted in 'natural order' |  |
-| ML | Forecasting | Based on the past, what values would you expect in the future | [video](https://youtu.be/wJVgh5knV4E) |
-| K | Input control | Input control visualization components allow users to select particular values and guide to important filtering values for a dashboard | [video](https://youtu.be/W1w76rysykI) |
+| ES | Composite agg | The composite aggregation is designed to return all terms and sorted in 'natural order' | [blog post](https://www.elastic.co/blog/composite-aggregations-elasticsearch-pizza-delivery-metrics) |
+| ML | Forecasting | Based on the past, what values would you expect in the future | [blog post](https://www.elastic.co/blog/elasticsearch-machine-learning-on-demand-forecasting), [video](https://youtu.be/wJVgh5knV4E) |
+| K | Input control | Input control visualization components allow users to select particular values and guide to important filtering values for a dashboard | [blog post](https://www.elastic.co/blog/interactive-inputs-on-kibana-dashboards), [video](https://youtu.be/W1w76rysykI) |
 
 ## 6.0
 
@@ -162,7 +162,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | MSI installer | Windows MSI Installer for Elasticsearch with both GUI and silent installation support |  |
 | ML | Monitoring | Monitor assigned nodes, number of processed documents, and a job's state over time |  |
 | K | Filter editor | New filter editors (drop-downs, text-boxes) in Discover |  |
-| K | Regions in maps | The Elastic Maps Service now supports region maps |  |
+| K | Regions in maps | The Elastic Maps Service now supports region maps | [blog post](https://www.elastic.co/blog/visualizing-france-salary-data-with-region-maps-in-kibana) |
 | K | Grok debugger | Debug grok patterns (from Logstash or ingest pipelines) in Kibana | [video](https://youtu.be/SKSqPRwDfns) |
 | K | CCS support | Index Patterns can now point to indices from remote clusters using cross cluster search feature |  |
 
@@ -177,7 +177,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Modules | Modules for JMX (using Jolokia) to monitor Java applications, Linux auditd and system authentication logs |  |
+| B | Modules | Modules for JMX (using Jolokia) to monitor Java applications, Linux auditd and system authentication logs | [blog post](https://www.elastic.co/blog/monitoring-java-applications-with-metricbeat-and-jolokia) |
 | ML | New! | Machine Learning makes it easy to detect anomalies (spot infrastructure problems, cyber attacks, or business issues) by automatically modeling the normal behavior of time series data |  |
 | K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw) |
 | K | Watcher UI | Watcher UI allows you to do basic operations on watches |  |
@@ -207,7 +207,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Heartbeat | Heartbeat periodically checks the status of services (availability and round-trip-time) |  |
+| B | Heartbeat | Heartbeat periodically checks the status of services (availability and round-trip-time) | [blog post](https://www.elastic.co/blog/uptime-monitoring-with-heartbeat-and-the-elastic-stack) |
 | B | Prometheus exporter | Prometheus module that collects metrics from the Prometheus exporters |  |
 | K | LS Monitoring UI | New monitoring UI with nice graphs and historical data to track changes in your production Logstash instances |  [video](https://youtu.be/Ahfymloitjk) |
 | K | Heatmaps | Heatmaps are great to pick out an area of high or low volume in time series data |  |
