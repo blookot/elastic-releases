@@ -4,6 +4,31 @@ Listing releases of the Elastic stack with new features and references
 **Disclamer**: This is an unofficial informative document. Vincent Maury or Elastic cannot be held responsible for erroneous information. Official information can be found on the only official [Elastic website](https://www.elastic.co).
 
 
+
+## 6.6
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 29 Jan 2019 | 6.7 release | 29 Jul 2020 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-6-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | Auditbeat module | Record host, process, socket & user activity on a host, using ECS | [blog post](https://www.elastic.co/blog/introducing-auditbeat-system-module) |
+| B | Netflow input | Filebeat adds a new NetFlow input |  |
+| L | Java plugins | Introducing native support for input, filter and output java plugins | [blog post](https://www.elastic.co/blog/previewing-native-support-for-java-plugins-in-logstash) |
+| APM | OpenTracing | All agents now have [OpenTracing](https://opentracing.io/) compatible bridges | [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm) |
+| APM | APM to Infra | When looking at a trace, you can jump to the host or container metrics and logs. This is Observability! |  |
+| ES | Frozen indices | Frozen indices allow for a much higher ratio of disk storage to heap, at the expense of search latency |  |
+| ES | SQL Date Histograms | Added support for date histograms via the SQL API |  |
+| ML | Annotations | Create annotations tokeep a record of actions taken, from the Kibana UI |  |
+| K | ILM | managing indices lifecycle (hot/warm/cold/delete) from Kibana |  |
+| K | CCR UI | Two new interfaces to manage remote clusters and remote replication process |  |
+| K | PNG export | Export dashboards as a PNG report |  |
+| K | Upgrade to 7.0 | Prepare for an upgrade from Elasticsearch 6.x to Elasticsearch 7.0 |  |
+| K | ES cluster | Kibana now allows the definition of multiple Elasticsearch nodes |  |
+
 ## 6.5
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -16,7 +41,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Central management | Enroll, configure, and manage Beats deployments from a central place using either the UI or API | [blog post](https://www.elastic.co/blog/introducing-beats-central-management-in-the-elastic-stack) |
 | B | Functionbeat | Functionbeat is a new Beat that deploys as a function in serverless platform, and streams cloud infrastructure data to Elasticsearch | [blog post](https://www.elastic.co/blog/functionbeat-serverless-ingestion-for-elasticsearch) |
-| APM | Distributed tracing | Distributed tracing gives an end-to-end trace on a request as it traverses multiple services | [video](https://youtu.be/Bz41KzRCM4g) |
+| APM | Distributed tracing | Distributed tracing gives an end-to-end trace on a request as it traverses multiple services | [video](https://youtu.be/Bz41KzRCM4g), [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm) |
 | APM | Monitoring | APM monitoring lets you track the health of your Elastic APM deployments from the Kibana Monitoring app |  |
 | ES | Cross Cluster Replication | Synchronization of indices across clusters | [webinar](https://www.elastic.co/webinars/replicate-elasticsearch-data-with-cross-cluster-replication-ccr), [doc](https://www.elastic.co/guide/en/elastic-stack-overview/current/xpack-ccr.html) |
 | ES | ODBC | Query Elasticsearch using the SQL API and the ODBC driver |  |
@@ -25,7 +50,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | K | Spaces | Kibana Spaces organize your Kibana objects (for eg. visualizations and dashboards) into separate "spaces", and use RBAC to control which users have access to which space | [intro](https://www.elastic.co/blog/introducing-kibana-spaces-for-organization-and-security), [migration](https://www.elastic.co/blog/how-to-migrate-to-kibana-spaces), [5mn video](https://youtu.be/RUMi5HUsWxM) |
 | K | Sample data | Several datasets (with dashboard, canvas, etc) are available to start playing around in Kibana! | [5mn video](https://youtu.be/qg5_k4ogpzY), [another one](https://youtu.be/32NbRQHHAYQ), the [flights dataset](https://youtu.be/hMFWu1NfNMU) and the [e-commerce dataset](https://youtu.be/6_DrY9_bVDY) |
 | K | Rollup UI | Management UI to configure and manage and visualize rollup indices (for metrics) | [blog post](https://www.elastic.co/blog/how-to-create-manage-and-visualize-elasticsearch-rollup-data-in-kibana) |
-| K | Data visualizer | This new UI (in ML tab) finds the structure of an uploaded file, generates the grok, ingest pipeline and mapping to eventually import data in Elasticsearch |  |
+| K | Data visualizer | This new UI (in ML tab) finds the structure of an uploaded file, generates the grok, ingest pipeline and mapping to eventually import data in Elasticsearch | [blog post](https://www.elastic.co/blog/importing-csv-and-log-data-into-elasticsearch-with-file-data-visualizer) and [earthquake data import](https://www.elastic.co/blog/aftershock-therapy-with-elasticsearch-and-csv-data-import) |
 | K | Infra UI | The Infrastructure solution allows to easily navigate between logs and metrics activity on any specific host, pod, or container | [blog post](https://www.elastic.co/blog/infrastructure-and-logs-ui-new-ways-for-ops-to-interact-with-elasticsearch), [6mn video](https://youtu.be/t4Ny-tcMES4), [preview at Elastic{ON}](https://youtu.be/NzHGDyAQ2_Y) |
 | K | Logs UI | The Logs UI in Kibana displays live trail, like a `tail -f` combined with a grep | [blog post](https://www.elastic.co/blog/infrastructure-and-logs-ui-new-ways-for-ops-to-interact-with-elasticsearch) |
 
