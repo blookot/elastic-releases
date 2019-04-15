@@ -1,9 +1,6 @@
 # Elastic releases
 Listing releases of the Elastic stack with new features and references
 
-**Disclamer**: This is an unofficial informative document. Vincent Maury or Elastic cannot be held responsible for erroneous information. Official information can be found on the only official [Elastic website](https://www.elastic.co).
-
-
 
 ## 7.0
 
@@ -330,6 +327,10 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 ## Authors
 
 * **Vincent Maury** - *Initial commit* - [blookot](https://github.com/blookot)
+
+## Disclamer
+
+This is an unofficial informative document. Vincent Maury or Elastic cannot be held responsible for erroneous information. Official information can be found on the only official [Elastic website](https://www.elastic.co).
 
 ## License
 
