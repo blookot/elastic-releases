@@ -2,6 +2,43 @@
 Listing releases of the Elastic stack with new features and references
 
 
+## 7.2
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 25 Jun 2019 | 7.3 release | 25 Dec 2020 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-2-0-released), [Video](https://youtu.be/bmx13X87e2s)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | New modules | A lot of new modules (Palo Alto Networks - PANW, Cisco ASA firewall, Netflow & IPFIX, NATS, CoreDNS, Windows sysmon & security) | [release post](https://www.elastic.co/blog/beats-7-2-0-released) |
+| B | Scripting | Scripting in Go at the edge (on servers) |  |
+| L | Google modules | New input & output modules to interact with GCS (Google Cloud Storage) buckets |  |
+| APM | .Net agent | Instrument ASP.NET Core 2.x+ and Entity Framework Core 2.x+ apps (and others manually via the API) |  |
+| APM | Metrics | APM agents now collect language-specific metrics (for example Java heap memory and thread count) |  |
+| ES | OpenID realm | OpenID Connect realm (authentication backbone used by Okta, Google, etc) added |  |
+| ES | Geo in SQL | Geographical queries through SQL statements |  |
+| ES | Geo ranking | Use time or geographical distance (normalized) in the computation of the relevance ranking score |  |
+| ES | Type ahead | New search_as_you_type field type providing results from the field while the user is typing the query |  |
+| K | SIEM | Dedicated UI for exploring and visualizing host and network-based data, made for investigation | [blog post](https://www.elastic.co/blog/introducing-elastic-siem), [solution page](https://www.elastic.co/solutions/siem) |
+| K | Metrics explorer | Navigate through most important infrastructure metrics and interact using tags and chart groupings | [blog post](https://www.elastic.co/blog/elastic-infrastructure-7-2-0-released) |
+| K | Logs UI++ | Adding field pinning and quick filtering in the Logs UI | [blog post](https://www.elastic.co/blog/elastic-logs-7-2-0-released) |
+| K | Feature control | Allows to hide and restrict applications and features (per Kibana Space) |  |
+| K | Data frames | Ability to pivot and aggregate data from one or multiple indices to a single, separate index |  |
+| K | Uptime integration | Provide bi-directional links between Uptime and Logs, Infrastructure, and APM | [blog post](https://www.elastic.co/blog/elastic-uptime-monitoring-7-2-0-released) |
+| K | Snapshot repo UI | Snapshot repository management, in Kibana. Snapshot management is coming ;) |  |
+| K | Saved Object restore | New API to export & import saved objects, including dependencies |  |
+| K | Rollup in TSVB | Time Series Visual Builder now supports rollup index |  |
+
+## 7.1
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 20 May 2019 | 7.2 release | 20 Nov 2020 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/security-for-elasticsearch-is-now-free)
+
 ## 7.0
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -28,11 +65,19 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Helm charts | Elastic now provides helm charts for Elasticsearch and Kibana | [blog post](https://www.elastic.co/blog/alpha-helm-charts-for-elasticsearch-kibana-and-cncf-membership) |
 | K | New UI | New navigation, dark mode, recent items, responsive, KQL by default... you'll love it! | [K7 release post](https://www.elastic.co/blog/kibana-7-0-0-released) |
 
+## 6.8
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 20 May 2019 | 8.0 release | 20 Nov 2020 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/security-for-elasticsearch-is-now-free)
+
 ## 6.7
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 26 Mar 2019 | 8.0 release | 26 Sept 2020 |
+| 26 Mar 2019 | 6.8 release | 26 Sept 2020 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-6-7-0-released)
 
