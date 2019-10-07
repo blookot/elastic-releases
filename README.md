@@ -1,7 +1,40 @@
 # Elastic releases
 Listing releases of the Elastic stack with new features and references
 
+Try the official Elastic Stack Service from the creators on [Elastic Cloud](https://www.elastic.co/products/elasticsearch/service) (14-day free trial!).
 
+_Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
+
+
+## 7.4
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 1 Oct 2019 | 7.5 release | 1 Apr 2021 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-4-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | New modules | Beats modules capturing metrics from StatD, AWS ELB, EBS and CloudWatch, logs from IBM MQ & AWS S3 (access logs) and a CEF decoder in Filebeat | [blog post](https://www.elastic.co/blog/monitoring-aws-services-using-the-cloudwatch-metricset) |
+| B | SQS & Kafka input | Filebeat now supports AWS SQS (used to read from S3) and Kafka inputs |  |
+| B | Java logging | Send (ECS compliant!) logs from Java apps using native integration in log4j & logback | [github project](https://github.com/elastic/java-ecs-logging) |
+| APM | Angular & .Net frameworks | Added support for Angular (RUM agent) and .Net framework (.Net agent) |  |
+| APM | Geolocation | Geolocation added in RUM to display "performance by geographic region" breakdown |  |
+| APM | APM to log | Integrated way to navigate between APM and the Logs app |  |
+| ES | New alerting | Basis of the new Kibana's alerting system are being delivered... stay tuned! | [blog post](https://www.elastic.co/blog/alerting-in-the-elastic-stack) |
+| ES | Results pinning | By using the new pinned query, users can manage and order results as they see fit |  |
+| ES | Agg on range | Run aggregations (cardinality, missing, value count, histogram and date histogram) on range fields |  |
+| ES | Geospacial | Geospacial improvements : shape field type and circle ingest processor |  |
+| ES | Auto cancel | Auto terminate queries sent through the `_search` endpoint when the initiating connection is closed |  |
+| ML | Outlier detection | Outlier detection integrated in data transforms | [catching malware](https://www.elastic.co/blog/catching-malware-with-elastic-outlier-detection) |
+| K | Missile map | Map (in both Maps & SIEM) showing network connections live | [blog post](https://www.elastic.co/blog/integrating-maps-into-elastic-siem) |
+| K | SNL | Management UI for snapshot lifecycle management (in Management/Snapshot and restore) |  |
+| K | Index template | Manage index templates |  |
+| K | PKI auth | Native support for PKI authentication enables to log into Kibana using X.509 client certificates and a two way encryption system |  |
+| K | Share queries | Share saved queries accross Discover, Visualize & Dashboard |  |
+| K | Custom time range | Ability to configure each viz or saved search for a specific time range |  |
+| K | Copy objects | Copy saved objects accross spaces |  |
 
 ## 7.3
 
@@ -20,8 +53,11 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | APM | Time spent | The "Time spent by type" chart allows to see exactly where applications are spending their time |  |
 | ES | Rare terms | New aggregation designed to identify the long-tail of terms that have low doc counts |  |
 | ES | Voting-only master | The new voting-only master-eligible node can participate in master elections without acting as a master |  |
+| ES | Vector scoring | Adds two predefined functions to use for calculating vector similarity between a given query vector and document vectors | [blog post](https://www.elastic.co/blog/text-similarity-search-with-vectors-in-elasticsearch) |
+| ES | Flattened type | Allows an entire flat JSON object to be indexed into a single field |  |
+| ES | Synonyms update | Synonym filters used by search analyzers can now be updated without restarting the index | [blog post](https://www.elastic.co/blog/boosting-the-power-of-elasticsearch-with-synonyms) |
 | ML | Security jobs | Create ML jobs from the SIEM app in Kibana |  |
-| ML | Data frames | Data frames enable to transform (pivot) an existing index to a secondary, summarized index, by batch or continuously |  | 
+| ML | Data transforms | Data transforms enable to pivot (aggregate) an existing index to a secondary, summarized index, by batch or continuously |  | 
 | K | Log to APM | Logs & APM are not integrated so you can automatically navigate from a specific log event to APM traces |  |
 | K | Uptime summaries | Monitor Summaries allow to see multiple Heartbeat results grouped in a single expandable row per endpoint |  |
 | K | Snapshot mngt UI | The snapshot management UI enables create, restore and delete |  |
@@ -111,7 +147,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | K | Uptime UI | Active uptime monitoring of services & apps, based on Heartbeat | [blog post](https://www.elastic.co/blog/elastic-uptime-monitoring-solution-released), [video](https://youtu.be/42iNUC2gScw) |
-| K | Maps | Dedicated solution for mapping, querying, and visualizing geospatial data | [blog post](https://www.elastic.co/blog/elastic-maps-beta-released) |
+| K | Maps | Dedicated solution for mapping, querying, and visualizing geospatial data | [blog post](https://www.elastic.co/blog/elastic-maps-beta-released), [new features](https://www.elastic.co/blog/top-10-new-elastic-maps-features) |
 | K | Frozen management | Frozen indices can be managed in ILM and index management |  |
 | K | Localization | Localizing Kibana, starting with Chinese |  |
 
@@ -133,7 +169,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Frozen indices | Frozen indices allow for a much higher ratio of disk storage to heap, at the expense of search latency | [blog post](https://www.elastic.co/blog/creating-frozen-indices-with-the-elasticsearch-freeze-index-api) |
 | ES | SQL Date Histograms | Added support for date histograms via the SQL API |  |
 | ML | Annotations | Create annotations to keep a record of actions taken, from the Kibana UI | [blog post](https://www.elastic.co/blog/augmenting-results-with-user-annotations-for-elastic-machine-learning) |
-| K | ILM | managing indices lifecycle (hot/warm/cold/delete) from Kibana | [blog post](https://www.elastic.co/blog/implementing-hot-warm-cold-in-elasticsearch-with-index-lifecycle-management) |
+| K | ILM | managing indices lifecycle (hot/warm/cold/delete) from Kibana | [blog post](https://www.elastic.co/blog/implementing-hot-warm-cold-in-elasticsearch-with-index-lifecycle-management), [ILM to APM data](https://www.elastic.co/blog/how-to-apply-index-lifecycle-management-to-apm-data) |
 | K | CCR UI | Two new interfaces to manage remote clusters and remote replication process | [5' video](https://youtu.be/jDt8IwXG398) |
 | K | PNG export | Export dashboards as a PNG report |  |
 | K | Upgrade to 7.0 | Prepare for an upgrade from Elasticsearch 6.x to Elasticsearch 7.0 | [blog post](https://www.elastic.co/blog/upgrading-the-elastic-stack-with-the-7-x-upgrade-assistant) |
