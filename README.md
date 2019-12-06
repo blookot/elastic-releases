@@ -6,6 +6,25 @@ Try the official Elastic Stack Service from the creators on [Elastic Cloud](http
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
 
+## 7.5
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 2 Dec 2019 | 7.6 release | 2 Jun 2021 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-5-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | Azure modules | Addition of Metricbeat and Filebeat modules to monitor logs and metrics from Azure Event Hub and Azure Monitor  |  |
+| ES | Snapshot retention | Added in SLM (snapshot lifecycle management) the retention configuration |  |
+| ES | API keys | Kibana app to easily view/manage API keys |  |
+| ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time |  |
+| ES | Pause CCR | Pause & resume flows in CCR, useful for upgrades |  |
+| ES | Geotile grid agg | This enhancement enables users to aggregate all docs within a given tile on a geographical map |  |
+| K | Lens | New way to rapidly draw meaningful visualization without needing any technical experience of Elasticsearch | [blog post](https://www.elastic.co/blog/introducing-kibana-lens) |
+| K | 
+
 ## 7.4
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -29,7 +48,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Auto cancel | Auto terminate queries sent through the `_search` endpoint when the initiating connection is closed |  |
 | ML | Outlier detection | Outlier detection integrated in data transforms | [catching malware](https://www.elastic.co/blog/catching-malware-with-elastic-outlier-detection) |
 | K | Missile map | Map (in both Maps & SIEM) showing network connections live | [blog post](https://www.elastic.co/blog/integrating-maps-into-elastic-siem) |
-| K | SNL | Management UI for snapshot lifecycle management (in Management/Snapshot and restore) |  |
+| K | SLM | Management UI for snapshot lifecycle management (in Management/Snapshot and restore) |  |
 | K | Index template | Manage index templates |  |
 | K | PKI auth | Native support for PKI authentication enables to log into Kibana using X.509 client certificates and a two way encryption system |  |
 | K | Share queries | Share saved queries accross Discover, Visualize & Dashboard |  |
