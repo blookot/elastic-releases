@@ -16,14 +16,23 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Azure modules | Addition of Metricbeat and Filebeat modules to monitor logs and metrics from Azure Event Hub and Azure Monitor  |  |
+| B | Stack monitoring | External collection for Elastic Stack Monitoring is now available via Metricbeat | [blog post](https://www.elastic.co/blog/external-collection-for-elastic-stack-monitoring-is-now-available-via-metricbeat) |
+| B | Azure modules | Addition of Metricbeat and Filebeat modules to monitor logs and metrics from Azure Event Hub and Azure Monitor  | [blog post](https://www.elastic.co/blog/elasticsearch-service-on-elastic-cloud-now-available-on-microsoft-azure) |
+| B | Heartbeat for k8s | Enhancing Uptime (heartbeat) to include hint-based auto-discovery for Kubernetes monitoring |  |
 | ES | Snapshot retention | Added in SLM (snapshot lifecycle management) the retention configuration |  |
 | ES | API keys | Kibana app to easily view/manage API keys |  |
 | ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time |  |
 | ES | Pause CCR | Pause & resume flows in CCR, useful for upgrades |  |
 | ES | Geotile grid agg | This enhancement enables users to aggregate all docs within a given tile on a geographical map |  |
 | K | Lens | New way to rapidly draw meaningful visualization without needing any technical experience of Elasticsearch | [blog post](https://www.elastic.co/blog/introducing-kibana-lens) |
-| K | 
+| K | Sharing Canvas | Share static Canvas workpads in HTML format using a JavaScript snippet |  |
+| K | News feed | Introducing a newsfeed that highlights what's new at Elastic (blogs, webinars, security vulnerabilities...) |  |
+| K | SIEM & EEP | Elastic SIEM now supports data from EEP (Elastic Endpoint Security, previously Endgame) |  |
+| K | SIEM widgets | The SIEM app adds event histogram, TLS widget and source/dest countries |  |
+| K | Log rate | The logs app now has a dataset-based log rate anomaly detection based on ML |  |
+| K | Query cancellation | If a user navigates away or updates a query before getting the results, Kibana now cancels the Elasticsearch query |  |
+| K | Landing page | Configure the landing page on a per-space basis |  |
+| K | Custom avatar | Configure a custom avatar per space |  |
 
 ## 7.4
 
@@ -46,7 +55,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Agg on range | Run aggregations (cardinality, missing, value count, histogram and date histogram) on range fields |  |
 | ES | Geospacial | Geospacial improvements : shape field type and circle ingest processor |  |
 | ES | Auto cancel | Auto terminate queries sent through the `_search` endpoint when the initiating connection is closed |  |
-| ML | Outlier detection | Outlier detection integrated in data transforms | [catching malware](https://www.elastic.co/blog/catching-malware-with-elastic-outlier-detection) |
+| ML | Outlier detection | Outlier detection integrated in data transforms | [catching malware](https://www.elastic.co/blog/catching-malware-with-elastic-outlier-detection), [benchmark](https://www.elastic.co/blog/benchmarking-outlier-detection-in-elastic-machine-learning) |
 | K | Missile map | Map (in both Maps & SIEM) showing network connections live | [blog post](https://www.elastic.co/blog/integrating-maps-into-elastic-siem) |
 | K | SLM | Management UI for snapshot lifecycle management (in Management/Snapshot and restore) |  |
 | K | Index template | Manage index templates |  |
@@ -98,11 +107,11 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | L | Google modules | New input & output modules to interact with GCS (Google Cloud Storage) buckets |  |
 | APM | .Net agent | Instrument ASP.NET Core 2.x+ and Entity Framework Core 2.x+ apps (and others manually via the API) | [video](https://youtu.be/1EyF6JIST_0) |
 | APM | Metrics | APM agents now collect language-specific metrics (for example Java heap memory and thread count) |  |
-| ES | OpenID realm | OpenID Connect realm (authentication backbone used by Okta, Google, etc) added |  |
+| ES | OpenID realm | OpenID Connect realm (authentication backbone used by Okta, Google, etc) added | [blog post](https://www.elastic.co/blog/a-deep-dive-into-elasticsearch-authentication-realms) |
 | ES | Geo in SQL | Geographical queries through SQL statements |  |
 | ES | Geo ranking | Use time or geographical distance (normalized) in the computation of the relevance ranking score | [blog post](https://www.elastic.co/blog/distance-feature-query-time-and-geo-in-elasticsearch-result-ranking) |
 | ES | Type ahead | New search_as_you_type field type providing results from the field while the user is typing the query |  |
-| K | SIEM | Dedicated UI for exploring and visualizing host and network-based data, made for investigation | [blog post](https://www.elastic.co/blog/introducing-elastic-siem), [solution page](https://www.elastic.co/solutions/siem) |
+| K | SIEM | Dedicated UI for exploring and visualizing host and network-based data, made for investigation | [blog post](https://www.elastic.co/blog/introducing-elastic-siem), [building a SIEM](https://www.elastic.co/blog/elastic-siem-for-small-business-and-home-1-getting-started) |
 | K | Metrics explorer | Navigate through most important infrastructure metrics and interact using tags and chart groupings | [blog post](https://www.elastic.co/blog/elastic-infrastructure-7-2-0-released) |
 | K | Logs UI++ | Adding field pinning and quick filtering in the Logs UI | [blog post](https://www.elastic.co/blog/elastic-logs-7-2-0-released) |
 | K | Feature control | Allows to hide and restrict applications and features (per Kibana Space) | [blog post](https://www.elastic.co/blog/introducing-kibana-feature-controls-curating-and-securing-feature-access) |
@@ -277,7 +286,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | L | Keystore | Hide passwords from configuration files using a secure keystore |  |
 | L | JDBC static filter |  |  |
 | ES | Rank Evaluation | Track how rankings of expected results is measured against specific queries | [blog post](https://www.elastic.co/blog/made-to-measure-how-to-use-the-ranking-evaluation-api-in-elasticsearch) |
-| ES | SAML support | Get access to the Elastic Stack with the introduction of SAML support | [blog post](https://www.elastic.co/blog/how-to-enable-saml-authentication-in-kibana-and-elasticsearch), [SAML on Azure](https://www.elastic.co/blog/saml-based-single-sign-on-with-elasticsearch-and-azure-active-directory) |
+| ES | SAML support | Get access to the Elastic Stack with the introduction of SAML support | [blog post](https://www.elastic.co/blog/how-to-enable-saml-authentication-in-kibana-and-elasticsearch), [SAML on Azure](https://www.elastic.co/blog/saml-based-single-sign-on-with-elasticsearch-and-azure-active-directory), [SAML with ADFS](https://www.elastic.co/blog/how-to-configure-elasticsearch-saml-authentication-with-adfs) |
 | ML | Calendar setting | Skip analyzing the data during scheduled events (entered manually or imported via ics) |  |
 | K | Vega | Support for Vega & Vega lite visualizations | [getting started](https://www.elastic.co/blog/getting-started-with-vega-visualizations-in-kibana), [blog post](https://www.elastic.co/blog/custom-vega-visualizations-in-kibana), [sankey viz](https://www.elastic.co/blog/sankey-visualization-with-vega-in-kibana) |
 
@@ -416,7 +425,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Docker module | Periodically collect container metrics from cgroup | [blog post](https://www.elastic.co/blog/monitoring_container_resource_usage_with_metricbeat), [metadata enrichment](https://www.elastic.co/blog/brewing-in-beats-enrich-events-with-docker-metadata) |
 | B | Kafka module | Connects to the local Kafka node and reads periodically details about the partitions | [blog post](https://www.elastic.co/blog/monitoring-kafka-with-elasticsearch-kibana-and-beats) |
-| L | Presistent queues | Inbuilt persistent queues enable Logstash to persist events before processing them | [blog post](https://www.elastic.co/blog/logstash-persistent-queue) |
+| L | Presistent queues | Inbuilt persistent queues enable Logstash to persist events before processing them | [blog post](https://www.elastic.co/blog/logstash-persistent-queue), [with parallel pipelines](https://www.elastic.co/blog/using-parallel-logstash-pipelines-to-improve-persistent-queue-performance) |
 | L | Truncate | Truncate is a new filter that allows you to truncate fields longer than a given byte-length |  |
 | ES | Faster reindexing | Reindex can now perform their tasks in parallel automatically |  |
 | K | Tag cloud | New visualization displaying tags (words) as a cloud |  |
