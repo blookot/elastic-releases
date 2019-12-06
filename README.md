@@ -1,7 +1,7 @@
 # Elastic releases
 Listing releases of the Elastic stack with new features and references
 
-Try the official Elastic Stack Service from the creators on [Elastic Cloud](https://www.elastic.co/products/elasticsearch/service) (14-day free trial!).
+Try the official Elasticsearch Service from the creators on [Elastic Cloud](https://www.elastic.co/products/elasticsearch/service) (14-day free trial!).
 
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
