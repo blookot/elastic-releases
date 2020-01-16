@@ -27,7 +27,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | K | Lens | New way to rapidly draw meaningful visualization without needing any technical experience of Elasticsearch | [blog post](https://www.elastic.co/blog/introducing-kibana-lens) |
 | K | Sharing Canvas | Share static Canvas workpads in HTML format using a JavaScript snippet |  |
 | K | News feed | Introducing a newsfeed that highlights what's new at Elastic (blogs, webinars, security vulnerabilities...) |  |
-| K | SIEM & EEP | Elastic SIEM now supports data from EEP (Elastic Endpoint Security, previously Endgame) |  |
+| K | SIEM & EES | Elastic SIEM now supports data from EES (Elastic Endpoint Security, previously Endgame) |  |
 | K | SIEM widgets | The SIEM app adds event histogram, TLS widget and source/dest countries |  |
 | K | Log rate | The logs app now has a dataset-based log rate anomaly detection based on ML |  |
 | K | Query cancellation | If a user navigates away or updates a query before getting the results, Kibana now cancels the Elasticsearch query |  |
