@@ -16,8 +16,10 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | AWS/GCP modules | New beat modules to capture AWS billing and any GCP service monitored by Stackdriver |  |
+| B | Cloud modules | New beat modules to capture AWS billing, AWS VPC flow logs, any GCP service monitored by Stackdriver and Azure Storage (blobs, files, etc) |  |
+| L | Monitor to Cloud | Easy configuration to send Logstash stack monitoring data to a cluster in Elastic Cloud |  |
 | APM | Jaeger bridge | Provide a direct bridge between Elastic APM and Jaeger with Jaeger intake support |  |
+| APM | .Net logger | Full C# representation of ECS using .NET types with integrations for Elastic APM Logging with Serilog and NLog, vanilla Serilog, and for BenchmarkDotnet | [blog post](https://www.elastic.co/blog/elastic-common-schema-dotnet-library-and-integrations-released-for-elasticsearch) |
 | ES | Faster sort | Improve (like 35x!) the performance of queries that are sorted by date or other long values |  |
 | ES | Faster composite agg | Faster composite aggregations on sorted indices |  |
 | ES | Faster geo_shape | The geo_shape query has been enhanced to use a BKD tree |  |
@@ -25,9 +27,14 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Histogram | New histogram data type as a more efficient way to handle data that can be represented in a histogram |  |
 | ES | String stats | New string stats aggregation calculates the count, Shannon entropy and the min/max and average length of the strings |  |
 | ML | Inference | Supervised ML models can be used for inference at ingest time |  |
-| ML | Language detection | Language identification model used to label the language on documents at ingest time |  |
+| ML | Language detection | Language identification model used to label the language on documents at ingest time | [blog post](https://www.elastic.co/blog/multilingual-search-using-language-identification-in-elasticsearch) |
+| ML | Py Panda | Python Elasticsearch client to analyse, explore and manipulate data that resides in Elasticsearch | [github](https://github.com/elastic/eland) |
 | K | SIEM detection engine | Automate threat detection and minimize MTTD with nearly 100 OOTB rules aligned with the ATT&CK framework |  |
+| K | APM in SIEM | Elastic SIEM added curated visibility into HTTP data (coming from Elastic APM) with adequate rules |  |
+| K | AWS/GCP in SIEM | Support for AWS CloudTrail and GCP events in the SIEM app |  |
 | K | SIEM overview | New Elastic SIEM app overview page with timelines, news, signals, sources, etc  |  |
+| K | Logs categorization | New categories tab in the Logs UI uses ML categorization to find anomalies on unstructured logs | [blog post](https://www.elastic.co/blog/elastic-logs-7-6-0-released)  |
+| K | Uptime | Addition of a world map to the Uptime UI enables visualization of user-perceived performance on a global scale |  |
 | K | Lens additions | Added a quick "reset layer" action and support for scripted fields in Kibana Lens |  |
 | K | Nested search | Ability to search and filter on nested fields. More to come soon ;) |  |
 | K | ILM&SLM | ILM users now have the ability to utilize a `wait_for_snapshot` action |  |
@@ -80,6 +87,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | APM | Angular & .Net frameworks | Added support for Angular (RUM agent) and .Net framework (.Net agent) |  |
 | APM | Geolocation | Geolocation added in RUM to display "performance by geographic region" breakdown |  |
 | APM | APM to log | Integrated way to navigate between APM and the Logs app |  |
+| APM | Java logger | Centralized logging for Java applications with the Elastic stack made easy using plugins for Log4j & Logback | [github](https://github.com/elastic/ecs-logging-java) |
 | ES | New alerting | Basis of the new Kibana's alerting system are being delivered... stay tuned! | [blog post](https://www.elastic.co/blog/alerting-in-the-elastic-stack) |
 | ES | Results pinning | By using the new pinned query, users can manage and order results as they see fit |  |
 | ES | Agg on range | Run aggregations (cardinality, missing, value count, histogram and date histogram) on range fields |  |
