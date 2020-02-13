@@ -22,7 +22,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | APM | .Net logger | Full C# representation of ECS using .NET types with integrations for Elastic APM Logging with Serilog and NLog, vanilla Serilog, and for BenchmarkDotnet | [blog post](https://www.elastic.co/blog/elastic-common-schema-dotnet-library-and-integrations-released-for-elasticsearch) |
 | ES | Faster sort | Improve (like 35x!) the performance of queries that are sorted by date or other long values |  |
 | ES | Faster composite agg | Faster composite aggregations on sorted indices |  |
-| ES | Faster geo_shape | The geo_shape query has been enhanced to use a BKD tree |  |
+| ES | Faster geo_shape | The geo_shape query has been enhanced to use a BKD tree | [blog post](https://www.elastic.co/blog/bkd-backed-geo-shapes-in-elasticsearch-precision-efficiency-speed) |
 | ES | CCx proxy | A proxy can now be used between clusters for both CCR and CCS |  |
 | ES | Histogram | New histogram data type as a more efficient way to handle data that can be represented in a histogram |  |
 | ES | String stats | New string stats aggregation calculates the count, Shannon entropy and the min/max and average length of the strings |  |
@@ -53,11 +53,11 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | B | Stack monitoring | External collection for Elastic Stack Monitoring is now available via Metricbeat | [blog post](https://www.elastic.co/blog/external-collection-for-elastic-stack-monitoring-is-now-available-via-metricbeat) |
-| B | Azure modules | Addition of Metricbeat and Filebeat modules to monitor logs and metrics from Azure Event Hub and Azure Monitor  | [blog post](https://www.elastic.co/blog/elasticsearch-service-on-elastic-cloud-now-available-on-microsoft-azure) |
+| B | Azure modules | Addition of Metricbeat and Filebeat modules to monitor logs and metrics from Azure Event Hub and Azure Monitor  | [blog post](https://www.elastic.co/blog/elasticsearch-service-on-elastic-cloud-now-available-on-microsoft-azure), [Azure module](https://www.elastic.co/blog/monitoring-azure-activity-logs-reports-and-metrics-with-new-beats-modules) |
 | B | Heartbeat for k8s | Enhancing Uptime (heartbeat) to include hint-based auto-discovery for Kubernetes monitoring |  |
 | ES | Snapshot retention | Added in SLM (snapshot lifecycle management) the retention configuration |  |
 | ES | API keys | Kibana app to easily view/manage API keys |  |
-| ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time |  |
+| ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time | [blog post](https://www.elastic.co/blog/introducing-the-enrich-processor-for-elasticsearch-ingest-nodes) |
 | ES | Pause CCR | Pause & resume flows in CCR, useful for upgrades |  |
 | ES | Geotile grid agg | This enhancement enables users to aggregate all docs within a given tile on a geographical map |  |
 | ML | Classification | Binary classification predicts the class or category of a given data point in a dataset |  |
@@ -67,6 +67,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | K | SIEM & EES | Elastic SIEM now supports data from EES (Elastic Endpoint Security, previously Endgame) |  |
 | K | SIEM widgets | The SIEM app adds event histogram, TLS widget and source/dest countries |  |
 | K | Log rate | The logs app now has a dataset-based log rate anomaly detection based on ML |  |
+| K | ILM age | Control the index age math that’s used by index lifecycle management (ILM) for phase timings calculations | [blog post](https://www.elastic.co/blog/control-ilm-phase-transition-timings-using-origination-date) |
 | K | Query cancellation | If a user navigates away or updates a query before getting the results, Kibana now cancels the Elasticsearch query |  |
 | K | Landing page | Configure the landing page on a per-space basis |  |
 | K | Custom avatar | Configure a custom avatar per space |  |
@@ -81,7 +82,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | New modules | Beats modules capturing metrics from StatD, AWS ELB, EBS and CloudWatch, logs from IBM MQ & AWS S3 (access logs) and a CEF decoder in Filebeat | [blog post](https://www.elastic.co/blog/monitoring-aws-services-using-the-cloudwatch-metricset) |
+| B | New modules | Beats modules capturing metrics from StatD, AWS ELB, EBS and CloudWatch, logs from IBM MQ & AWS S3 (access logs) and a CEF decoder in Filebeat | [blog post](https://www.elastic.co/blog/monitoring-aws-services-using-the-cloudwatch-metricset), [another on S3](https://www.elastic.co/blog/getting-aws-logs-from-s3-using-filebeat-and-the-elastic-stack) |
 | B | SQS & Kafka input | Filebeat now supports AWS SQS (used to read from S3) and Kafka inputs |  |
 | B | Java logging | Send (ECS compliant!) logs from Java apps using native integration in log4j & logback | [github project](https://github.com/elastic/ecs-logging-java) |
 | APM | Angular & .Net frameworks | Added support for Angular (RUM agent) and .Net framework (.Net agent) |  |
@@ -182,7 +183,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | ECS | Beats now use the new field naming convention Elastic Common Schema (ECS) | [blog post](https://www.elastic.co/blog/introducing-the-elastic-common-schema), [webinar](https://www.elastic.co/webinars/introducing-the-elastic-common-schema), [ECS doc](https://www.elastic.co/guide/en/ecs/current/index.html), [observability with ECS](https://www.elastic.co/blog/easier-observability-with-the-elastic-common-schema), [blog post](https://www.elastic.co/blog/migrating-to-elastic-common-schema-in-beats-environments) |
 | B | AWS module | New metricbeat module to monitor AWS EC2 using Cloudwatch | [video](https://youtu.be/JO-1PhA7XuU), [blog post](https://www.elastic.co/blog/monitoring-aws-ec2-using-metricbeat-and-the-elastic-stack) |
 | B | MSSQL module | New metricbeat module for Microsoft SQL Server | [blog post](https://www.elastic.co/blog/monitoring-microsoft-sql-server-using-metricbeat-and-elasticsearch) |
-| B | OpenMetrics support | Deeper integration between Elastic Stack and Prometheus by support the OpenMetrics standard | [blog post](https://www.elastic.co/blog/elasticsearch-observability-embracing-prometheus-and-openmetrics-standards-for-metrics), [observability, by Elastic](https://www.elastic.co/blog/observability-with-the-elastic-stack) |
+| B | OpenMetrics support | Deeper integration between Elastic Stack and Prometheus by support the OpenMetrics standard | [blog post](https://www.elastic.co/blog/elasticsearch-observability-embracing-prometheus-and-openmetrics-standards-for-metrics), [observability, by Elastic](https://www.elastic.co/blog/observability-with-the-elastic-stack), [Prometheus at scale](https://www.elastic.co/blog/prometheus-monitoring-at-scale-with-the-elastic-stack) |
 | L | Java execution | Logstash now executed in Java by default, for better performance, less memory and java plugins support | [blog post](https://www.elastic.co/blog/meet-the-new-logstash-java-execution-engine), [java plugins](https://www.elastic.co/blog/previewing-native-support-for-java-plugins-in-logstash) |
 | ES | Typeless APIs | 6.0: no more than one type, 7.0: new typeless APIs, 8.0 will remove APIs that accept types | [blog post](https://www.elastic.co/blog/moving-from-types-to-typeless-apis-in-elasticsearch-7-0) |
 | ES | Cluster coordination | New Zen2 cluster coordination which is faster, safer, and easier to use | [blog post](https://www.elastic.co/blog/a-new-era-for-cluster-coordination-in-elasticsearch) |
@@ -256,7 +257,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Functionbeat | Functionbeat is a new Beat that deploys as a function in serverless platform, and streams cloud infrastructure data to Elasticsearch | [blog post](https://www.elastic.co/blog/functionbeat-serverless-ingestion-for-elasticsearch) |
 | APM | Distributed tracing | Distributed tracing gives an end-to-end trace on a request as it traverses multiple services | [video](https://youtu.be/Bz41KzRCM4g), [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm) |
 | APM | Monitoring | APM monitoring lets you track the health of your Elastic APM deployments from the Kibana Monitoring app |  |
-| ES | Cross Cluster Replication (CCR) | Synchronization of indices across clusters | [webinar](https://www.elastic.co/webinars/replicate-elasticsearch-data-with-cross-cluster-replication-ccr), [blog post](https://www.elastic.co/blog/follow-the-leader-an-introduction-to-cross-cluster-replication-in-elasticsearch), [another post](https://www.elastic.co/blog/cross-datacenter-replication-with-elasticsearch-cross-cluster-replication), [benchmark CCR](https://www.elastic.co/blog/benchmarking-elasticsearch-cross-cluster-replication), [doc](https://www.elastic.co/guide/en/elastic-stack-overview/current/xpack-ccr.html) |
+| ES | Cross Cluster Replication (CCR) | Synchronization of indices across clusters | [webinar](https://www.elastic.co/webinars/replicate-elasticsearch-data-with-cross-cluster-replication-ccr), [blog post](https://www.elastic.co/blog/follow-the-leader-an-introduction-to-cross-cluster-replication-in-elasticsearch), [another post](https://www.elastic.co/blog/cross-datacenter-replication-with-elasticsearch-cross-cluster-replication), [benchmark CCR](https://www.elastic.co/blog/benchmarking-elasticsearch-cross-cluster-replication), [bidirectional replication](https://www.elastic.co/blog/bi-directional-replication-with-elasticsearch-cross-cluster-replication-ccr) |
 | ES | ODBC | Query Elasticsearch using the SQL API and the ODBC driver | [5' video](https://youtu.be/1KCw6DwS6Us) |
 | ES | Minimal snapshots | 50% smaller snapshots with source-only (needs reindex though) | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/6.5/modules-snapshots.html#_source_only_repository) |
 | ML | Multi-bucket span | Detect anomalies that span multiple buckets and adjust anomaly score accordingly | [blog post](https://www.elastic.co/blog/changes-to-elastic-machine-learning-anomaly-scoring-in-6-5) |
@@ -419,7 +420,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Modules | Modules for JMX (using Jolokia) to monitor Java applications, Linux auditd and system authentication logs | [blog post](https://www.elastic.co/blog/monitoring-java-applications-with-metricbeat-and-jolokia) |
 | ML | New! | Machine Learning makes it easy to detect anomalies (spot infrastructure problems, cyber attacks, or business issues) by automatically modeling the normal behavior of time series data | [blog post](https://www.elastic.co/blog/introducing-machine-learning-for-the-elastic-stack), [scoring](https://www.elastic.co/blog/machine-learning-anomaly-scoring-elasticsearch-how-it-works), [span](https://www.elastic.co/blog/explaining-the-bucket-span-in-machine-learning-for-elasticsearch), [sizing](https://www.elastic.co/blog/sizing-machine-learning-with-elasticsearch) |
-| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [getting started](https://www.elastic.co/blog/master-time-with-kibanas-new-time-series-visual-builder), [annotations](https://www.elastic.co/blog/time-series-annotations-and-anomalies-with-kibana), [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw) |
+| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [getting started](https://www.elastic.co/blog/master-time-with-kibanas-new-time-series-visual-builder), [annotations](https://www.elastic.co/blog/time-series-annotations-and-anomalies-with-kibana), [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw), [blog post](https://www.elastic.co/blog/how-to-display-data-as-a-percentage-in-kibana-visualizations) |
 | K | Watcher UI | Watcher UI allows you to do basic operations on watches |  |
 
 ## 5.3
