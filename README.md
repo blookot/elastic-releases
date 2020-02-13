@@ -6,6 +6,35 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
 
+## 7.6
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 11 Feb 2020 | 7.7 release | 11 Aug 2021 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-6-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | AWS/GCP modules | New beat modules to capture AWS billing and any GCP service monitored by Stackdriver |  |
+| APM | Jaeger bridge | Provide a direct bridge between Elastic APM and Jaeger with Jaeger intake support |  |
+| ES | Faster sort | Improve (like 35x!) the performance of queries that are sorted by date or other long values |  |
+| ES | Faster composite agg | Faster composite aggregations on sorted indices |  |
+| ES | Faster geo_shape | The geo_shape query has been enhanced to use a BKD tree |  |
+| ES | CCx proxy | A proxy can now be used between clusters for both CCR and CCS |  |
+| ES | Histogram | New histogram data type as a more efficient way to handle data that can be represented in a histogram |  |
+| ES | String stats | New string stats aggregation calculates the count, Shannon entropy and the min/max and average length of the strings |  |
+| ML | Inference | Supervised ML models can be used for inference at ingest time |  |
+| ML | Language detection | Language identification model used to label the language on documents at ingest time |  |
+| K | SIEM detection engine | Automate threat detection and minimize MTTD with nearly 100 OOTB rules aligned with the ATT&CK framework |  |
+| K | SIEM overview | New Elastic SIEM app overview page with timelines, news, signals, sources, etc  |  |
+| K | Lens additions | Added a quick "reset layer" action and support for scripted fields in Kibana Lens |  |
+| K | Nested search | Ability to search and filter on nested fields. More to come soon ;) |  |
+| K | ILM&SLM | ILM users now have the ability to utilize a `wait_for_snapshot` action |  |
+| K | Template UI | New visual mapping editor for index templates |  |
+| K | Maps style | Categorical styling and customize labels within the layer style panel |  |
+| K | Maps in Canvas | Ability to embed map elements directly into Canvas workpads |  |
+
 ## 7.5
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -24,6 +53,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time |  |
 | ES | Pause CCR | Pause & resume flows in CCR, useful for upgrades |  |
 | ES | Geotile grid agg | This enhancement enables users to aggregate all docs within a given tile on a geographical map |  |
+| ML | Classification | Binary classification predicts the class or category of a given data point in a dataset |  |
 | K | Lens | New way to rapidly draw meaningful visualization without needing any technical experience of Elasticsearch | [blog post](https://www.elastic.co/blog/introducing-kibana-lens) |
 | K | Sharing Canvas | Share static Canvas workpads in HTML format using a JavaScript snippet |  |
 | K | News feed | Introducing a newsfeed that highlights what's new at Elastic (blogs, webinars, security vulnerabilities...) |  |
@@ -55,7 +85,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Agg on range | Run aggregations (cardinality, missing, value count, histogram and date histogram) on range fields |  |
 | ES | Geospacial | Geospacial improvements : shape field type and circle ingest processor |  |
 | ES | Auto cancel | Auto terminate queries sent through the `_search` endpoint when the initiating connection is closed |  |
-| ML | Outlier detection | Outlier detection integrated in data transforms | [catching malware](https://www.elastic.co/blog/catching-malware-with-elastic-outlier-detection), [benchmark](https://www.elastic.co/blog/benchmarking-outlier-detection-in-elastic-machine-learning) |
+| ML | Regression | Regression analysis estimates the relationships among a number of feature variables and a dependent variable |  |
 | K | Missile map | Map (in both Maps & SIEM) showing network connections live | [blog post](https://www.elastic.co/blog/integrating-maps-into-elastic-siem) |
 | K | SLM | Management UI for snapshot lifecycle management (in Management/Snapshot and restore) |  |
 | K | Index template | Manage index templates |  |
@@ -85,7 +115,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Flattened type | Allows an entire flat JSON object to be indexed into a single field |  |
 | ES | Synonyms update | Synonym filters used by search analyzers can now be updated without restarting the index | [blog post](https://www.elastic.co/blog/boosting-the-power-of-elasticsearch-with-synonyms) |
 | ML | Security jobs | Create ML jobs from the SIEM app in Kibana |  |
-| ML | Data transforms | Data transforms enable to pivot (aggregate) an existing index to a secondary, summarized index, by batch or continuously |  | 
+| ML | Outlier detection | Outlier detection integrated in data transforms | [catching malware](https://www.elastic.co/blog/catching-malware-with-elastic-outlier-detection), [benchmark](https://www.elastic.co/blog/benchmarking-outlier-detection-in-elastic-machine-learning) |
 | K | Log to APM | Logs & APM are not integrated so you can automatically navigate from a specific log event to APM traces |  |
 | K | Uptime summaries | Monitor Summaries allow to see multiple Heartbeat results grouped in a single expandable row per endpoint |  |
 | K | Snapshot mngt UI | The snapshot management UI enables create, restore and delete |  |
@@ -111,6 +141,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Geo in SQL | Geographical queries through SQL statements |  |
 | ES | Geo ranking | Use time or geographical distance (normalized) in the computation of the relevance ranking score | [blog post](https://www.elastic.co/blog/distance-feature-query-time-and-geo-in-elasticsearch-result-ranking) |
 | ES | Type ahead | New search_as_you_type field type providing results from the field while the user is typing the query |  |
+| ML | Data transforms | Data transforms enable to pivot (aggregate) an existing index to a secondary, summarized index, by batch or continuously |  | 
 | K | SIEM | Dedicated UI for exploring and visualizing host and network-based data, made for investigation | [blog post](https://www.elastic.co/blog/introducing-elastic-siem), [building a SIEM](https://www.elastic.co/blog/elastic-siem-for-small-business-and-home-1-getting-started) |
 | K | Metrics explorer | Navigate through most important infrastructure metrics and interact using tags and chart groupings | [blog post](https://www.elastic.co/blog/elastic-infrastructure-7-2-0-released) |
 | K | Logs UI++ | Adding field pinning and quick filtering in the Logs UI | [blog post](https://www.elastic.co/blog/elastic-logs-7-2-0-released) |
