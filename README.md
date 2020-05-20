@@ -6,6 +6,36 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
 
+## 7.7
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 13 May 2020 | 7.8 release | 23 Nov 2021 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-7-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | Added integrations | Main additions are Prometheus/OpenMetrics, AWS (Lambda, VPC, Aurora, DynamoDB), Google Cloud (Pub/Sub and LB), Azure (db account, AKS and container metrics), Pivotal Cloud Foundry, MQTT, Redis, and IBM MQ | [Prometheus blog post](https://www.elastic.co/blog/how-to-implement-prometheus-long-term-storage-using-elasticsearch) |
+| B | Security sources | Adding Okta, Microsoft 365 and Check Point security sources |  |
+| APM | Inferred spans | Surface additional spans that show you granular method-level info powered by a low overhead async profiler | [blog post](https://www.elastic.co/blog/from-distributed-tracing-to-distributed-profiling-with-elastic-apm) |
+| ES | async search | Run potentially long-running queries in the background, allowing you to track their progress and retrieve partial results as they become available. |  |
+| ES | Faster sort | Improved performance on time sorted queries (note that this does not help when aggregations are requested) |  |
+| ES | Platform support | ES now supports RHEL/CentOS 8, Windows 2019 and OpenJDK 14 | [support matrix](https://www.elastic.co/support/matrix) |
+| ML | Multiclass classification | Data frame analytics can classify a range of outputs, not only right or wrong (binary classif introduced in 7.5) |  |
+| K | Lazy loading | Kibana uses asynchronous search in Dashboard and Discover to optionally ignore timeout until completion |  |
+| K | Alerting in apps | Full new Kibana alerting tightly integrated into the SIEM, Metrics, APM and Uptime apps, managed from the UI | [blog post](https://www.elastic.co/blog/introducing-the-new-alerting-framework-for-observability-security-and-the-elastic-stack), [genesis](https://www.elastic.co/blog/alerting-in-the-elastic-stack) |
+| K | APM Service map | Shows a graphical view of the dependencies between applications and external services with high level KPIs |  |
+| K | APM agent config | Ability to configure the APM agent properties in the APM app |  |
+| K | APM custom links | Create dynamic custom links (populate GitHub/Jira issues or link to a Kibana dashboard) based on your specific APM data |  |
+| K | ML in Uptime | Uptime has incorporated machine learning into its ability to highlight anomalous response durations |  |
+| K | Viz in Canvas | Add existing visualizations created in Kibana Lens, Visualize, or TSVB inside a Canvas |  |
+| K | File upload | The file upload UI (in ML > Data Visualizer) now has the ability to recommend a Filebeat config file |  |
+| K | Cases | Embedded case management in Elastic SIEM |  |
+| K | ServiceNow integ | Cases directly integrates with ServiceNow ITSM, allowing analysts to forward info from Elastic SIEM to ServiceNow |  |
+| K | Maps additions | Show individual points when zooming in, and filter on distance (radial) |  |
+| K | Painless Lab | Added in "Dev Tools", painless lab allows to run and debug Painless (simple, fast and secure scripting language for Elasticsearch) scripts |  |
+
 ## 7.6
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -18,7 +48,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Cloud modules | New beat modules to capture AWS billing, AWS VPC flow logs, any GCP service monitored by Stackdriver and Azure Storage (blobs, files, etc) |  |
 | L | Monitor to Cloud | Easy configuration to send Logstash stack monitoring data to a cluster in Elastic Cloud |  |
-| APM | Jaeger bridge | Provide a direct bridge between Elastic APM and Jaeger with Jaeger intake support |  |
+| APM | Jaeger bridge | Provide a direct bridge between Elastic APM and Jaeger with Jaeger intake support | [blog post](https://www.elastic.co/blog/exploring-jaeger-traces-with-elastic-apm), [APM, free and open](https://www.elastic.co/blog/elastic-apm-free-open-source-apm) |
 | APM | .Net logger | Full C# representation of ECS using .NET types with integrations for Elastic APM Logging with Serilog and NLog, vanilla Serilog, and for BenchmarkDotnet | [blog post](https://www.elastic.co/blog/elastic-common-schema-dotnet-library-and-integrations-released-for-elasticsearch) |
 | ES | Faster sort | Improve (like 35x!) the performance of queries that are sorted by date or other long values |  |
 | ES | Faster composite agg | Faster composite aggregations on sorted indices |  |
@@ -29,7 +59,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ML | Inference | Supervised ML models can be used for inference at ingest time |  |
 | ML | Language detection | Language identification model used to label the language on documents at ingest time | [blog post](https://www.elastic.co/blog/multilingual-search-using-language-identification-in-elasticsearch) |
 | ML | Py Panda | Python Elasticsearch client to analyse, explore and manipulate data that resides in Elasticsearch | [github](https://github.com/elastic/eland) |
-| K | SIEM detection engine | Automate threat detection and minimize MTTD with nearly 100 OOTB rules aligned with the ATT&CK framework |  |
+| K | SIEM detection engine | Automate threat detection and minimize MTTD with nearly 100 OOTB rules aligned with the ATT&CK framework | [blog post](https://www.elastic.co/blog/elastic-siem-detections) |
 | K | APM in SIEM | Elastic SIEM added curated visibility into HTTP data (coming from Elastic APM) with adequate rules |  |
 | K | AWS/GCP in SIEM | Support for AWS CloudTrail and GCP events in the SIEM app |  |
 | K | SIEM overview | New Elastic SIEM app overview page with timelines, news, signals, sources, etc  |  |
@@ -57,10 +87,10 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Heartbeat for k8s | Enhancing Uptime (heartbeat) to include hint-based auto-discovery for Kubernetes monitoring |  |
 | ES | Snapshot retention | Added in SLM (snapshot lifecycle management) the retention configuration |  |
 | ES | API keys | Kibana app to easily view/manage API keys |  |
-| ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time | [blog post](https://www.elastic.co/blog/introducing-the-enrich-processor-for-elasticsearch-ingest-nodes) |
+| ES | Enrichment proc | Added an enrich processor (in ingest pipeline) to lookup in an Elasticsearch index and add the results to your document at indexing time | [blog post](https://www.elastic.co/blog/introducing-the-enrich-processor-for-elasticsearch-ingest-nodes), [other one](https://www.elastic.co/blog/how-to-enrich-logs-and-metrics-using-an-elasticsearch-ingest-node) |
 | ES | Pause CCR | Pause & resume flows in CCR, useful for upgrades |  |
 | ES | Geotile grid agg | This enhancement enables users to aggregate all docs within a given tile on a geographical map |  |
-| ML | Classification | Binary classification predicts the class or category of a given data point in a dataset |  |
+| ML | Classification | Binary classification predicts the class or category of a given data point in a dataset | [blog post](https://www.elastic.co/blog/benchmarking-binary-classification-results-in-elastic-machine-learning), [feature importance](https://www.elastic.co/blog/feature-importance-for-data-frame-analytics-with-elastic-machine-learning) |
 | K | Lens | New way to rapidly draw meaningful visualization without needing any technical experience of Elasticsearch | [blog post](https://www.elastic.co/blog/introducing-kibana-lens) |
 | K | Sharing Canvas | Share static Canvas workpads in HTML format using a JavaScript snippet |  |
 | K | News feed | Introducing a newsfeed that highlights what's new at Elastic (blogs, webinars, security vulnerabilities...) |  |
@@ -94,7 +124,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Agg on range | Run aggregations (cardinality, missing, value count, histogram and date histogram) on range fields |  |
 | ES | Geospacial | Geospacial improvements : shape field type and circle ingest processor |  |
 | ES | Auto cancel | Auto terminate queries sent through the `_search` endpoint when the initiating connection is closed |  |
-| ML | Regression | Regression analysis estimates the relationships among a number of feature variables and a dependent variable |  |
+| ML | Regression | Regression analysis estimates the relationships among a number of feature variables and a dependent variable | [feature importance](https://www.elastic.co/blog/feature-importance-for-data-frame-analytics-with-elastic-machine-learning) |
 | K | Missile map | Map (in both Maps & SIEM) showing network connections live | [blog post](https://www.elastic.co/blog/integrating-maps-into-elastic-siem) |
 | K | SLM | Management UI for snapshot lifecycle management (in Management/Snapshot and restore) |  |
 | K | Index template | Manage index templates |  |
@@ -141,7 +171,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | New modules | A lot of new modules (Palo Alto Networks - PANW, Cisco ASA firewall, Netflow & IPFIX, NATS, CoreDNS, Windows sysmon & security) | [release post](https://www.elastic.co/blog/beats-7-2-0-released) |
+| B | New modules | A lot of new modules (Palo Alto Networks - PANW, Cisco ASA firewall, Netflow & IPFIX, NATS, CoreDNS, Windows sysmon & security) | [release post](https://www.elastic.co/blog/beats-7-2-0-released), [signals on sysmon data](https://www.elastic.co/blog/signals-in-elastic-siem-sysmon-data) |
 | B | Scripting | Scripting in Go at the edge (on servers) |  |
 | L | Google modules | New input & output modules to interact with GCS (Google Cloud Storage) buckets |  |
 | APM | .Net agent | Instrument ASP.NET Core 2.x+ and Entity Framework Core 2.x+ apps (and others manually via the API) | [video](https://youtu.be/1EyF6JIST_0) |
@@ -168,7 +198,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- |
 | 20 May 2019 | 7.2 release | 20 Nov 2020 |
 
-Version-level references: [Blog post](https://www.elastic.co/blog/security-for-elasticsearch-is-now-free), [getting started](https://www.elastic.co/blog/getting-started-with-elasticsearch-security), [how to setup encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash)
+Version-level references: [Blog post](https://www.elastic.co/blog/security-for-elasticsearch-is-now-free), [getting started](https://www.elastic.co/blog/getting-started-with-elasticsearch-security), [how to setup encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash), [prevent breach](https://www.elastic.co/blog/how-to-prevent-elasticsearch-server-breach-securing-elasticsearch)
 
 ## 7.0
 
@@ -202,7 +232,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- |
 | 20 May 2019 | 8.0 release | 20 Nov 2020 |
 
-Version-level references: [Blog post](https://www.elastic.co/blog/security-for-elasticsearch-is-now-free), [getting started](https://www.elastic.co/blog/getting-started-with-elasticsearch-security), [how to setup encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash)
+Version-level references: [Blog post](https://www.elastic.co/blog/security-for-elasticsearch-is-now-free), [getting started](https://www.elastic.co/blog/getting-started-with-elasticsearch-security), [how to setup encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash), [prevent breach](https://www.elastic.co/blog/how-to-prevent-elasticsearch-server-breach-securing-elasticsearch)
 
 ## 6.7
 
@@ -232,7 +262,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Auditbeat module | Record host, process, socket & user activity on a host, using ECS | [blog post](https://www.elastic.co/blog/introducing-auditbeat-system-module) |
 | B | Netflow input | Filebeat adds a new NetFlow input |  |
 | L | Java plugins | Introducing native support for input, filter and output java plugins | [blog post](https://www.elastic.co/blog/previewing-native-support-for-java-plugins-in-logstash) |
-| APM | OpenTracing | All agents now have [OpenTracing](https://opentracing.io/) compatible bridges | [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm) |
+| APM | OpenTracing | All agents now have [OpenTracing](https://opentracing.io/) compatible bridges | [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm), [W3C TraceContext](https://www.elastic.co/blog/elastic-apm-adopts-w3c-tracecontext) |
 | APM | APM to Infra | When looking at a trace, you can jump to the host or container metrics and logs. This is Observability! |  |
 | ES | Frozen indices | Frozen indices allow for a much higher ratio of disk storage to heap, at the expense of search latency | [blog post](https://www.elastic.co/blog/creating-frozen-indices-with-the-elasticsearch-freeze-index-api) |
 | ES | SQL Date Histograms | Added support for date histograms via the SQL API |  |
@@ -255,7 +285,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Central management | Enroll, configure, and manage Beats deployments from a central place using either the UI or API | [blog post](https://www.elastic.co/blog/introducing-beats-central-management-in-the-elastic-stack) |
 | B | Functionbeat | Functionbeat is a new Beat that deploys as a function in serverless platform, and streams cloud infrastructure data to Elasticsearch | [blog post](https://www.elastic.co/blog/functionbeat-serverless-ingestion-for-elasticsearch) |
-| APM | Distributed tracing | Distributed tracing gives an end-to-end trace on a request as it traverses multiple services | [video](https://youtu.be/Bz41KzRCM4g), [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm) |
+| APM | Distributed tracing | Distributed tracing gives an end-to-end trace on a request as it traverses multiple services | [video](https://youtu.be/Bz41KzRCM4g), [blog post](https://www.elastic.co/blog/distributed-tracing-opentracing-and-elastic-apm), [Distributed tracing](https://www.elastic.co/blog/how-to-instrument-a-polyglot-microservices-application-with-elastic-apm) |
 | APM | Monitoring | APM monitoring lets you track the health of your Elastic APM deployments from the Kibana Monitoring app |  |
 | ES | Cross Cluster Replication (CCR) | Synchronization of indices across clusters | [webinar](https://www.elastic.co/webinars/replicate-elasticsearch-data-with-cross-cluster-replication-ccr), [blog post](https://www.elastic.co/blog/follow-the-leader-an-introduction-to-cross-cluster-replication-in-elasticsearch), [another post](https://www.elastic.co/blog/cross-datacenter-replication-with-elasticsearch-cross-cluster-replication), [benchmark CCR](https://www.elastic.co/blog/benchmarking-elasticsearch-cross-cluster-replication), [bidirectional replication](https://www.elastic.co/blog/bi-directional-replication-with-elasticsearch-cross-cluster-replication-ccr) |
 | ES | ODBC | Query Elasticsearch using the SQL API and the ODBC driver | [5' video](https://youtu.be/1KCw6DwS6Us) |
@@ -301,7 +331,7 @@ Opening the code of X-Pack: [Webpage](https://www.elastic.co/products/x-pack/ope
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically | [blog post](https://www.elastic.co/blog/docker-and-kubernetes-hints-based-autodiscover-with-beats), [another one](https://www.elastic.co/blog/monitoring-kubernetes-and-docker-containers-with-beats-logs-metrics-and-metadata), [video](https://youtu.be/1-iUoWGfByE), [5' video](https://youtu.be/585ig9iuqI4) |
+| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically | [blog post](https://www.elastic.co/blog/docker-and-kubernetes-hints-based-autodiscover-with-beats), [another one](https://www.elastic.co/blog/monitoring-kubernetes-and-docker-containers-with-beats-logs-metrics-and-metadata), [Amazon EKS monitoring](https://www.elastic.co/blog/observability-monitoring-amazon-eks-logs-and-metrics-with-the-elastic-stack), [video](https://youtu.be/1-iUoWGfByE), [5' video](https://youtu.be/585ig9iuqI4) |
 | B | syslog input | Send logs to Filebeat using syslog over UDP or TCP | [blog post](https://www.elastic.co/blog/brewing-in-beats-syslog-input-in-filebeat) |
 | L | Connecting pipelines | Multi-staged processing pipelines can connect pipelines within a Logstash process |  |
 | APM | Watcher integration | Receive alerts on errors (in APM data) |  |
@@ -360,7 +390,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Docker & K8S | Logs and metrics out of Kubernetes and Docker | [docker](https://www.elastic.co/blog/enrich-docker-logs-with-filebeat), [kubernetes](https://www.elastic.co/blog/shipping-kubernetes-logs-to-elasticsearch-with-filebeat), [5mn video](https://youtu.be/4E3-k0eFcj0) |
 | B | Auditbeat | A new beat to capture auditd (based on the Linux audit framework) | [blog post](https://www.elastic.co/blog/introducing-auditbeat-ship-linux-audit-logs-to-elasticsearch), [use ML](https://www.elastic.co/blog/analysing-linux-auditd-anomalies-with-auditbeat-and-elastic-stack-machine-learning) |
-| L | Multiple pipelines | Run multiple pipelines concurrently for different use cases in the same instance, with centralized pipeline management, pipeline viewer and a conversion tool from ingest pipelines! | [blog post](https://www.elastic.co/blog/logstash-multiple-pipelines), [management UI](https://www.elastic.co/blog/logstash-centralized-pipeline-management), [pipeline viewer](https://www.elastic.co/blog/logstash-pipeline-viewer-6-0) and [conversion tool](https://www.elastic.co/blog/ingest-node-to-logstash-configuration-converter), [doc](https://www.elastic.co/guide/en/logstash/6.0/multiple-pipelines.html) |
+| L | Multiple pipelines | Run multiple pipelines concurrently for different use cases in the same instance, with centralized pipeline management, pipeline viewer and a conversion tool from ingest pipelines! | [blog post](https://www.elastic.co/blog/logstash-multiple-pipelines), [maintainable pipelines](https://www.elastic.co/blog/how-to-create-maintainable-and-reusable-logstash-pipelines), [management UI](https://www.elastic.co/blog/logstash-centralized-pipeline-management), [pipeline viewer](https://www.elastic.co/blog/logstash-pipeline-viewer-6-0) and [conversion tool](https://www.elastic.co/blog/ingest-node-to-logstash-configuration-converter), [doc](https://www.elastic.co/guide/en/logstash/6.0/multiple-pipelines.html) |
 | ES | Rolling upgrade | Upgrade a cluster without a cluster restart (from 5.6.3 to 6.x) |  |
 | ES | Faster restart | Faster Restarts and Recoveries using operations-based shard recovery (using sequence IDs) | [blog post](https://www.elastic.co/blog/elasticsearch-sequence-ids-6-0) |
 | ES | Sparse data | sparse fields (with no data) in doc-values will be significantly smaller | [blog post](https://www.elastic.co/blog/minimize-index-storage-size-elasticsearch-6-0) |
@@ -420,7 +450,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | --- | --- | --- | --- |
 | B | Modules | Modules for JMX (using Jolokia) to monitor Java applications, Linux auditd and system authentication logs | [blog post](https://www.elastic.co/blog/monitoring-java-applications-with-metricbeat-and-jolokia) |
 | ML | New! | Machine Learning makes it easy to detect anomalies (spot infrastructure problems, cyber attacks, or business issues) by automatically modeling the normal behavior of time series data | [blog post](https://www.elastic.co/blog/introducing-machine-learning-for-the-elastic-stack), [scoring](https://www.elastic.co/blog/machine-learning-anomaly-scoring-elasticsearch-how-it-works), [span](https://www.elastic.co/blog/explaining-the-bucket-span-in-machine-learning-for-elasticsearch), [sizing](https://www.elastic.co/blog/sizing-machine-learning-with-elasticsearch) |
-| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [getting started](https://www.elastic.co/blog/master-time-with-kibanas-new-time-series-visual-builder), [annotations](https://www.elastic.co/blog/time-series-annotations-and-anomalies-with-kibana), [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw), [blog post](https://www.elastic.co/blog/how-to-display-data-as-a-percentage-in-kibana-visualizations) |
+| K | Time Series Visual Builder | Time Series Visual Builder (TSVB) combines pipeline aggregations and a new UI for interacting with, and designing visualizations from, time series data | [getting started](https://www.elastic.co/blog/master-time-with-kibanas-new-time-series-visual-builder), [other post](https://www.elastic.co/blog/visualizing-observability-with-kibana-event-rates-and-rate-of-change-in-tsvb), [annotations](https://www.elastic.co/blog/time-series-annotations-and-anomalies-with-kibana), [demo](https://www.elastic.co/elasticon/conf/2017/sf/kibana-visualizations-deep-dive), [video part1](https://youtu.be/CNR-4kZ6v_E), [video part2](https://youtu.be/CvorsH3x7Z8), [video part3](https://youtu.be/xkluflzhpAw), [blog post](https://www.elastic.co/blog/how-to-display-data-as-a-percentage-in-kibana-visualizations) |
 | K | Watcher UI | Watcher UI allows you to do basic operations on watches |  |
 
 ## 5.3
