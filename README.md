@@ -6,6 +6,39 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
 
+## 7.9
+
+New [Kibana platform](https://www.elastic.co/blog/introducing-a-new-architecture-for-kibana)... coming soon!
+
+## 7.8
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 18 June 2020 | 7.9 release | 18 Dec 2021 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-8-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| B | Added integrations | Main additions are Google Cloud operations suite (formerly Stackdriver), Fortinet, Check Point and CrowdStrike Falcon | [all integrations](https://www.elastic.co/integrations) |
+| B | Certificate validity | Elastic Uptime adds TLS/SSL monitoring to automatically track certificate validity and expiration dates | [blog post](https://www.elastic.co/blog/elastic-uptime-monitoring-7-8-0-released) |
+| APM | OpenTelemetry support | Added an Elastic APM exporter to integrate the OpenTelemetry trace data into Elastic APM | [blog post](https://www.elastic.co/blog/elastic-apm-opentelemetry-integration)
+| ES | Geo aggs | Aggregations now support BKD-backed geo_shapes (geo bounds, grids and centroids) |  |
+| ES | Histogram aggs | New aggregations (sum, value count & avg) on the histogram field |  |
+| ES | t-test | Metric aggregation used in A/B testing |  |
+| ES | ARM support | ES now runs on ARM | [blog post](https://www.elastic.co/blog/elasticsearch-on-arm) |
+| K | New navigation menu! | with simple organization and grouping |  |
+| K | Dashboard upgrades | Cloning a viz, drilldown links between dashboards and including ML anomaly swimlanes |  |
+| K | 1GB File upload | The file data visualizer upload supports 1GB files |  |
+| K | Alerting connectors | Connectors are globally available, easy to configure with Kibana keystore support |  |
+| K | Jira integration | New integration with Jira Core, Jira Service Desk and Jira Software to quickly open or update a Jira incident or issue to take action |  |
+| K | Maps for APM RUM | Real User Monitoring data can now be added as a layer in a Map |  |
+| K | ML in service maps | APM service maps automatically pull data from ML and color service nodes to show the anomalies |  |
+| K | Treemap | Lens adds treemap viz type |  |
+| K | Pipeline builder | The new ingest node pipeline builder makes it easy to configure custom ingest pipelines |  |
+| K | Pre-access screen | Shown before a user is allowed to authenticate into Kibana, with custom text and completion button |  |
+| K | Custom sign-on | Configurable sign-on experience for anyone using SSO (password hints, custom icons) |  |
+
 ## 7.7
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -16,13 +49,13 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | Added integrations | Main additions are Prometheus/OpenMetrics, AWS (Lambda, VPC, Aurora, DynamoDB), Google Cloud (Pub/Sub and LB), Azure (db account, AKS and container metrics), Pivotal Cloud Foundry, MQTT, Redis, and IBM MQ | [Prometheus blog post](https://www.elastic.co/blog/how-to-implement-prometheus-long-term-storage-using-elasticsearch) |
+| B | Added integrations | Main additions are Prometheus/OpenMetrics, AWS (Lambda, VPC, Aurora, DynamoDB), Google Cloud (Pub/Sub and LB), Azure (db account, AKS and container metrics), Pivotal Cloud Foundry, MQTT, Redis, and IBM MQ | [Prometheus blog post](https://www.elastic.co/blog/how-to-implement-prometheus-long-term-storage-using-elasticsearch), [all integrations](https://www.elastic.co/integrations) |
 | B | Security sources | Adding Okta, Microsoft 365 and Check Point security sources |  |
 | APM | Inferred spans | Surface additional spans that show you granular method-level info powered by a low overhead async profiler | [blog post](https://www.elastic.co/blog/from-distributed-tracing-to-distributed-profiling-with-elastic-apm) |
 | ES | async search | Run potentially long-running queries in the background, allowing you to track their progress and retrieve partial results as they become available. |  |
 | ES | Faster sort | Improved performance on time sorted queries (note that this does not help when aggregations are requested) |  |
 | ES | Platform support | ES now supports RHEL/CentOS 8, Windows 2019 and OpenJDK 14 | [support matrix](https://www.elastic.co/support/matrix) |
-| ML | Multiclass classification | Data frame analytics can classify a range of outputs, not only right or wrong (binary classif introduced in 7.5) |  |
+| ML | Multiclass classification | Data frame analytics can classify a range of outputs, not only right or wrong (binary classif introduced in 7.5) | [example on DGA detection](https://www.elastic.co/blog/machine-learning-in-cybersecurity-training-supervised-models-to-detect-dga-activity) and [part 2 on inference](https://www.elastic.co/blog/machine-learning-in-cybersecurity-detecting-dga-activity-in-network-data) |
 | K | Lazy loading | Kibana uses asynchronous search in Dashboard and Discover to optionally ignore timeout until completion |  |
 | K | Alerting in apps | Full new Kibana alerting tightly integrated into the SIEM, Metrics, APM and Uptime apps, managed from the UI | [blog post](https://www.elastic.co/blog/introducing-the-new-alerting-framework-for-observability-security-and-the-elastic-stack), [genesis](https://www.elastic.co/blog/alerting-in-the-elastic-stack) |
 | K | APM Service map | Shows a graphical view of the dependencies between applications and external services with high level KPIs |  |
@@ -59,7 +92,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ML | Inference | Supervised ML models can be used for inference at ingest time |  |
 | ML | Language detection | Language identification model used to label the language on documents at ingest time | [blog post](https://www.elastic.co/blog/multilingual-search-using-language-identification-in-elasticsearch) |
 | ML | Py Panda | Python Elasticsearch client to analyse, explore and manipulate data that resides in Elasticsearch | [github](https://github.com/elastic/eland) |
-| K | SIEM detection engine | Automate threat detection and minimize MTTD with nearly 100 OOTB rules aligned with the ATT&CK framework | [blog post](https://www.elastic.co/blog/elastic-siem-detections) |
+| K | SIEM detection engine | Automate threat detection and minimize MTTD with nearly 100 OOTB rules aligned with the ATT&CK framework | [blog post](https://www.elastic.co/blog/elastic-siem-detections), [detection rules repo](https://www.elastic.co/blog/elastic-security-opens-public-detection-rules-repo), [copy-paste attack detection](https://www.elastic.co/blog/preventing-copy-paste-compromises-acsc-2020-008-with-elastic-security) |
 | K | APM in SIEM | Elastic SIEM added curated visibility into HTTP data (coming from Elastic APM) with adequate rules |  |
 | K | AWS/GCP in SIEM | Support for AWS CloudTrail and GCP events in the SIEM app |  |
 | K | SIEM overview | New Elastic SIEM app overview page with timelines, news, signals, sources, etc  |  |
@@ -117,7 +150,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Java logging | Send (ECS compliant!) logs from Java apps using native integration in log4j & logback | [github project](https://github.com/elastic/ecs-logging-java) |
 | APM | Angular & .Net frameworks | Added support for Angular (RUM agent) and .Net framework (.Net agent) |  |
 | APM | Geolocation | Geolocation added in RUM to display "performance by geographic region" breakdown |  |
-| APM | APM to log | Integrated way to navigate between APM and the Logs app |  |
+| APM | APM to log | Integrated way to navigate between APM and the Logs app | [blog post](https://www.elastic.co/blog/how-to-easily-correlate-logs-apm-traces-for-better-observability-elastic-stack) |
 | APM | Java logger | Centralized logging for Java applications with the Elastic stack made easy using plugins for Log4j & Logback | [github](https://github.com/elastic/ecs-logging-java) |
 | ES | New alerting | Basis of the new Kibana's alerting system are being delivered... stay tuned! | [blog post](https://www.elastic.co/blog/alerting-in-the-elastic-stack) |
 | ES | Results pinning | By using the new pinned query, users can manage and order results as they see fit |  |
@@ -331,7 +364,7 @@ Opening the code of X-Pack: [Webpage](https://www.elastic.co/products/x-pack/ope
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically | [blog post](https://www.elastic.co/blog/docker-and-kubernetes-hints-based-autodiscover-with-beats), [another one](https://www.elastic.co/blog/monitoring-kubernetes-and-docker-containers-with-beats-logs-metrics-and-metadata), [Amazon EKS monitoring](https://www.elastic.co/blog/observability-monitoring-amazon-eks-logs-and-metrics-with-the-elastic-stack), [video](https://youtu.be/1-iUoWGfByE), [5' video](https://youtu.be/585ig9iuqI4) |
+| B | K8S and Docker autodiscovery | The Autodiscover feature allows logs & metrics to be captured automatically | [kubernetes observability](https://www.elastic.co/blog/kubernetes-observability-tutorial-k8s-metrics-collection-and-analysis), [blog post](https://www.elastic.co/blog/docker-and-kubernetes-hints-based-autodiscover-with-beats), [another one](https://www.elastic.co/blog/monitoring-kubernetes-and-docker-containers-with-beats-logs-metrics-and-metadata), [Amazon EKS monitoring](https://www.elastic.co/blog/observability-monitoring-amazon-eks-logs-and-metrics-with-the-elastic-stack), [video](https://youtu.be/1-iUoWGfByE), [5' video](https://youtu.be/585ig9iuqI4) |
 | B | syslog input | Send logs to Filebeat using syslog over UDP or TCP | [blog post](https://www.elastic.co/blog/brewing-in-beats-syslog-input-in-filebeat) |
 | L | Connecting pipelines | Multi-staged processing pipelines can connect pipelines within a Logstash process |  |
 | APM | Watcher integration | Receive alerts on errors (in APM data) |  |
