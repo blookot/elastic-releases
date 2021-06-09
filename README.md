@@ -6,9 +6,145 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
 
+
+## 7.13
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 25 May 2021 | 7.14 release | 25 Nov 2022 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-13-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Fleet server | Dedicated component for managing agents and administering agent integrations |  |
+| A | k8s auto-discover | Improve ease of deployment in highly dynamic orchestrated environments |  |
+| A | Heartbeat support | Integration of uptime monitoring in Elastic Agent |  |
+| A | osquery deployment | Elastic Agent can install osquery on any host |  |
+| ES | Runtime to indexed | To create an indexed field based on a runtime field, simply "move" it in the index template |  |
+| ES | Faster aggs | Additional performance increase in terms and filter aggregations |  |
+| ES | Audit ignore policy | Reduce the noise and remove unnecessary response from actions in ES audit logs |  |
+| ML | SIEM ML jobs | New ML jobs added in Kibana SIEM | [LOLBins ML](https://www.elastic.co/blog/problemchild-detecting-living-off-the-land-attacks)
+| ML | model alias | To simplify the deployment and upgrading of trained models |  |
+| K | Custom banner | Banner (showing at the top) that visually differentiates Kibana Spaces |  |
+| K | Runtime fields editor | Create your own fields in a Kibana index pattern on the fly |  |
+| K | Frozen in ILM | Configure the frozen tier and also choose the object store repository to use |  |
+| K | APM time compare | Allows users to quickly compare current and historical behavior |  |
+| K | APM scatterplot | Scatterplot view visually shows transactions by latency and load distribution |  |
+| K | osquery integration | osquery management and unified analysis integrated in Kibana |  |
+
+## 7.12
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 23 Mar 2021 | 7.13 release | 23 Sep 2022 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-12-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Ransomware prevention | New layer of ransomware prevention based on behavioral analysis |  |
+| B | Threat intel | Seamlessly ingest freely available threat intelligence sources (Abuse.ch, AlienVault OTX, etc) |  |
+| APM | Native OpenTelemetry support | Users can now directly send data from OpenTelemetry agents to APM server |  |
+| ES | Frozen tier | Makes object stores (S3) searchable by fetching needed data from the store and caching locally | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-frozen-tier-searchbox-on-s3), [query 1PB](https://www.elastic.co/blog/querying-a-petabyte-of-cloud-storage-in-10-minutes) |
+| K | APM correlation | Automatically surface factors that are highly correlated with underperforming transactions |  |
+| K | Save session | In Discover and Dashboard, you can save a long-running search to run in the background |  |
+| K | Runtime fields | You can now use runtime fields from within Discover and Kibana Lens | [new fields api](https://www.elastic.co/blog/discover-uses-fields-api-in-7-12) |
+| K | Transform retention | Data Transforms adds data retention policy |  |
+| K | ServiceNow SIR connector | Adding in SIEM the ServiceNow Security Incident Response (SIR) action |  |
+
+## 7.11
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 10 Feb 2021 | 7.12 release | 10 Aug 2022 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-11-0-released)
+
+_Note_: Elastic is changing the licensing options for Elasticsearch and Kibana, moving from the Apache 2 licensed code to be dual licensed under both the Elastic License and SSPL. See [blog post](https://www.elastic.co/blog/elastic-license-v2)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Added sources | Catching up on Beats modules, Elastic Agent added auditd, CEF, iptables, osquery and other sources |  |
+| A | Registered AV in Windows | Windows now recognizes Elastic as an official antivirus solution |  |
+| A | Trusted signer | Trusted applications (on Windows) can now be defined by the software signer, path, and/or hash |  |
+| APM | ECS logging libs | ECS logging libraries are plugins (for most languages & frameworks) to link app logs & traces |  |
+| ES | Date hist speed++ | The speed of date histograms has been increased by 85% | [blog post](https://www.elastic.co/blog/how-we-made-date-histogram-aggregations-faster-than-ever-in-elasticsearch-7-11) |
+| ES | Runtime fields | Give ability to define the schema at query time | [intro post](https://www.elastic.co/blog/introducing-elasticsearch-runtime-fields) and [tech post](https://elastic.co/blog/getting-started-with-elasticsearch-runtime-fields) |
+| ML | Latest Transform | In Data Transforms, new "latest" agg creating an index updated with the most recent document |  |
+| ML | Space aware | ML jobs are now space aware |  |
+| K | Anonymous access | Any saved object can be accessed with no credentials using specialized links |  |
+| K | Service health view | New service overview page summarizes all the information about the health of a service |  |
+| K | Host details | New view to the Metrics app to zoom out for historical key metrics for individual hosts |  |
+| K | Page load | New page load waterfall chart that displays the connection stats in the synthetic monitoring |  |
+| K | Tags | Set tags to better manage and access content in Kibana (nav bar) |  |
+| K | Lens updates | New color palette picking, custom chart labels and... CSV export! |  |
+| K | Maps server | Elastic Maps Server, a downloadable docker image to use Maps offline |  |
+| K | Timeline updates | In SIEM, Timeline got tabbed info, fullscreen, multicolumn sorting, event details, etc |  |
+| K | SS in ILM | Searchable snapshots in index lifecycle management UI |  |
+| K | Audit log | This new audit log records authentication and authorization, CRUD operations, HTTP requests etc |  |
+| K | Data viz redesign | The Machine Learning data visualizer gets redesigned |  |
+
+## 7.10
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 11 Nov 2020 | 7.11 release | 11 May 2022 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-10-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Trusted apps | Users can provide a list of trusted (whitelisted) apps in malware prevention |  |
+| APM | PHP agent | New PHP agent |  |
+| ES | Searchable snapshots | Elasticsearch can now search in snapshots stored in low-cost object stores like S3 | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-searchable-snapshots) |
+| ES | Cold tier | By replacing the index replica by a searchable snapshot, cluster storage can be reduced by up to 50% |  |
+| K | UX monitoring | New User Experience app allows you to monitor key user experience metrics, inc [Web Vitals](https://web.dev/vitals/) | [blog post](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities) |
+| K | Synthetic monitoring | Multistep checks to simulate complex user flows and measure performance from Uptime UI | [blog post](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities) |
+| K | Nav bar | Move faster in Kibana with new navigational search (at the top of Kibana) |  |
+| K | ML in metrics | Detect common infrastructure issues with new one-click ML jobs |  |
+| K | URL drilldown | Create navigation paths to web apps using URLs that can even include data parameters |  |
+| K | Chart description | In dashboards, a description can be added to a chart (displayed as tooltip) |  |
+| K | APM canvas | Pre-made Canvas workpad displaying APM data | [blog post](https://www.elastic.co/blog/application-performance-monitoring-apm-with-canvas-in-kibana) |
+| K | Jira action | New Jira connector for Kibana alerting |  |
+| K | Correlation rules | Leverages EQL to automate detection of multi-stage attacks |  |
+| K | RBAC for alerting | Feature control for stack-level alerts, actions and connectors |  |
+| K | Detection rules repo | All detection rules (including newest Azure/GCP) are shared and contributed in github | [github repo](https://github.com/elastic/detection-rules) |
+| K | Feature importance | In ML Data Frame Analytics, displaying the feature importance |  |
+| K | Maps alerting | Added location-based "geo-fencing" alerts in Maps |  |
+
 ## 7.9
 
-New [Kibana platform](https://www.elastic.co/blog/introducing-a-new-architecture-for-kibana)... coming soon!
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 19 Aug 2020 | 7.10 release | 18 Feb 2022 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-9-0-released)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Elastic Agent | Single agent to collect all kinds of data from a host, including logs, metrics, and endpoint security data |  |
+| A | Ingest Manager | Central place to control all integrations (formerly called modules) for Elastic Agent |  |
+| A | Fleet | Centrally manage all Elastic Agents from Kibana |  |
+| A | Anti-malware | Signatureless malware prevention now built into Elastic Agent |  |
+| B | Security integrations | Added Microsoft Defender ATP, PowerShell, Gsuite and tens of others leveraging [RSA2ELK](https://github.com/blookot/rsa2elk) |  |
+| APM | OpenTelemetry | Elastic APM exporter takes data from OpenTelemetry collector  and sends them to Elastic APM server |  |
+| ES | EQL | New Event Query Language facilitating correlation designed for security use cases |  |
+| ES | Wildcard type | New data type splitting strings into 3-letter tokens to introduce wildcard and regex search |  |
+| ES | Data streams | Single named resource to ingest & manage time series data |  |
+| ES | Tableau Connector | Provides direct, real-time access to Elasticsearch data from Tableau Server and Tableau Desktop | [Tableau connector](https://extensiongallery.tableau.com/connectors/180) |
+| ML | Added SIEM jobs | Adding new ML jobs to detect threats, integrated in the SIEM app |  |
+| ML | Model snapshot | Lets you quickly revert back to an earlier snapshot or even just skip the problem events |  |
+| K | New Kibana platform | New platform enabling instant page loads | [Kibana platform](https://www.elastic.co/blog/introducing-a-new-architecture-for-kibana) |
+| K | Explore viz data | In a dashboard, click 'explore underlying data' to see the documents in Discover |  |
+| K | Lens improvements | Multiple Y axes, custom color selection, handling sparse data
+| K | Observability homepage | Curated view presenting key information across all your observability data (logs, metrics, APM, uptime) |  |
+| K | Threshold-based rules | In SIEM, new rules detecting number of matches exceeding a threshold |  |
+| K | Process-tree viz | In SIEM, new interactive visualization of endpoint-based activity |  |
+| K | Alert exception | Create rule exceptions in SIEM (indivisually or with a list) |  |
+| K | ServiceNow action | Trigger ServiceNow incidents with alerts |  |
+| K | IBM Resilient action | Open or update a case within IBM Security Resilient from Kibana alerting |  |
+| K | Enterprise search | App Search and Workplace Search have their UI integrated in Kibana |  |
 
 ## 7.8
 
@@ -29,6 +165,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | ARM support | ES now runs on ARM | [blog post](https://www.elastic.co/blog/elasticsearch-on-arm) |
 | K | New navigation menu! | with simple organization and grouping |  |
 | K | Dashboard upgrades | Cloning a viz, drilldown links between dashboards and including ML anomaly swimlanes |  |
+| K | Anomaly explorer in dahsboards | embed visuals from ML Anomaly Explorer inside dashboards |  |
 | K | 1GB File upload | The file data visualizer upload supports 1GB files |  |
 | K | Alerting connectors | Connectors are globally available, easy to configure with Kibana keystore support |  |
 | K | Jira integration | New integration with Jira Core, Jira Service Desk and Jira Software to quickly open or update a Jira incident or issue to take action |  |
