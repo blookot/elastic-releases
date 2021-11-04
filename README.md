@@ -5,7 +5,50 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
+Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
+
+## 7.15
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 22 Sep 2021 | 7.16 release | 22 Mar 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-15-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | GCP integration | Agentless ingestion of logs from GCP using Dataflow integration | blog post for [GCS](https://www.elastic.co/blog/ingest-data-directly-from-google-cloud-storage-into-elastic-using-google-dataflow), [BigQuery](https://www.elastic.co/blog/ingest-data-directly-from-google-bigquery-into-elastic-using-google-dataflow) and [Pub/Sub](https://www.elastic.co/blog/ingest-data-directly-from-google-pub-sub-into-elastic-using-google-dataflow) |
+| A | Added integrations | New integrations for EDRs (Carbon Black, CrowdStrike, Palo Alto Cortex) and more |  |
+| A | Scheduled queries | Schedule queries to inspect hosts with osquery and get results in the Stack |  |
+| A | Private EPR | Self-managed version of Elastic Package Registry (EPR) as a Docker image | [doc](https://www.elastic.co/guide/en/integrations-developer/current/air-gapped.html) |
+| A | In-memory attacks | Prevent memory manipulation (used for process injection via shellcode) | [blog post](https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack) |
+| A | Linux quarantine | Use [eBPF](https://ebpf.io/) to isolate a Linux host from the network | [Cmd](https://www.elastic.co/blog/elastic-and-cmd-join-forces-to-help-you-take-command-of-your-cloud-workloads) |
+| ML | Import/Export | Import and export jobs in Stack Management > Machine Learning Jobs |  |
+| K | ML monitoring | Use anomaly detection on jobs health and alert on issue | [blog post](https://www.elastic.co/blog/accelerate-actions-on-anomaly-detection-jobs-with-the-kibana-alerting-framework) |
+| K | Runtime field editor | Create runtime fields on the fly in Kibana |  |
+| K | Cursor hover | In dashboards, cursor hover is synced across viz |  |
+
+## 7.14
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 3 Aug 2021 | 7.15 release | 3 Feb 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-14-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Quarantine | Ability to isolate a host from a network with a simple Kibana clic |  |
+| A | Live queries | Run a live query at anytime on osquery using the sql commands |  |
+| ES | Match_only_text | Replacement for the text field type that leads to a 10% reduction of storage | [blog post](https://elastic.co/blog/save-10-percent-disk-space-on-your-logging-datasets-with-match-only-text) |
+| ES | EQL supports CCS | EQL (and the whole Kibana Security app) supports Cross Cluster Search | [blog post](https://www.elastic.co/blog/elastic-on-elastic-configuring-the-security-app-to-use-cross-cluster-search) |
+| ML | APM RCA | Reduce MTTR with automated root cause analysis of application issues | |
+| ML | Spoofed URLs | Detect spoofed URLs by monitoring DGA domains | [blog post](https://www.elastic.co/blog/supervised-and-unsupervised-machine-learning-for-dga-detection) |
+| K | Swimlane SOAR | New connector with the Swimlane SOAR platform  | [blog post](https://www.elastic.co/blog/elastic-swimlane-partnership) |
+| K | Rule updates | In Kibana Security, rules update are faster and easier |  |
+| K | Lens updates | Use [time shift](https://www.elastic.co/guide/en/kibana/7.14/whats-new.html#_time_shifts) and [color by value](https://www.elastic.co/guide/en/kibana/7.14/whats-new.html#_table_enhancements) and [custom formulas](https://www.elastic.co/guide/en/kibana/7.14/lens.html#lens-formulas) in Lens | [blog post](https://www.elastic.co/blog/kibana-10-common-questions-formulas-time-series-maps) |
+| K | Maps updates | Highlight POI, mapping anomalies, a time slider and more | [blog post](https://www.elastic.co/blog/whats-new-elastic-maps-geo-annotations-choropleth-maps-integrations) |
 
 ## 7.13
 
@@ -23,12 +66,13 @@ _Note_: Elastic has changed the licensing options for Elasticsearch and Kibana. 
 | A | k8s auto-discover | Improve ease of deployment in highly dynamic orchestrated environments |  |
 | A | Heartbeat support | Integration of uptime monitoring in Elastic Agent |  |
 | A | osquery deployment | Elastic Agent can install osquery on any host |  |
+| B | Threat intel | Seamlessly ingest freely available threat intelligence sources (Abuse.ch, AlienVault OTX, etc) | [blog post](https://www.elastic.co/blog/ingesting-threat-data-with-threat-intel-filebeat-module) and [other post](https://www.elastic.co/blog/establish-robust-threat-intelligence-with-elastic-security) and [on Mozi](https://www.elastic.co/blog/collecting-and-operationalizing-threat-data-from-the-mozi-botnet) |
 | L | Data stream support | Extends the Elasticsearch output plugin to write data streams |  |
 | L | ECS compliance | In the way to get Logstash ECS compliant | [github issue](https://github.com/elastic/logstash/issues/11623) |
 | ES | Runtime to indexed | To create an indexed field based on a runtime field, simply "move" it in the index template |  |
 | ES | Faster aggs | Additional performance increase in terms and filter aggregations | [blog post](https://www.elastic.co/blog/new-in-elasticsearch-7-13-even-faster-aggregations) |
 | ES | Audit ignore policy | Reduce the noise and remove unnecessary response from actions in ES audit logs |  |
-| ML | SIEM ML jobs | New ML jobs added in Kibana SIEM | [LOLBins ML](https://www.elastic.co/blog/problemchild-detecting-living-off-the-land-attacks) or [ML for AWS Cloudtrail](https://www.elastic.co/blog/detecting-threats-in-aws-cloudtrail-logs-using-machine-learning) or [rare anomalies examples](https://www.elastic.co/blog/using-elastic-machine-learning-rare-analysis-to-hunt-for-the-unusual) |
+| ML | SIEM ML jobs | New ML jobs added in Kibana SIEM | [LOLBins ML](https://www.elastic.co/blog/problemchild-detecting-living-off-the-land-attacks) or [ML for AWS Cloudtrail](https://www.elastic.co/blog/detecting-threats-in-aws-cloudtrail-logs-using-machine-learning) or [rare anomalies examples](https://www.elastic.co/blog/using-elastic-machine-learning-rare-analysis-to-hunt-for-the-unusual) or [unusual network activity](https://www.elastic.co/blog/detecting-unusual-network-activity-with-elastic-security-and-machine-learning) |
 | ML | model alias | To simplify the deployment and upgrading of trained models |  |
 | K | Custom banner | Banner (showing at the top) that visually differentiates Kibana Spaces |  |
 | K | Runtime fields editor | Create your own fields in a Kibana index pattern on the fly |  |
@@ -48,14 +92,13 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | A | Ransomware prevention | New layer of ransomware prevention based on behavioral analysis |  |
-| B | Threat intel | Seamlessly ingest freely available threat intelligence sources (Abuse.ch, AlienVault OTX, etc) |  |
 | APM | Native OpenTelemetry support | Users can now directly send data from OpenTelemetry agents to APM server |  |
 | ES | Frozen tier | Makes object stores (S3) searchable by fetching needed data from the store and caching locally | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-frozen-tier-searchbox-on-s3), [query 1PB](https://www.elastic.co/blog/querying-a-petabyte-of-cloud-storage-in-10-minutes) |
 | K | APM correlation | Automatically surface factors that are highly correlated with underperforming transactions |  |
-| K | Dashboard-first | Dashboard-first approach makes it simple to create and add viz without leaving the dashboard-building flow | [blog post](https://www.elastic.co/blog/building-kibana-dashboards-more-efficiently) |
+| K | Dashboard-first | Dashboard-first approach makes it simple to create and add viz without leaving the dashboard-building flow | [blog post](https://www.elastic.co/blog/building-kibana-dashboards-more-efficiently) and [other post](https://www.elastic.co/blog/new-in-kibana-how-we-made-it-easier-manage-visualizations-and-build-dashboards) |
 | K | Save session | In Discover and Dashboard, you can save a long-running search to run in the background |  |
 | K | Runtime fields | You can now use runtime fields from within Discover and Kibana Lens | [new fields api](https://www.elastic.co/blog/discover-uses-fields-api-in-7-12) |
-| K | Transform retention | Data Transforms adds data retention policy |  |
+| K | Transform retention | Data Transforms adds data retention policy | [blog post](https://www.elastic.co/blog/how-to-use-transforms-to-track-your-most-recent-customer-orders) |
 | K | ServiceNow SIR connector | Adding in SIEM the ServiceNow Security Incident Response (SIR) action |  |
 
 ## 7.11
@@ -70,7 +113,7 @@ _Note_: Elastic is changing the licensing options for Elasticsearch and Kibana, 
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | Added sources | Catching up on Beats modules, Elastic Agent added auditd, CEF, iptables, osquery and other sources |  |
+| A | Added sources | Catching up on Beats modules, Elastic Agent added auditd, CEF, iptables, osquery and other sources | |
 | A | Registered AV in Windows | Windows now recognizes Elastic as an official antivirus solution |  |
 | A | Trusted signer | Trusted applications (on Windows) can now be defined by the software signer, path, and/or hash |  |
 | B | Iotsio module | Added monitoring for iostio | [blog post](https://www.elastic.co/blog/istio-monitoring-with-elastic-observability) |
@@ -131,7 +174,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | Elastic Agent | Single agent to collect all kinds of data from a host, including logs, metrics, and endpoint security data |  |
+| A | Elastic Agent | Single agent to collect all kinds of data from a host, including logs, metrics, and endpoint security data | [blog post](https://www.elastic.co/blog/elastic-agent-and-fleet-make-it-easier-to-integrate-your-systems-with-elastic) |
 | A | Ingest Manager | Central place to control all integrations (formerly called modules) for Elastic Agent |  |
 | A | Fleet | Centrally manage all Elastic Agents from Kibana |  |
 | A | Anti-malware | Signatureless malware prevention now built into Elastic Agent | [blog post](https://www.elastic.co/blog/detecting-cobalt-strike-with-memory-signatures) and [sandbox setup](https://www.elastic.co/blog/how-to-build-a-malware-analysis-sandbox-with-elastic-security) and [Sunburst protection](https://www.elastic.co/blog/elastic-security-provides-free-and-open-protections-for-sunburst) |
@@ -449,7 +492,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Frozen indices | Frozen indices allow for a much higher ratio of disk storage to heap, at the expense of search latency | [blog post](https://www.elastic.co/blog/creating-frozen-indices-with-the-elasticsearch-freeze-index-api) |
 | ES | SQL Date Histograms | Added support for date histograms via the SQL API |  |
 | ML | Annotations | Create annotations to keep a record of actions taken, from the Kibana UI | [blog post](https://www.elastic.co/blog/augmenting-results-with-user-annotations-for-elastic-machine-learning) |
-| K | ILM | managing indices lifecycle (hot/warm/cold/delete) from Kibana | [blog post](https://www.elastic.co/blog/implementing-hot-warm-cold-in-elasticsearch-with-index-lifecycle-management), [ILM to APM data](https://www.elastic.co/blog/how-to-apply-index-lifecycle-management-to-apm-data) |
+| K | ILM | managing indices lifecycle (hot/warm/cold/delete) from Kibana | [blog post](https://www.elastic.co/blog/implementing-hot-warm-cold-in-elasticsearch-with-index-lifecycle-management), [ILM to APM data](https://www.elastic.co/blog/how-to-apply-index-lifecycle-management-to-apm-data) and [ILM troubleshooting](https://www.elastic.co/blog/troubleshooting-elasticsearch-ilm-common-issues-and-fixes) |
 | K | CCR UI | Two new interfaces to manage remote clusters and remote replication process | [5' video](https://youtu.be/jDt8IwXG398) |
 | K | PNG export | Export dashboards as a PNG report |  |
 | K | Upgrade to 7.0 | Prepare for an upgrade from Elasticsearch 6.x to Elasticsearch 7.0 | [blog post](https://www.elastic.co/blog/upgrading-the-elastic-stack-with-the-7-x-upgrade-assistant) |
