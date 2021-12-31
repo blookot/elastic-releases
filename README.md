@@ -8,6 +8,34 @@ _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a 
 Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+
+## 7.16
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 7 Dec 2021 | 7.17 release | 7 Jun 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-16-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Added integrations | Added AWS WAF, Cisco Duo, CrowdStrike, GitHub and 1Password integrations |  |
+| A | AWS Firelens | Added integration for AWS FireLens to use ECS and Fargate logs in Observability & Security | [blog post](https://www.elastic.co/blog/elastic-cloud-with-aws-firelens-accelerate-time-to-insight-with-agentless-data-ingestion) |
+| A | Enhanced protection | Extended malicious behavior protection & memory threat protection |  |
+| APM | CI/CD | Integrations for Ansible and Maven offering deeper visibility into job execution and deployment errors |  |
+| APM | .Net auto-instrumentation | Auto-instrumentation of .NET applications with no code changes required |  |
+| L | ECS compliance | The grok processor now supports ECS! in the path of getting LS fully ECS compliant... |  |
+| ES | Heap reduction | Greatly reduced heap consumption and improved search speed |  |
+| ES | EQL perf | Performance increase of 830x (by removing the use of null values as join keys in sequences) |  |
+| ES | Sort queries perf | Performance improvement (up to 4x) for time-sorted data retrieval | [blog post](https://www.elastic.co/blog/optimizing-sort-queries-in-elasticsearch-for-faster-results) |
+| ES | Prebuilt ILM policies | ILM now includes five built-in policies |  |
+| K | Integrations UI | Search for all integrations - with a few clicks to deploy with Elastic Agent |  |
+| K | Reference lines | Horizontal reference lines in Kibana Lens to identify important values |  |
+| K | ServiceNow integrations | Certified integrations of ServiceNow SIR, ITSM and ITOM to accelerate | [blog post](https://www.elastic.co/blog/elastic-integrations-with-servicenow-itsm-sir-itom) |
+| K | Osquery manager | Now GA with addition of custom config, ECS mapping, query testing & query pack scheduling |  |
+| K | Upgrade assistant | Get prepared for 8.0 and beyond! | [webinar](https://www.elastic.co/elasticon/archive/2021/global/upgrade-assistant-to-the-rescue) |
+| K | OAuth 2 for emails | Authenticate the email connector with OAuth 2.0 Client Credentials |  |
+
 ## 7.15
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
