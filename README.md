@@ -5,8 +5,41 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
+_Note2_: you can also try the official [Elastic Terraform provider](https://www.elastic.co/blog/streamline-configuration-processes-with-official-elastic-stack-terraform-provider)!
+
 Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
+
+
+## 8.0
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 10 Feb 2022 | 8.1 release | 8 Aug 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-0-0) and [beta post](https://www.elastic.co/blog/preview-elastic-8-0-beta-stack-security-by-default-natural-language-processing-and-more)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | AWS SAR | Ingest logs from AWS S3 using Elastic serverless forwarder (AWS Lambda app) | [blog post](https://www.elastic.co/blog/elastic-and-aws-serverless-application-repository-speed-time-to-actionable-insights-with-frictionless-log-ingestion-from-amazon-s3) |
+| A | AWS Storage Lens | Ingest Storage Lens metrics to optimize S3 usage costs, ensure data protection and monitor user activity trends | [blog post](https://www.elastic.co/blog/new-elastic-and-amazon-s3-storage-lens-integration-simplify-management-control-costs-and-reduce-risk) |
+| ES | Security by default | Elastic Stack security is on by default for self-managed clusters | [blog post](https://www.elastic.co/blog/introducing-simplified-elastic-stack-security) |
+| ES | NLP | Native support for PyTorch ML models into Elasticsearch to do natural language processing (NLP) for named entity recognition (NER) and sentiment analysis | [blog post](https://www.elastic.co/blog/introduction-to-nlp-with-pytorch-models), [webinar](https://www.youtube.com/watch?v=SvvbMCwyOnU) and [another webinar](https://www.elastic.co/virtual-events/introduction-to-nlp-models-and-vector-search) |
+| ES | ANN search | Native support for approximate nearest neighbor (ANN) search to compare vector-based queries with a vector-based document corpus |  |
+
+
+## 7.17
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 1 Feb 2022 | 9.0 release | 1 Aug 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-17-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | Deduplicated settings | All identical index mapping or settings are reduced to just one, saving a lot of heap |  |
+| K | Upgrade assistant | Upgrade to 7.17 to learn about deprecations, remediation options (inc setting changes) | [webinar](https://www.youtube.com/watch?v=BOS0weyi-HY) |
 
 
 ## 7.16
@@ -21,18 +54,18 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | --- | --- | --- | --- |
 | A | Added integrations | Added AWS WAF, Cisco Duo, CrowdStrike, GitHub and 1Password integrations |  |
 | A | AWS Firelens | Added integration for AWS FireLens to use ECS and Fargate logs in Observability & Security | [blog post](https://www.elastic.co/blog/elastic-cloud-with-aws-firelens-accelerate-time-to-insight-with-agentless-data-ingestion) |
-| A | Enhanced protection | Extended malicious behavior protection & memory threat protection |  |
+| A | Enhanced protection | Extended malicious behavior protection & memory threat protection | [blog post](https://www.elastic.co/blog/linux-malware-protection-in-elastic-security) |
 | APM | CI/CD | Integrations for Ansible and Maven offering deeper visibility into job execution and deployment errors |  |
 | APM | .Net auto-instrumentation | Auto-instrumentation of .NET applications with no code changes required |  |
 | L | ECS compliance | The grok processor now supports ECS! in the path of getting LS fully ECS compliant... |  |
-| ES | Heap reduction | Greatly reduced heap consumption and improved search speed |  |
+| ES | Heap reduction | Greatly reduced heap consumption and improved search speed | [blog post](https://www.elastic.co/blog/three-ways-improved-elasticsearch-scalability) |
 | ES | EQL perf | Performance increase of 830x (by removing the use of null values as join keys in sequences) |  |
 | ES | Sort queries perf | Performance improvement (up to 4x) for time-sorted data retrieval | [blog post](https://www.elastic.co/blog/optimizing-sort-queries-in-elasticsearch-for-faster-results) |
 | ES | Prebuilt ILM policies | ILM now includes five built-in policies |  |
 | K | Integrations UI | Search for all integrations - with a few clicks to deploy with Elastic Agent |  |
 | K | Reference lines | Horizontal reference lines in Kibana Lens to identify important values |  |
 | K | ServiceNow integrations | Certified integrations of ServiceNow SIR, ITSM and ITOM to accelerate | [blog post](https://www.elastic.co/blog/elastic-integrations-with-servicenow-itsm-sir-itom) |
-| K | Osquery manager | Now GA with addition of custom config, ECS mapping, query testing & query pack scheduling |  |
+| K | Osquery manager | Now GA with addition of custom config, ECS mapping, query testing & query pack scheduling | [blog post](https://www.elastic.co/blog/gain-upper-hand-over-adversaries-with-osquery-and-elastic) |
 | K | Upgrade assistant | Get prepared for 8.0 and beyond! | [webinar](https://www.elastic.co/elasticon/archive/2021/global/upgrade-assistant-to-the-rescue) |
 | K | OAuth 2 for emails | Authenticate the email connector with OAuth 2.0 Client Credentials |  |
 
@@ -51,7 +84,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Scheduled queries | Schedule queries to inspect hosts with osquery and get results in the Stack |  |
 | A | Private EPR | Self-managed version of Elastic Package Registry (EPR) as a Docker image | [doc](https://www.elastic.co/guide/en/integrations-developer/current/air-gapped.html) |
 | A | In-memory attacks | Prevent memory manipulation (used for process injection via shellcode) | [blog post](https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack) |
-| A | Linux quarantine | Use [eBPF](https://ebpf.io/) to isolate a Linux host from the network | [Cmd](https://www.elastic.co/blog/elastic-and-cmd-join-forces-to-help-you-take-command-of-your-cloud-workloads) |
+| A | Linux quarantine | Use [eBPF](https://ebpf.io/) to isolate a Linux host from the network | [Cmd](https://www.elastic.co/blog/elastic-and-cmd-join-forces-to-help-you-take-command-of-your-cloud-workloads) and [eBPF blog post](https://www.elastic.co/blog/code-coverage-for-ebpf-programs) |
+| ES | Vector tiles | The vector tiles provides a huge performance improvement when searching geo_points and geo_shapes drawn to a map | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-vector-tile-search-api-for-geospatial) |
 | ML | Import/Export | Import and export jobs in Stack Management > Machine Learning Jobs |  |
 | K | ML monitoring | Use anomaly detection on jobs health and alert on issue | [blog post](https://www.elastic.co/blog/accelerate-actions-on-anomaly-detection-jobs-with-the-kibana-alerting-framework) |
 | K | Runtime field editor | Create runtime fields on the fly in Kibana |  |
@@ -76,7 +110,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | Swimlane SOAR | New connector with the Swimlane SOAR platform  | [blog post](https://www.elastic.co/blog/elastic-swimlane-partnership) |
 | K | Rule updates | In Kibana Security, rules update are faster and easier |  |
 | K | Lens updates | Use [time shift](https://www.elastic.co/guide/en/kibana/7.14/whats-new.html#_time_shifts) and [color by value](https://www.elastic.co/guide/en/kibana/7.14/whats-new.html#_table_enhancements) and [custom formulas](https://www.elastic.co/guide/en/kibana/7.14/lens.html#lens-formulas) in Lens | [blog post](https://www.elastic.co/blog/kibana-10-common-questions-formulas-time-series-maps) |
-| K | Maps updates | Highlight POI, mapping anomalies, a time slider and more | [blog post](https://www.elastic.co/blog/whats-new-elastic-maps-geo-annotations-choropleth-maps-integrations) |
+| K | Maps updates | Highlight POI, mapping anomalies, a time slider and more | [blog post](https://www.elastic.co/blog/whats-new-elastic-maps-geo-annotations-choropleth-maps-integrations) and [volcano example](https://www.elastic.co/blog/understanding-evolution-volcano-eruption-elastic-maps) |
 
 ## 7.13
 
@@ -272,6 +306,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Security sources | Adding Okta, Microsoft 365 and Check Point security sources |  |
 | APM | Inferred spans | Surface additional spans that show you granular method-level info powered by a low overhead async profiler | [blog post](https://www.elastic.co/blog/from-distributed-tracing-to-distributed-profiling-with-elastic-apm) and [okta security](https://www.elastic.co/blog/testing-okta-visibility-and-detection-dorothy) |
 | ES | async search | Run potentially long-running queries in the background, allowing you to track their progress and retrieve partial results as they become available. |  |
+| ES | Heap reduction | Moved the terms index of the _id off heap for time-series | [blog post](https://www.elastic.co/blog/significantly-decrease-your-elasticsearch-heap-memory-usage) |
 | ES | Faster sort | Improved performance on time sorted queries (note that this does not help when aggregations are requested) |  |
 | ES | Platform support | ES now supports RHEL/CentOS 8, Windows 2019 and OpenJDK 14 | [support matrix](https://www.elastic.co/support/matrix) |
 | ML | Multiclass classification | Data frame analytics can classify a range of outputs, not only right or wrong (binary classif introduced in 7.5) | [example on DGA detection](https://www.elastic.co/blog/machine-learning-in-cybersecurity-training-supervised-models-to-detect-dga-activity) and [part 2 on inference](https://www.elastic.co/blog/machine-learning-in-cybersecurity-detecting-dga-activity-in-network-data) |
