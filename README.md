@@ -11,11 +11,37 @@ Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Bea
 
 
 
+## 8.1
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 8 Mar 2022 | 8.2 release | 8 Sep 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-1-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Security integrations | Added integs for Akamai, Symantec, Zscaler ZIA & ZPA, Tenable, modsecurity, auth0 and much more! | [new integrations picture](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt284359ffbafcf373/621e7d376f0333490a0e7315/security-8-1-integrations.png) |
+| A | network packet capture | Npcap integration to ingest host-based network activity | [integration](https://docs.elastic.co/en/integrations/network_traffic) |
+| A | Threat intel | Added threat intelligence feeds from Recorded Future, ThreatQuotient and Cybersixgill |  |
+| APM | OpenTelemetry logs | Ingest OpenTelemetry logs | [blog post](https://www.elastic.co/blog/tracing-aws-lambdas-with-opentelemetry-and-elastic-observability) and [illustration](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt7a563316b21adb86/621facd068865368951c6443/image_(4).png) |
+| APM | Jenkins logs | Collect detailed Jenkins logs (inc. errors and build execution details) with OT collector | [jenkins ot collector](https://plugins.jenkins.io/opentelemetry/) |
+| APM | AWS Lambda tracing | Collect application traces from AWS Lambda functions written in Node.js, Python, and Java | [doc](https://www.elastic.co/guide/en/apm/guide/current/aws-lambda-extension.html) |
+| ES | 20% better! | 20% faster indexing speeds and 20% lower data storage requirements with doc-value-only fields | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.1/doc-values.html#doc-value-only-fields) |
+| ES | Hex tile agg | Geospatial data can be partitioned into hexagonally shaped tiles. After all, hexagons are the bestagons - and I (frenchy) can't agree more! |  |
+| ES | painless getting simpler | New field API helps writing shorter painless | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.1/script-fields-api.html) |
+| K | Gauge, waffle & mosaic | Use gauges for metrics, waffles to see the smallest proportions and mosaics to better compare data with multiple variables | [video](https://www.youtube.com/watch?v=58itzaqz6xE) |
+| K | Lens combined fields | Combine multi-field top values with a simple drag & drop |  |
+| K | Lens metric color | Color by value range in Lens metrics | [example](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltcca1469ca37c8398/62278916737c7822c2880ff7/lens-color-metrics-8.1.png) |
+| K | Document Explorer | In Discover, try out the new Document Explorer, a whole new way to examine your data |  |
+| K | SIEM UI enhancements | Many UI improvements on [alerts](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltdf79ac68b5501e7e/6228ce50b17dc223f2f2a5fd/screenshot-security-alert-detail-context-1000.png), [rules](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blte72be23d400662a9/6227bc87a7fee30be331ef93/recording-security-rule-management-width-1000.gif), [exceptions](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltd872e9ba9a015399/6227bb22eda9a1043584a46f/screenshot-security-exception-width.jpeg) and [filters](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltea730a8f80b28401/6227bfeb638e1304348421ac/screenshot-security-event-filters-policy-8-1-width-1000.png) |  |
+
+
 ## 8.0
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 10 Feb 2022 | 8.1 release | 8 Aug 2023 |
+| 8 Feb 2022 | 8.1 release | 8 Aug 2023 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-0-0) and [beta post](https://www.elastic.co/blog/preview-elastic-8-0-beta-stack-security-by-default-natural-language-processing-and-more)
 
@@ -56,8 +82,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | AWS Firelens | Added integration for AWS FireLens to use ECS and Fargate logs in Observability & Security | [blog post](https://www.elastic.co/blog/elastic-cloud-with-aws-firelens-accelerate-time-to-insight-with-agentless-data-ingestion) |
 | A | Enhanced protection | Extended malicious behavior protection & memory threat protection | [blog post](https://www.elastic.co/blog/linux-malware-protection-in-elastic-security) |
 | APM | CI/CD | Integrations for Ansible and Maven offering deeper visibility into job execution and deployment errors |  |
-| APM | .Net auto-instrumentation | Auto-instrumentation of .NET applications with no code changes required |  |
+| APM | .Net auto-instrumentation | Auto-instrumentation of .NET applications with no code changes required | [blog post](https://www.elastic.co/blog/auto-instrumentation-elastic-apm-net-agent) |
 | L | ECS compliance | The grok processor now supports ECS! in the path of getting LS fully ECS compliant... |  |
+| ES | categorize_text | New multi-bucket aggregation that groups semi-structured text into buckets | [blog post](https://www.elastic.co/blog/categorize-your-logs-with-the-new-elasticsearch-categorize-text-search-aggregation) |
 | ES | Heap reduction | Greatly reduced heap consumption and improved search speed | [blog post](https://www.elastic.co/blog/three-ways-improved-elasticsearch-scalability) |
 | ES | EQL perf | Performance increase of 830x (by removing the use of null values as join keys in sequences) |  |
 | ES | Sort queries perf | Performance improvement (up to 4x) for time-sorted data retrieval | [blog post](https://www.elastic.co/blog/optimizing-sort-queries-in-elasticsearch-for-faster-results) |
@@ -65,7 +92,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | Integrations UI | Search for all integrations - with a few clicks to deploy with Elastic Agent |  |
 | K | Reference lines | Horizontal reference lines in Kibana Lens to identify important values |  |
 | K | ServiceNow integrations | Certified integrations of ServiceNow SIR, ITSM and ITOM to accelerate | [blog post](https://www.elastic.co/blog/elastic-integrations-with-servicenow-itsm-sir-itom) |
-| K | Osquery manager | Now GA with addition of custom config, ECS mapping, query testing & query pack scheduling | [blog post](https://www.elastic.co/blog/gain-upper-hand-over-adversaries-with-osquery-and-elastic) |
+| K | Osquery manager | Now GA with addition of custom config, ECS mapping, query testing & query pack scheduling | [blog post](https://www.elastic.co/blog/gain-upper-hand-over-adversaries-with-osquery-and-elastic) and [a guide on threat hunting with osquery](https://www.elastic.co/blog/comprehensive-guide-on-threat-hunting-for-persistence-with-osquery) |
 | K | Upgrade assistant | Get prepared for 8.0 and beyond! | [webinar](https://www.elastic.co/elasticon/archive/2021/global/upgrade-assistant-to-the-rescue) |
 | K | OAuth 2 for emails | Authenticate the email connector with OAuth 2.0 Client Credentials |  |
 
@@ -85,7 +112,10 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Private EPR | Self-managed version of Elastic Package Registry (EPR) as a Docker image | [doc](https://www.elastic.co/guide/en/integrations-developer/current/air-gapped.html) |
 | A | In-memory attacks | Prevent memory manipulation (used for process injection via shellcode) | [blog post](https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack) |
 | A | Linux quarantine | Use [eBPF](https://ebpf.io/) to isolate a Linux host from the network | [Cmd](https://www.elastic.co/blog/elastic-and-cmd-join-forces-to-help-you-take-command-of-your-cloud-workloads) and [eBPF blog post](https://www.elastic.co/blog/code-coverage-for-ebpf-programs) |
+| APM | iOS agent | new APM agent for iOS (Swift only) based on OpenTelemetry | [blog post](https://www.elastic.co/blog/elastic-apm-ios-agent-technical-preview-released) |
 | ES | Vector tiles | The vector tiles provides a huge performance improvement when searching geo_points and geo_shapes drawn to a map | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-vector-tile-search-api-for-geospatial) |
+| ES | Field usage | Grab field usage information and statistics |  |
+| ES | Disk usage | Grab disk usage information of each field of an index or data stream | [blog post](https://www.elastic.co/blog/how-to-analyze-and-optimize-the-storage-footprint-of-your-elastic-deployment-disk-usage-api) |
 | ML | Import/Export | Import and export jobs in Stack Management > Machine Learning Jobs |  |
 | K | ML monitoring | Use anomaly detection on jobs health and alert on issue | [blog post](https://www.elastic.co/blog/accelerate-actions-on-anomaly-detection-jobs-with-the-kibana-alerting-framework) |
 | K | Runtime field editor | Create runtime fields on the fly in Kibana |  |
