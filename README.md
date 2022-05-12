@@ -11,6 +11,34 @@ Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Bea
 
 
 
+## 8.2
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 3 May 2022 | 8.3 release | 26 Oct 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-2-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Added integ | Added support for Microsoft 365 Defender, VMware Carbon Black or Cisco Secure Email & ISE |  |
+| A | Logstash output | The Elastic Agent (deployed with Fleet) now supports Logstash output | [comparison table](https://www.elastic.co/guide/en/fleet/current/beats-agent-comparison.html) |
+| A | Custom blocklists | Protect high-risk systems (PoS, MS...) by blocking the execution of specific app at the edge |  |
+| A | Uptime & Cloud | New cloud-based synthetic testing initiated from Elastic Cloud Uptime solution |  |
+| APM | Sampling++ | Tail-based sampling (added to existing head-based) for high volumes of transactions | [image](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt10f97ccce64381b2/626185a0b87c7b4bf91c552a/Elastic-Observability-Head-tail-based-sampling.png) |
+| ES | Lookup runtime fields | Enrich at query time from another index - Can I call it outer join?! | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/runtime-retrieving-fields.html#lookup-runtime-fields) |
+| ES | Random sampler agg | Exponentially accelerate aggregations (with a slight trade off in accuracy) by randomly sampling docs | [blog post](https://www.elastic.co/blog/aggregate-data-faster-with-new-the-random-sampler-aggregation), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/search-aggregations-random-sampler-aggregation.html) |
+| ES | JWT support | Authorize and authenticate Elasticsearch's API calls using JSON Web Tokens (JWT) |  |
+| ES | Search UI | New UI (actually a React lib) to quickly implement search experiences | [blog post](https://www.elastic.co/blog/search-ui-1-1-0-makes-building-search-experiences-for-elasticsearch-even-easier), [doc](https://docs.elastic.co/search-ui/overview) |
+| K | French Kibana! | Sorry, I couldn't miss that one ;) | [doc](https://www.elastic.co/guide/en/kibana/8.2/i18n-settings-kb.html) |
+| K | Document explorer | Enhanced doc explorer with column selection, sorting, highlighting, comparing, etc |  |
+| K | Users view | The new Users View supports security monitoring by presenting environment-wide user context | [visual](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt0b805d2aae96e9b9/6259cb853531aa4a9d831bfd/1-security-user-detail.png) |
+|K | Session View | New interface that provides a forensic view for examining process executions on Linux | [visual](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt7574a35e3d374371/625c7c98102a0b4e934e1f81/screenshot-security-session-manager-clean.png) |
+| K | Investigation guide | Detailed (expert) investigation guides for a large set of prebuilt detection rules |  |
+| K | Osquery from alerts | Inspect hosts directly from an alert using the Osquery Manager integration for Elastic Agent | [visual](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt1e1b77a6667cd7fe/6259da9c38818f4df2a2c1fe/4-security-rule-run_osquery_button.png) |
+| K | xMatters connector | Create associated incidents in the xMatters’s automated incident management platform |  |
+
+
 ## 8.1
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
@@ -47,11 +75,12 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | AWS SAR | Ingest logs from AWS S3 using Elastic serverless forwarder (AWS Lambda app) | [blog post](https://www.elastic.co/blog/elastic-and-aws-serverless-application-repository-speed-time-to-actionable-insights-with-frictionless-log-ingestion-from-amazon-s3) |
+| A | AWS SAR | Ingest logs from AWS S3 using Elastic serverless forwarder (AWS Lambda app) | [blog post](https://www.elastic.co/blog/elastic-and-aws-serverless-application-repository-speed-time-to-actionable-insights-with-frictionless-log-ingestion-from-amazon-s3) and [security workloads](https://www.elastic.co/blog/protect-your-aws-workloads-using-elastic-security) |
 | A | AWS Storage Lens | Ingest Storage Lens metrics to optimize S3 usage costs, ensure data protection and monitor user activity trends | [blog post](https://www.elastic.co/blog/new-elastic-and-amazon-s3-storage-lens-integration-simplify-management-control-costs-and-reduce-risk) |
 | ES | Security by default | Elastic Stack security is on by default for self-managed clusters | [blog post](https://www.elastic.co/blog/introducing-simplified-elastic-stack-security) |
 | ES | NLP | Native support for PyTorch ML models into Elasticsearch to do natural language processing (NLP) for named entity recognition (NER) and sentiment analysis | [blog post](https://www.elastic.co/blog/introduction-to-nlp-with-pytorch-models), [webinar](https://www.youtube.com/watch?v=SvvbMCwyOnU) and [another webinar](https://www.elastic.co/virtual-events/introduction-to-nlp-models-and-vector-search) |
-| ES | ANN search | Native support for approximate nearest neighbor (ANN) search to compare vector-based queries with a vector-based document corpus |  |
+| ES | ANN search | Native support for approximate nearest neighbor (ANN) search to compare vector-based queries with a vector-based document corpus | [blog post](https://www.elastic.co/blog/embracing-the-future-of-search-relevance) |
+| K | Field statistics | In Discover, new tab to explore the fields in your data |  |
 
 
 ## 7.17
@@ -89,6 +118,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | EQL perf | Performance increase of 830x (by removing the use of null values as join keys in sequences) |  |
 | ES | Sort queries perf | Performance improvement (up to 4x) for time-sorted data retrieval | [blog post](https://www.elastic.co/blog/optimizing-sort-queries-in-elasticsearch-for-faster-results) |
 | ES | Prebuilt ILM policies | ILM now includes five built-in policies |  |
+| K | Compressed spans | In the APM UI, displaying a compressed view of spans | [visual](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt171d62ee7d3df42e/619e56e62dc01977975bbdfc/blog-7-16-observability-spans-view.png) |
 | K | Integrations UI | Search for all integrations - with a few clicks to deploy with Elastic Agent |  |
 | K | Reference lines | Horizontal reference lines in Kibana Lens to identify important values |  |
 | K | ServiceNow integrations | Certified integrations of ServiceNow SIR, ITSM and ITOM to accelerate | [blog post](https://www.elastic.co/blog/elastic-integrations-with-servicenow-itsm-sir-itom) |
@@ -333,7 +363,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | B | Added integrations | Main additions are Prometheus/OpenMetrics, AWS (Lambda, VPC, Aurora, DynamoDB), Google Cloud (Pub/Sub and LB), Azure (db account, AKS and container metrics), Pivotal Cloud Foundry, MQTT, Redis, and IBM MQ | [Prometheus blog post](https://www.elastic.co/blog/how-to-implement-prometheus-long-term-storage-using-elasticsearch), [all integrations](https://www.elastic.co/integrations) |
-| B | Security sources | Adding Okta, Microsoft 365 and Check Point security sources |  |
+| B | Security sources | Adding Okta, Microsoft 365 and Check Point security sources | [blog post on Okta](https://www.elastic.co/blog/okta-and-lapsus-what-you-need-to-know) |
 | APM | Inferred spans | Surface additional spans that show you granular method-level info powered by a low overhead async profiler | [blog post](https://www.elastic.co/blog/from-distributed-tracing-to-distributed-profiling-with-elastic-apm) and [okta security](https://www.elastic.co/blog/testing-okta-visibility-and-detection-dorothy) |
 | ES | async search | Run potentially long-running queries in the background, allowing you to track their progress and retrieve partial results as they become available. |  |
 | ES | Heap reduction | Moved the terms index of the _id off heap for time-series | [blog post](https://www.elastic.co/blog/significantly-decrease-your-elasticsearch-heap-memory-usage) |
