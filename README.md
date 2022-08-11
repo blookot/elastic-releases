@@ -5,10 +5,35 @@ Try the official Elasticsearch Service from the creators on [Elastic Cloud](http
 
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
-_Note2_: you can also try the official [Elastic Terraform provider](https://www.elastic.co/blog/streamline-configuration-processes-with-official-elastic-stack-terraform-provider)!
+_Note2_: you can also try the official [Elastic Terraform provider](https://www.elastic.co/blog/streamline-configuration-processes-with-official-elastic-stack-terraform-provider) (see [blog post](https://www.elastic.co/blog/using-terraform-with-elastic-cloud) as well)!
 
 Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
+
+
+## 8.3
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 28 June 2022 | 8.4 release | 28 Dec 2023 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-3-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | New integrations | AWS Fargate (monitor ECS containers), Nagios, Spark, Spring Boot, Salesforce and Hadoop |  |
+| A | Rolling upgrades | Rolling upgrades during scheduled maintenance windows  |  |
+| A | Tagging | Attach tags to agents during installation to have greater control over agents management at scale |  |
+| ES | Hybrid deployments | CCS and CCR now support searching and replicating data across Elastic Cloud, self-managed clusters, ECE and ECK. | [blog post](https://www.elastic.co/blog/search-and-replicate-data-between-your-elastic-cloud-and-on-prem-deployments), [another one](https://www.elastic.co/blog/whats-new-elasticsearch-kibana-cloud-8-3-0) |
+| ES | Search in v5 snapshots | Use searchable snapshots to access 6-year-old data with no restore or reindex! | [blog post](https://www.elastic.co/blog/whats-new-elasticsearch-8-3-0) |
+| ES | Sharding guidance | Updated sharding guidance (starting v8.3+) on master & data nodes | [blog post](https://www.elastic.co/blog/whats-new-elasticsearch-8-3-0), [blog update](https://www.elastic.co/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster) |
+| ES | Geo grid query | Natively return all the documents that overlap a specific geo tile |  |
+| ES | dot naming | Now supporting dots in field names | [blog post](https://www.elastic.co/blog/whats-new-elasticsearch-8-3-0) and [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.3/release-highlights.html?elektra=elasticsearch-8-3-blog#add_support_for_dots_in_field_names_for_metrics_usecases) |
+| K | Cloud Security | New cloud posture management and workload protection capabilities, starting with [CIS k8s benchmark](https://www.cisecurity.org/benchmark/kubernetes) | [blog post](https://www.elastic.co/blog/secure-your-cloud-with-elastic-security) |
+| K | SOAR | Elastic and Tines are partnering to help detect security threats and reduce mean time to respond | [blog post](https://www.elastic.co/blog/elastic-and-tines-partner-to-detect-security-threats-and-reduce-mean-time-to-respond) |
+| K | Alerting in Discover | Create alerts for documents matching your query with a custom threshold and time interval |  |
+| K | Viz to ML | Transform a visualization (from a dashboard) into a machine learning anomaly detection job | [doc](https://www.elastic.co/guide/en/machine-learning/8.3/ml-jobs-from-lens.html) |
+| K | D&D controls | In your dashboard, add controls with simple drag & drop | [doc](https://www.elastic.co/guide/en/kibana/8.3/add-controls.html) |
 
 
 ## 8.2
@@ -25,7 +50,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Logstash output | The Elastic Agent (deployed with Fleet) now supports Logstash output | [comparison table](https://www.elastic.co/guide/en/fleet/current/beats-agent-comparison.html) |
 | A | Custom blocklists | Protect high-risk systems (PoS, MS...) by blocking the execution of specific app at the edge |  |
 | A | Uptime & Cloud | New cloud-based synthetic testing initiated from Elastic Cloud Uptime solution |  |
-| APM | Sampling++ | Tail-based sampling (added to existing head-based) for high volumes of transactions | [image](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt10f97ccce64381b2/626185a0b87c7b4bf91c552a/Elastic-Observability-Head-tail-based-sampling.png) |
+| APM | Sampling++ | Tail-based sampling (added to existing head-based) for high volumes of transactions | [blog post](https://www.elastic.co/fr/blog/whats-new-elastic-observability-8-2-0), [image](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt10f97ccce64381b2/626185a0b87c7b4bf91c552a/Elastic-Observability-Head-tail-based-sampling.png) |
 | ES | Lookup runtime fields | Enrich at query time from another index - Can I call it outer join?! | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/runtime-retrieving-fields.html#lookup-runtime-fields) |
 | ES | Random sampler agg | Exponentially accelerate aggregations (with a slight trade off in accuracy) by randomly sampling docs | [blog post](https://www.elastic.co/blog/aggregate-data-faster-with-new-the-random-sampler-aggregation), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/search-aggregations-random-sampler-aggregation.html) |
 | ES | JWT support | Authorize and authenticate Elasticsearch's API calls using JSON Web Tokens (JWT) |  |
@@ -54,7 +79,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Threat intel | Added threat intelligence feeds from Recorded Future, ThreatQuotient and Cybersixgill |  |
 | APM | OpenTelemetry logs | Ingest OpenTelemetry logs | [blog post](https://www.elastic.co/blog/tracing-aws-lambdas-with-opentelemetry-and-elastic-observability) and [illustration](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt7a563316b21adb86/621facd068865368951c6443/image_(4).png) |
 | APM | Jenkins logs | Collect detailed Jenkins logs (inc. errors and build execution details) with OT collector | [jenkins ot collector](https://plugins.jenkins.io/opentelemetry/) |
-| APM | AWS Lambda tracing | Collect application traces from AWS Lambda functions written in Node.js, Python, and Java | [doc](https://www.elastic.co/guide/en/apm/guide/current/aws-lambda-extension.html) |
+| APM | AWS Lambda tracing | Collect application traces from AWS Lambda functions written in Node.js, Python, and Java | [blog post](https://www.elastic.co/fr/blog/observability-apm-aws-lambda-serverless-functions),  [doc](https://www.elastic.co/guide/en/apm/guide/current/aws-lambda-extension.html) |
 | ES | 20% better! | 20% faster indexing speeds and 20% lower data storage requirements with doc-value-only fields | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.1/doc-values.html#doc-value-only-fields) |
 | ES | Hex tile agg | Geospatial data can be partitioned into hexagonally shaped tiles. After all, hexagons are the bestagons - and I (frenchy) can't agree more! |  |
 | ES | painless getting simpler | New field API helps writing shorter painless | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.1/script-fields-api.html) |
@@ -78,7 +103,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | AWS SAR | Ingest logs from AWS S3 using Elastic serverless forwarder (AWS Lambda app) | [blog post](https://www.elastic.co/blog/elastic-and-aws-serverless-application-repository-speed-time-to-actionable-insights-with-frictionless-log-ingestion-from-amazon-s3) and [security workloads](https://www.elastic.co/blog/protect-your-aws-workloads-using-elastic-security) |
 | A | AWS Storage Lens | Ingest Storage Lens metrics to optimize S3 usage costs, ensure data protection and monitor user activity trends | [blog post](https://www.elastic.co/blog/new-elastic-and-amazon-s3-storage-lens-integration-simplify-management-control-costs-and-reduce-risk) |
 | ES | Security by default | Elastic Stack security is on by default for self-managed clusters | [blog post](https://www.elastic.co/blog/introducing-simplified-elastic-stack-security) |
-| ES | NLP | Native support for PyTorch ML models into Elasticsearch to do natural language processing (NLP) for named entity recognition (NER) and sentiment analysis | [blog post](https://www.elastic.co/blog/introduction-to-nlp-with-pytorch-models), [webinar](https://www.youtube.com/watch?v=SvvbMCwyOnU) and [another webinar](https://www.elastic.co/virtual-events/introduction-to-nlp-models-and-vector-search) |
+| ES | NLP | Native support for PyTorch ML models into Elasticsearch to do natural language processing (NLP) for named entity recognition (NER) and sentiment analysis | [blog post](https://www.elastic.co/blog/introduction-to-nlp-with-pytorch-models), [another one](https://www.elastic.co/blog/how-to-deploy-natural-language-processing-nlp-getting-started), [sentiment analysis](https://www.elastic.co/blog/how-to-deploy-nlp-sentiment-analysis-example), [NER](https://www.elastic.co/blog/how-to-deploy-nlp-named-entity-recognition-ner-example), [text embeddings](https://www.elastic.co/blog/how-to-deploy-nlp-text-embeddings-and-vector-search),   [webinar](https://www.youtube.com/watch?v=SvvbMCwyOnU) and [another webinar](https://www.elastic.co/virtual-events/introduction-to-nlp-models-and-vector-search) |
 | ES | ANN search | Native support for approximate nearest neighbor (ANN) search to compare vector-based queries with a vector-based document corpus | [blog post](https://www.elastic.co/blog/embracing-the-future-of-search-relevance) |
 | K | Field statistics | In Discover, new tab to explore the fields in your data |  |
 
@@ -268,7 +293,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | A | Trusted apps | Users can provide a list of trusted (whitelisted) apps in malware prevention |  |
-| APM | PHP agent | New PHP agent | [blog post](https://www.elastic.co/blog/elastic-apm-php-agent-1-0-released) |
+| APM | PHP agent | New PHP agent | [blog post](https://www.elastic.co/blog/elastic-apm-php-agent-1-0-released), [in v8](https://www.elastic.co/blog/introducing-the-new-php-client-for-elasticsearch-8) |
 | ES | Searchable snapshots | Elasticsearch can now search in snapshots stored in low-cost object stores like S3 | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-searchable-snapshots) and [vs AWS ultrawarm](https://www.elastic.co/blog/elastic-searchable-snapshots-or-aws-ultrawarm-making-the-right-choice-elasticsearch) |
 | ES | Improved compression | 10% storage savings in indices created in v7.10+ | [blog post](https://www.elastic.co/blog/save-space-and-money-with-improved-storage-efficiency-in-elasticsearch-7-10) |
 | ES | Cold tier | By replacing the index replica by a searchable snapshot, cluster storage can be reduced by up to 50% | [3-tier setup](https://www.elastic.co/blog/elasticsearch-data-lifecycle-management-with-data-tiers) and [cold tier testing](https://www.elastic.co/blog/testing-the-new-elasticsearch-cold-tier-of-searchable-snapshots-at-scale) |
@@ -660,7 +685,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | B | Dissect processor | A new processor that's fast and performant, and brings more processing power to the edge device |  |
 | L | Azure module | Monitoring your Azure cloud environment using the Elastic Stack is a single command away | [blog post](https://www.elastic.co/blog/azure-cloud-monitoring-with-the-elastic-stack) |
 | APM | ML integration | Click a button in the APM app to enable Machine Learning jobs and start detecting anomalies on performance and errors |  |
-| APM | Java agent | New APM agent for Java | [blog post](https://www.elastic.co/blog/elastic-apm-java-agent-beta-released), [perf tuning](https://www.elastic.co/blog/performance-tuning-of-the-elastic-apm-java-agent), [plugin contrib](https://www.elastic.co/blog/a-cookbook-for-contributing-a-plugin-to-the-elastic-apm-java-agent), [5mn video](https://youtu.be/mm0sdldjeo0) and [other 5' video](https://youtu.be/X9r0sjBWdlA) and [java monitoring](https://www.elastic.co/blog/monitoring-java-applications-and-getting-started-with-the-elastic-apm-java-agent) |
+| APM | Java agent | New APM agent for Java | [blog post](https://www.elastic.co/blog/elastic-apm-java-agent-beta-released), [custom instrumentation](https://www.elastic.co/fr/blog/create-your-own-instrumentation-with-the-java-agent-plugin), [perf tuning](https://www.elastic.co/blog/performance-tuning-of-the-elastic-apm-java-agent), [regression testing](https://www.elastic.co/fr/blog/regression-testing-your-java-agent-plugin), [plugin contrib](https://www.elastic.co/blog/a-cookbook-for-contributing-a-plugin-to-the-elastic-apm-java-agent), [5mn video](https://youtu.be/mm0sdldjeo0) and [other 5' video](https://youtu.be/X9r0sjBWdlA) and [java monitoring](https://www.elastic.co/blog/monitoring-java-applications-and-getting-started-with-the-elastic-apm-java-agent) |
 | APM | RUM agent | Real User Monitoring | [blog post](https://www.elastic.co/blog/elastic-apm-rum-js-agent-is-generally-available), [another post](https://www.elastic.co/blog/performing-real-user-monitoring-rum-with-elastic-apm) |
 | ES | Kerberos auth | Use Kerberos as authentication realm | [blog post](https://www.elastic.co/blog/how-to-secure-your-elasticsearch-clusters-using-kerberos) |
 | ES | FIPS 140-2 | Elasticsearch now has the ability to run with a FIPS 140-2 enabled JVM | [blog post](https://www.elastic.co/blog/configuring-elasticsearch-in-a-fips-140-2-environment) |
