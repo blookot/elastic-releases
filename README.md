@@ -11,6 +11,33 @@ Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Bea
 
 
 
+## 8.4
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 24 Aug 2022 | 8.5 release | 24 Feb 2024 |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-4-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Added integrations | Support for Azure Firewall, Cisco Identity Service Engine, Cisco Secure Email Gateway, Citrix WAF, Mimecast, Proofpoint TAP and SentinelOne |  |
+| A | New remediations | New cross-OS responses to enumerate, suspend and kill processes |  |
+| A | Self healing | Automated remediation feature that erases attack artifacts to return to pre-attack state |  |
+| APM | AWS instrumentation | APM agents adds auto-instrumentation for calls to native AWS services (inc S3, SNS, SQS, and DynamoDB) |  |
+| ES | synthetic _source | Reduce the index size and speed up analysis for specific time-series use cases | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping-source-field.html#synthetic-source) |
+| K | Responser | New UI that enables viewing and invoking response actions quickly |  |
+| K | SOAR partners | New SOAR partnerships with D3 and Torq for customizable orchestration capabilities |  |
+| K | Custom connectors | An open community-based list of webhook actions that can be added to rules within Elastic Security | [blog post](https://www.elastic.co/blog/webhook-for-case-management), [github repo](https://github.com/elastic/security-action-examples) |
+| K | Log rate spikes | Identify deviations from the baseline log rate and which fields contribute the most to the deviation |  |
+| K | Scheduled snooze | Snooze option added to alert rules, allowing you to temporarily suppress notifications |  |
+| K | Transforms retries | Transforms recover after a failure without any user intervention |  |
+| K | k8s dashboards | OOTB Kubernetes dashboards have been revamped using Lens for enhanced drill-down and navigation |  |
+| K | Ops alerting | Easily access and manage all observability rules and alerts from within the Observability UI |  |
+| K | APM errors | APM error screens add transaction details to facilitate root cause analysis workflows |  |
+| K | DevTools improvement | Performance improvements, ability to leave comments and more! | [blog post](https://www.elastic.co/blog/big-console-improvements-in-kibana) |
+
+
 ## 8.3
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
