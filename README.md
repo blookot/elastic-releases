@@ -7,15 +7,37 @@ _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a 
 
 _Note2_: you can also try the official [Elastic Terraform provider](https://www.elastic.co/blog/streamline-configuration-processes-with-official-elastic-stack-terraform-provider) (see [blog post](https://www.elastic.co/blog/using-terraform-with-elastic-cloud) as well)!
 
-Products are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
+_EOL note_: Starting 1st Oct 2022, a new policy applies. 
+* For v8.x, maintenance ends at the latest between 10th Aug 2024 and the v9.0 release date + 6 months. Support ends 6 months after maintenance.
+* For v7.x and before please refer to the tables below.
 
+Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
+
+
+## 8.5
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 1 Nov 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-5-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | 10 to 30% faster | When using explicit _id, GET and indexing are way faster! |  |
+| K | Synthetics service | Ability to enable synthetic tests (from a recorded script) using our Cloud service | [blog post](https://www.elastic.co/blog/oct-2022-launch-elastic-observability), [news blog post](https://www.elastic.co/blog/new-synthetic-monitoring-observability) |
+| K | Universal profiling | Provides visibility into how application code and infrastructure are performing | [blog post](https://www.elastic.co/blog/oct-2022-launch-elastic-profiling), [general on observability](https://www.elastic.co/blog/oct-2022-launch-elastic-observability) and [press release](https://ir.elastic.co/news-events/press-releases/press-releases-details/2022/Elastic-Announces-the-Beta-of-New-Universal-Profiling-and-Additional-Synthetic-Monitoring-Capabilities-to-Enhance-Cloud-Native-Observability/default.aspx) |
+| K | Lens to ML | Anomaly detection jobs can now be created directly from the flyout of a Lens viz |  |
+| K | ML notifications | In ML UI, dedicated notifications page to display all ML-related messages | [image](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltd1d056868604a044/634827e0bbff0b3fd98de80c/blog-elastic-platform85-7.png) |
+| K | Case assignment | Assign a case to users (via searching through user profiles) |  |
+| K | Log pattern analysis | In ML AIOps UI, take the "log rate spikes" (from 8.4) further by grouping results that co-occur | [image](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt80c697ee6558628c/634827a5b0662c1e9a6717ce/blog-elastic-platform85-5.png) |
 
 
 ## 8.4
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 24 Aug 2022 | 8.5 release | 24 Feb 2024 |
+| 24 Aug 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-4-0)
 
@@ -40,9 +62,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 ## 8.3
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 28 June 2022 | 8.4 release | 28 Dec 2023 |
+| 28 June 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-3-0)
 
@@ -56,18 +78,18 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | Sharding guidance | Updated sharding guidance (starting v8.3+) on master & data nodes | [blog post](https://www.elastic.co/blog/whats-new-elasticsearch-8-3-0), [blog update](https://www.elastic.co/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster) |
 | ES | Geo grid query | Natively return all the documents that overlap a specific geo tile |  |
 | ES | dot naming | Now supporting dots in field names | [blog post](https://www.elastic.co/blog/whats-new-elasticsearch-8-3-0) and [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.3/release-highlights.html?elektra=elasticsearch-8-3-blog#add_support_for_dots_in_field_names_for_metrics_usecases) |
-| K | Cloud Security | New cloud posture management and workload protection capabilities, starting with [CIS k8s benchmark](https://www.cisecurity.org/benchmark/kubernetes) | [blog post](https://www.elastic.co/blog/secure-your-cloud-with-elastic-security) |
-| K | SOAR | Elastic and Tines are partnering to help detect security threats and reduce mean time to respond | [blog post](https://www.elastic.co/blog/elastic-and-tines-partner-to-detect-security-threats-and-reduce-mean-time-to-respond) |
-| K | Alerting in Discover | Create alerts for documents matching your query with a custom threshold and time interval |  |
+| K | Cloud Security | New cloud posture management and workload protection capabilities, starting with [CIS k8s benchmark](https://www.cisecurity.org/benchmark/kubernetes) | [blog post](https://www.elastic.co/blog/secure-your-cloud-with-elastic-security) and [GA](https://www.elastic.co/fr/blog/whats-new-elastic-security-8-5-0) |
+| K | SOAR | Elastic and Tines are partnering to help detect security threats and reduce mean time to respond | [blog post](https://www.elastic.co/blog/elastic-and-tines-partner-to-detect-security-threats-and-reduce-mean-time-to-respond) and [SOAR & TI](https://www.elastic.co/blog/oct-2022-launch-elastic-security) |
+| K | Alerting in Discover | Create alerts for documents matching your query with a custom threshold and time interval | [history of Kibana](https://www.elastic.co/blog/the-evolution-of-discover-in-kibana) |
 | K | Viz to ML | Transform a visualization (from a dashboard) into a machine learning anomaly detection job | [doc](https://www.elastic.co/guide/en/machine-learning/8.3/ml-jobs-from-lens.html) |
 | K | D&D controls | In your dashboard, add controls with simple drag & drop | [doc](https://www.elastic.co/guide/en/kibana/8.3/add-controls.html) |
 
 
 ## 8.2
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 3 May 2022 | 8.3 release | 26 Oct 2023 |
+| 3 May 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-2-0)
 
@@ -93,9 +115,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 ## 8.1
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 8 Mar 2022 | 8.2 release | 8 Sep 2023 |
+| 8 Mar 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-1-0)
 
@@ -103,7 +125,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | --- | --- | --- | --- |
 | A | Security integrations | Added integs for Akamai, Symantec, Zscaler ZIA & ZPA, Tenable, modsecurity, auth0 and much more! | [new integrations picture](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt284359ffbafcf373/621e7d376f0333490a0e7315/security-8-1-integrations.png) |
 | A | network packet capture | Npcap integration to ingest host-based network activity | [integration](https://docs.elastic.co/en/integrations/network_traffic) |
-| A | Threat intel | Added threat intelligence feeds from Recorded Future, ThreatQuotient and Cybersixgill |  |
+| A | Threat intel | Added threat intelligence feeds from Recorded Future, ThreatQuotient and Cybersixgill | [SOAR & TI](https://www.elastic.co/blog/oct-2022-launch-elastic-security) |
 | APM | OpenTelemetry logs | Ingest OpenTelemetry logs | [blog post](https://www.elastic.co/blog/tracing-aws-lambdas-with-opentelemetry-and-elastic-observability) and [illustration](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt7a563316b21adb86/621facd068865368951c6443/image_(4).png) |
 | APM | Jenkins logs | Collect detailed Jenkins logs (inc. errors and build execution details) with OT collector | [jenkins ot collector](https://plugins.jenkins.io/opentelemetry/) |
 | APM | AWS Lambda tracing | Collect application traces from AWS Lambda functions written in Node.js, Python, and Java | [blog post](https://www.elastic.co/fr/blog/observability-apm-aws-lambda-serverless-functions),  [doc](https://www.elastic.co/guide/en/apm/guide/current/aws-lambda-extension.html) |
@@ -113,15 +135,15 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | Gauge, waffle & mosaic | Use gauges for metrics, waffles to see the smallest proportions and mosaics to better compare data with multiple variables | [video](https://www.youtube.com/watch?v=58itzaqz6xE) |
 | K | Lens combined fields | Combine multi-field top values with a simple drag & drop |  |
 | K | Lens metric color | Color by value range in Lens metrics | [example](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltcca1469ca37c8398/62278916737c7822c2880ff7/lens-color-metrics-8.1.png) |
-| K | Document Explorer | In Discover, try out the new Document Explorer, a whole new way to examine your data |  |
+| K | Document Explorer | In Discover, try out the new Document Explorer, a whole new way to examine your data | [history of Kibana](https://www.elastic.co/blog/the-evolution-of-discover-in-kibana) |
 | K | SIEM UI enhancements | Many UI improvements on [alerts](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltdf79ac68b5501e7e/6228ce50b17dc223f2f2a5fd/screenshot-security-alert-detail-context-1000.png), [rules](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blte72be23d400662a9/6227bc87a7fee30be331ef93/recording-security-rule-management-width-1000.gif), [exceptions](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltd872e9ba9a015399/6227bb22eda9a1043584a46f/screenshot-security-exception-width.jpeg) and [filters](https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltea730a8f80b28401/6227bfeb638e1304348421ac/screenshot-security-event-filters-policy-8-1-width-1000.png) |  |
 
 
 ## 8.0
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 8 Feb 2022 | 8.1 release | 8 Aug 2023 |
+| 8 Feb 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-0-0) and [beta post](https://www.elastic.co/blog/preview-elastic-8-0-beta-stack-security-by-default-natural-language-processing-and-more)
 
@@ -130,16 +152,16 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | AWS SAR | Ingest logs from AWS S3 using Elastic serverless forwarder (AWS Lambda app) | [blog post](https://www.elastic.co/blog/elastic-and-aws-serverless-application-repository-speed-time-to-actionable-insights-with-frictionless-log-ingestion-from-amazon-s3) and [security workloads](https://www.elastic.co/blog/protect-your-aws-workloads-using-elastic-security) |
 | A | AWS Storage Lens | Ingest Storage Lens metrics to optimize S3 usage costs, ensure data protection and monitor user activity trends | [blog post](https://www.elastic.co/blog/new-elastic-and-amazon-s3-storage-lens-integration-simplify-management-control-costs-and-reduce-risk) |
 | ES | Security by default | Elastic Stack security is on by default for self-managed clusters | [blog post](https://www.elastic.co/blog/introducing-simplified-elastic-stack-security) |
-| ES | NLP | Native support for PyTorch ML models into Elasticsearch to do natural language processing (NLP) for named entity recognition (NER) and sentiment analysis | [blog post](https://www.elastic.co/blog/introduction-to-nlp-with-pytorch-models), [another one](https://www.elastic.co/blog/how-to-deploy-natural-language-processing-nlp-getting-started), [sentiment analysis](https://www.elastic.co/blog/how-to-deploy-nlp-sentiment-analysis-example), [NER](https://www.elastic.co/blog/how-to-deploy-nlp-named-entity-recognition-ner-example), [text embeddings](https://www.elastic.co/blog/how-to-deploy-nlp-text-embeddings-and-vector-search),   [webinar](https://www.youtube.com/watch?v=SvvbMCwyOnU) and [another webinar](https://www.elastic.co/virtual-events/introduction-to-nlp-models-and-vector-search) |
+| ES | NLP | Native support for PyTorch ML models into Elasticsearch to do natural language processing (NLP) for named entity recognition (NER) and sentiment analysis | [blog post](https://www.elastic.co/blog/introduction-to-nlp-with-pytorch-models), [another one](https://www.elastic.co/blog/how-to-deploy-natural-language-processing-nlp-getting-started), [custom model & Maps](https://www.elastic.co/blog/introduction-to-custom-machine-learning-models-and-maps), [sentiment analysis](https://www.elastic.co/blog/how-to-deploy-nlp-sentiment-analysis-example), [NER](https://www.elastic.co/blog/how-to-deploy-nlp-named-entity-recognition-ner-example), [text embeddings](https://www.elastic.co/blog/how-to-deploy-nlp-text-embeddings-and-vector-search),   [webinar](https://www.youtube.com/watch?v=SvvbMCwyOnU) and [another webinar](https://www.elastic.co/virtual-events/introduction-to-nlp-models-and-vector-search) |
 | ES | ANN search | Native support for approximate nearest neighbor (ANN) search to compare vector-based queries with a vector-based document corpus | [blog post](https://www.elastic.co/blog/embracing-the-future-of-search-relevance) |
-| K | Field statistics | In Discover, new tab to explore the fields in your data |  |
+| K | Field statistics | In Discover, new tab to explore the fields in your data | [history of Kibana](https://www.elastic.co/blog/the-evolution-of-discover-in-kibana) |
 
 
 ## 7.17
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 1 Feb 2022 | 9.0 release | 1 Aug 2023 |
+| 1 Feb 2022 | 9.0 release | 10 Feb 2023 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-17-0)
 
@@ -151,9 +173,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 ## 7.16
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 7 Dec 2021 | 7.17 release | 7 Jun 2023 |
+| 7 Dec 2021 | 7.17 release | 10 Feb 2023 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-16-0)
 
@@ -163,7 +185,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | AWS Firelens | Added integration for AWS FireLens to use ECS and Fargate logs in Observability & Security | [blog post](https://www.elastic.co/blog/elastic-cloud-with-aws-firelens-accelerate-time-to-insight-with-agentless-data-ingestion) |
 | A | Enhanced protection | Extended malicious behavior protection & memory threat protection | [blog post](https://www.elastic.co/blog/linux-malware-protection-in-elastic-security) |
 | APM | CI/CD | Integrations for Ansible and Maven offering deeper visibility into job execution and deployment errors |  |
-| APM | .Net auto-instrumentation | Auto-instrumentation of .NET applications with no code changes required | [blog post](https://www.elastic.co/blog/auto-instrumentation-elastic-apm-net-agent) |
+| APM | .Net auto-instrumentation | Auto-instrumentation of .NET applications with no code changes required | [blog post](https://www.elastic.co/blog/auto-instrumentation-elastic-apm-net-agent) and [other one](https://www.elastic.co/blog/whats-new-elastic-observability-8-5-0) |
 | L | ECS compliance | The grok processor now supports ECS! in the path of getting LS fully ECS compliant... |  |
 | ES | categorize_text | New multi-bucket aggregation that groups semi-structured text into buckets | [blog post](https://www.elastic.co/blog/categorize-your-logs-with-the-new-elasticsearch-categorize-text-search-aggregation) |
 | ES | Heap reduction | Greatly reduced heap consumption and improved search speed | [blog post](https://www.elastic.co/blog/three-ways-improved-elasticsearch-scalability) |
@@ -180,9 +202,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 ## 7.15
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 22 Sep 2021 | 7.16 release | 22 Mar 2023 |
+| 22 Sep 2021 | 7.16 release | 10 Feb 2023 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-15-0)
 
@@ -205,9 +227,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 ## 7.14
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 3 Aug 2021 | 7.15 release | 3 Feb 2023 |
+| 3 Aug 2021 | 7.15 release | 10 Feb 2023 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-7-14-0)
 
@@ -226,9 +248,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 ## 7.13
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 25 May 2021 | 7.14 release | 25 Nov 2022 |
+| 25 May 2021 | 7.14 release | 10 Feb 2023 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-7-13-0-released)
 
@@ -240,7 +262,7 @@ _Note_: Elastic has changed the licensing options for Elasticsearch and Kibana. 
 | A | k8s auto-discover | Improve ease of deployment in highly dynamic orchestrated environments |  |
 | A | Heartbeat support | Integration of uptime monitoring in Elastic Agent |  |
 | A | osquery deployment | Elastic Agent can install osquery on any host |  |
-| B | Threat intel | Seamlessly ingest freely available threat intelligence sources (Abuse.ch, AlienVault OTX, etc) | [blog post](https://www.elastic.co/blog/ingesting-threat-data-with-threat-intel-filebeat-module) and [other post](https://www.elastic.co/blog/establish-robust-threat-intelligence-with-elastic-security) and [on Mozi](https://www.elastic.co/blog/collecting-and-operationalizing-threat-data-from-the-mozi-botnet) |
+| B | Threat intel | Seamlessly ingest freely available threat intelligence sources (Abuse.ch, AlienVault OTX, etc) | [blog post](https://www.elastic.co/blog/ingesting-threat-data-with-threat-intel-filebeat-module) and [other post](https://www.elastic.co/blog/establish-robust-threat-intelligence-with-elastic-security) and [on Mozi](https://www.elastic.co/blog/collecting-and-operationalizing-threat-data-from-the-mozi-botnet) and [SOAR & TI](https://www.elastic.co/blog/oct-2022-launch-elastic-security) |
 | L | Data stream support | Extends the Elasticsearch output plugin to write data streams |  |
 | L | ECS compliance | In the way to get Logstash ECS compliant | [github issue](https://github.com/elastic/logstash/issues/11623) |
 | ES | Runtime to indexed | To create an indexed field based on a runtime field, simply "move" it in the index template |  |
@@ -257,7 +279,7 @@ _Note_: Elastic has changed the licensing options for Elasticsearch and Kibana. 
 
 ## 7.12
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 23 Mar 2021 | 7.13 release | 23 Sep 2022 |
 
@@ -268,7 +290,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | A | Ransomware prevention | New layer of ransomware prevention based on behavioral analysis |  |
 | APM | Native OpenTelemetry support | Users can now directly send data from OpenTelemetry agents to APM server |  |
 | ES | Frozen tier | Makes object stores (S3) searchable by fetching needed data from the store and caching locally | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-frozen-tier-searchbox-on-s3), [query 1PB](https://www.elastic.co/blog/querying-a-petabyte-of-cloud-storage-in-10-minutes) |
-| K | APM correlation | Automatically surface factors that are highly correlated with underperforming transactions |  |
+| K | APM correlation | Automatically surface factors that are highly correlated with underperforming transactions | [blog post](https://www.elastic.co/blog/apm-correlations-elastic-observability-root-cause-transactions) |
 | K | Dashboard-first | Dashboard-first approach makes it simple to create and add viz without leaving the dashboard-building flow | [blog post](https://www.elastic.co/blog/building-kibana-dashboards-more-efficiently) and [other post](https://www.elastic.co/blog/new-in-kibana-how-we-made-it-easier-manage-visualizations-and-build-dashboards) |
 | K | Save session | In Discover and Dashboard, you can save a long-running search to run in the background |  |
 | K | Runtime fields | You can now use runtime fields from within Discover and Kibana Lens | [new fields api](https://www.elastic.co/blog/discover-uses-fields-api-in-7-12) |
@@ -277,7 +299,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.11
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 10 Feb 2021 | 7.12 release | 10 Aug 2022 |
 
@@ -311,7 +333,7 @@ _Note_: Elastic is changing the licensing options for Elasticsearch and Kibana, 
 
 ## 7.10
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 11 Nov 2020 | 7.11 release | 11 May 2022 |
 
@@ -325,7 +347,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | ES | Improved compression | 10% storage savings in indices created in v7.10+ | [blog post](https://www.elastic.co/blog/save-space-and-money-with-improved-storage-efficiency-in-elasticsearch-7-10) |
 | ES | Cold tier | By replacing the index replica by a searchable snapshot, cluster storage can be reduced by up to 50% | [3-tier setup](https://www.elastic.co/blog/elasticsearch-data-lifecycle-management-with-data-tiers) and [cold tier testing](https://www.elastic.co/blog/testing-the-new-elasticsearch-cold-tier-of-searchable-snapshots-at-scale) |
 | K | UX monitoring | New User Experience app allows you to monitor key user experience metrics, inc [Web Vitals](https://web.dev/vitals/) | [blog post](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities) |
-| K | Synthetic monitoring | Multistep checks to simulate complex user flows and measure performance from Uptime UI | [blog post](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities) |
+| K | Synthetic monitoring | Multistep checks to simulate complex user flows and measure performance from Uptime UI | [blog post](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities), [Synthetic monitoring service](https://www.elastic.co/blog/new-synthetic-monitoring-observability) and [ynthetics on Kibana](https://www.elastic.co/blog/what-can-elastic-synthetics-tell-us-about-kibana-dashboards) |
 | K | Nav bar | Move faster in Kibana with new navigational search (at the top of Kibana) |  |
 | K | ML in metrics | Detect common infrastructure issues with new one-click ML jobs |  |
 | K | URL drilldown | Create navigation paths to web apps using URLs that can even include data parameters | [blog post](https://www.elastic.co/blog/driving-dashboard-actions-in-kibana-with-url-drilldowns) |
@@ -340,7 +362,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.9
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 19 Aug 2020 | 7.10 release | 18 Feb 2022 |
 
@@ -376,7 +398,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.8
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 18 June 2020 | 7.9 release | 18 Dec 2021 |
 
@@ -406,7 +428,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.7
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 13 May 2020 | 7.8 release | 23 Nov 2021 |
 
@@ -437,7 +459,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.6
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 11 Feb 2020 | 7.7 release | 11 Aug 2021 |
 
@@ -473,7 +495,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.5
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 2 Dec 2019 | 7.6 release | 2 Jun 2021 |
 
@@ -503,7 +525,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.4
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 1 Oct 2019 | 7.5 release | 1 Apr 2021 |
 
@@ -519,7 +541,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | APM | APM to log | Integrated way to navigate between APM and the Logs app | [blog post](https://www.elastic.co/blog/how-to-easily-correlate-logs-apm-traces-for-better-observability-elastic-stack) |
 | APM | Java logger | Centralized logging for Java applications with the Elastic stack made easy using plugins for Log4j & Logback | [github](https://github.com/elastic/ecs-logging-java) |
 | ES | New alerting | Basis of the new Kibana's alerting system are being delivered... stay tuned! | [blog post](https://www.elastic.co/blog/alerting-in-the-elastic-stack) |
-| ES | Results pinning | By using the new pinned query, users can manage and order results as they see fit |  |
+| ES | Results pinning | By using the new pinned query, users can manage and order results as they see fit | [blog post](https://www.elastic.co/blog/using-elasticsearch-pinned-queries-to-promote-specific-results) |
 | ES | Agg on range | Run aggregations (cardinality, missing, value count, histogram and date histogram) on range fields |  |
 | ES | Geospacial | Geospacial improvements : shape field type and circle ingest processor |  |
 | ES | Auto cancel | Auto terminate queries sent through the `_search` endpoint when the initiating connection is closed |  |
@@ -534,7 +556,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.3
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 31 Jul 2019 | 7.4 release | 31 Jan 2021 |
 
@@ -562,7 +584,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.2
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 25 Jun 2019 | 7.3 release | 25 Dec 2020 |
 
@@ -593,7 +615,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 7.1
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 20 May 2019 | 7.2 release | 20 Nov 2020 |
 
@@ -601,7 +623,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/security-for-e
 
 ## 7.0
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 10 Apr 2019 | 7.1 release | 10 Oct 2020 |
 
@@ -628,7 +650,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 6.8
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 20 May 2019 | 8.0 release | 20 Nov 2020 |
 
@@ -636,7 +658,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/security-for-e
 
 ## 6.7
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 26 Mar 2019 | 6.8 release | 26 Sept 2020 |
 
@@ -645,13 +667,13 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | K | Uptime UI | Active uptime monitoring of services & apps, based on Heartbeat | [blog post](https://www.elastic.co/blog/elastic-uptime-monitoring-solution-released), [video](https://youtu.be/42iNUC2gScw) |
-| K | Maps | Dedicated solution for mapping, querying, and visualizing geospatial data | [blog post](https://www.elastic.co/blog/elastic-maps-beta-released), [new features](https://www.elastic.co/blog/top-10-new-elastic-maps-features) |
+| K | Maps | Dedicated solution for mapping, querying, and visualizing geospatial data | [blog post](https://www.elastic.co/blog/elastic-maps-beta-released), [new features](https://www.elastic.co/blog/top-10-new-elastic-maps-features), [Maps example](https://www.elastic.co/blog/how-to-use-elastic-maps-to-make-public-datasets-observable) |
 | K | Frozen management | Frozen indices can be managed in ILM and index management |  |
 | K | Localization | Localizing Kibana, starting with Chinese |  |
 
 ## 6.6
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 29 Jan 2019 | 6.7 release | 29 Jul 2020 |
 
@@ -675,7 +697,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 6.5
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 14 Nov 2018 | 6.6 release | 14 May 2020 |
 
@@ -701,7 +723,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 6.4
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 23 Aug 2018 | 6.5 release (14 Nov 2018) | 23 Feb 2020 |
 
@@ -721,7 +743,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 6.3
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 13 Jun 2018 | 6.4 release (23 Aug 2018) | 13 Dec 2019 |
 
@@ -743,7 +765,7 @@ Opening the code of X-Pack: [Webpage](https://www.elastic.co/products/x-pack/ope
 
 ## 6.2
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 6 Feb 2018 | 6.3 release (13 Jun 2018) | 6 Aug 2019 |
 
@@ -762,7 +784,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 6.1
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 13 Dec 2017 | 6.2 release (6 Feb 2018) | 13 Jun 2019 |
 
@@ -780,7 +802,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 6.0
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 14 Nov 2017 | 6.1 release (13 Dec 2017) | 14 May 2019 |
 
@@ -805,7 +827,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.6
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 11 Sep 2017 | 7.0 release | 11 Mar 2019 |
 
@@ -821,7 +843,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.5
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 6 Jul 2017 | 5.6 release (11 Sep 2017) | 6 Jan 2019 |
 
@@ -840,7 +862,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.4
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 4 May 2017 | 5.5 release (6 Jul 2017) | 4 Nov 2018 |
 
@@ -855,7 +877,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.3
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 28 Mar 2017 | 5.4 release (4 May 2017) | 28 Sep 2018 |
 
@@ -870,7 +892,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.2
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 31 Jan 2017 | 5.3 release (28 Mar 2017) | 31 Jul 2018 |
 
@@ -885,7 +907,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.1
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 8 Dec 2016 | 5.2 release (31 Jan 2017) | 8 Jun 2018 |
 
@@ -904,7 +926,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 
 ## 5.0
 
-| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Life](https://www.elastic.co/support/eol) |
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
 | 26 Oct 2016 | 5.1 release (5 Dec 2016) | 26 Apr 2018 |
 
