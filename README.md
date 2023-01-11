@@ -14,6 +14,30 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+## 8.6
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 10 Jan 2023 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-6-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Security integ | New integrations for Box, Darktrace, F5 BIG-IP, InfoBlox, Microsoft 365 Defender, Trend Micro and others... |  |
+| ES | time_series index | It's a new type of index that is optimized for time series of metrics data  |  |
+| ES | field_caps improved | The field_caps API - that provides information about a field - is 10x faster! |  |
+| ES | Shard balancing | Introducing "desired balance" allocator (used by default in 8.6+) and two additional variables into the balancing computation | [github issue](https://github.com/elastic/elasticsearch/pull/91343) |
+| ES | ESQL | New query language coming soon... :-) | [blog post](https://www.elastic.co/blog/introduction-to-esql-new-query-language-flexible-iterative-analytics) |
+| K | Host observability | Get a comprehensive and customizable view of all your hosts (inc. health & performance) |  |
+| K | Ad hoc data views | Create temporary data views on the fly to explore data, and permanently persist when ready |  |
+| K | APM Dependencies | New tab in the dependencies view showing operations, latency distrib & trace waterfalls | |
+| K | Enhanced case mngt | New bulk actions, unassigned cases, unlinking of alerts, ticket linking back to Elastic |  |
+| K | SIEM alert correlation | Prebuilt rules now detect complex attack behaviors by correlating groups/sequences of alerts |  |
+| K | Opsgenie connector | New OOTB integration with Opsgenie for Kibana Alerting | [blog post](https://www.elastic.co/blog/streamline-incident-management-elastic-observability-atlassian-opsgenie) |
+| K | Universal profiling | coming soon... :-) | [home page](https://www.elastic.co/observability/universal-profiling), [blog post](https://www.elastic.co/blog/universal-profiling-frame-pointers-symbols-ebpf), [eBPF blog post](https://www.elastic.co/blog/ebpf-observability-security-workload-profiling) |
+
+
 ## 8.5
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -71,7 +95,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | New integrations | AWS Fargate (monitor ECS containers), Nagios, Spark, Spring Boot, Salesforce and Hadoop |  |
+| A | New integrations | AWS Fargate (monitor ECS containers), Nagios, Spark, Spring Boot, Salesforce and Hadoop | [AWS integration](https://www.elastic.co/blog/aws-service-metrics-monitor-observability-easy) |
 | A | Rolling upgrades | Rolling upgrades during scheduled maintenance windows  |  |
 | A | Tagging | Attach tags to agents during installation to have greater control over agents management at scale |  |
 | ES | Hybrid deployments | CCS and CCR now support searching and replicating data across Elastic Cloud, self-managed clusters, ECE and ECK. | [blog post](https://www.elastic.co/blog/search-and-replicate-data-between-your-elastic-cloud-and-on-prem-deployments), [another one](https://www.elastic.co/blog/whats-new-elasticsearch-kibana-cloud-8-3-0) |
@@ -289,7 +313,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/elastic-stack-
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | A | Ransomware prevention | New layer of ransomware prevention based on behavioral analysis |  |
-| APM | Native OpenTelemetry support | Users can now directly send data from OpenTelemetry agents to APM server |  |
+| APM | Native OpenTelemetry support | Users can now directly send data from OpenTelemetry agents to APM server | [blog post](https://www.elastic.co/blog/implementing-kubernetes-observability-security-opentelemetry) |
 | ES | Frozen tier | Makes object stores (S3) searchable by fetching needed data from the store and caching locally | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-frozen-tier-searchbox-on-s3), [query 1PB](https://www.elastic.co/blog/querying-a-petabyte-of-cloud-storage-in-10-minutes) |
 | K | APM correlation | Automatically surface factors that are highly correlated with underperforming transactions | [blog post](https://www.elastic.co/blog/apm-correlations-elastic-observability-root-cause-transactions) |
 | K | Dashboard-first | Dashboard-first approach makes it simple to create and add viz without leaving the dashboard-building flow | [blog post](https://www.elastic.co/blog/building-kibana-dashboards-more-efficiently) and [other post](https://www.elastic.co/blog/new-in-kibana-how-we-made-it-easier-manage-visualizations-and-build-dashboards) |
