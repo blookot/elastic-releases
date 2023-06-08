@@ -14,6 +14,26 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+## 8.7
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 30 March 2023 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-7-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Agent metrics | Display agent metrics (CPU,RAM) in the agent list table & details page |  |
+| ES | Health Reporting | The new health report API is now GA and helps you understand your cluster state at a glance for faster troubleshooting | [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/health-api.html), [blog post](https://www.elastic.co/blog/cluster-health-diagnosis-elasticsearch-health-api) |
+| ES | Time Series Data Streams & Downsampling | While time series was a tech preview in 8.6 it is now GA! Uses on average 70% less disk space for metrics & supports downsampling for longer retention | [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/tsds.html)  |
+| ES | Cloud Security Posture Management | You can now easily audit your AWS configurations against security guidelines defined by the Center for Internet Security (CIS)  | [Documentation](https://www.elastic.co/guide/en/security/8.7/cspm.html) |
+| ES | Ingest pipelines improvements | GeoIP, set and append ingest processors are now significantly faster. Running a document through multiple ingest pipelines is faster too.  |  |
+| K | Alert Flapping & Summarization| Enable alert flapping detection to prevent being repeteadly alerted for rapidly changing status on rules. Summarize alerts to reduce number of notifications | [Documentation](https://www.elastic.co/guide/en/kibana/8.7/whats-new.html#_alerting) |
+| K | Concurrent sessions management | An administrator can now set the maximum number of sessions allowed for a user, disconnecting the oldest session when the limit is reached | [Documentation](https://www.elastic.co/guide/en/kibana/8.7/whats-new.html#_control_concurrent_user_sessions) |
+| K | Anomaly detection on geo data | You can now create an anomaly detection job on geo data directly from a dashboard or follow a link to get to the advanced ML job wizard | [Documentation](https://www.elastic.co/guide/en/kibana/8.7/whats-new.html#_control_concurrent_user_sessions) |
+
+
 ## 8.6
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
