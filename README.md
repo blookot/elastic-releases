@@ -14,6 +14,31 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+## 8.10
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 12 September 2023 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-10-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Kafka output | Elastic Agent users can stream their data to Kafka for further processing |  |
+| ES | CCx improvements | More info on remote cluster health in search results, exclude remote clusters in async search, and new key-based security |  |
+| ES | Parallel kNN | Start each query by parallelizing kNN vector search saving 50% query time |  |
+| ES | Query rules | Searching with query rules give promotes documents that match defined criteria at the top of the result list | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.10/search-using-query-rules.html) |
+| ES | Synonyms | New single API call manage synonyms (replacing the former multi-step process) | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.10/search-with-synonyms.html) |
+| ES | Google Drive connector | New Google Drive connector client including doc-level security support | [KB for support](https://www.elastic.co/enterprise-search/customer-support) |
+| ES | Webhook SSL auth | The Webhook connector is enhanced to support client certification |  |
+| ML | Log rate dips | Log rate analysis explains dips and spikes (by identifying statistically significant deviation) |  |
+| K | Universal Profiling | Universal Profiling is a continuous profiling solution (only available on Elastic Cloud) that requires zero-instrumentation, zero-code changes, and zero-restarts | [blog post](https://www.elastic.co/blog/continuous-profiling-is-generally-available) |
+| K | AI assistant chat | Tech preview of a chat capability powered by the Elastic AI Assistant. Share your use cases in the Elastic Community Slack (#observability-ai-assistant) | [community slack](https://ela.st/slack) |
+| K | Alert contextualization | Investigate security alerts faster with rich contextualization including advanced entity analytics | [blog post](https://www.elastic.co/blog/elastic-modernizes-secops-advanced-entity-analytics) |
+| K | MITRE ATT&CK Coverage | The new MITRE ATT&CK Coverage page in Elastic Security shows the coverage provided by prebuilt and custom rules |  |
+| K | CSPM for GCP | The cloud security posture management (CSPM) capabilities now cover Google Cloud too |  |
+
+
 ## 8.9
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
