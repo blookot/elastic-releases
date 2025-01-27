@@ -14,6 +14,37 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+## 8.8
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 25 May 2023 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-8-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | New integ | Addition of AWS Kinesis Data Firehose integration | [blog post](https://elastic.co/blog/aws-kinesis-data-firehose-elastic-observability-analytics), [aws blog post](https://aws.amazon.com/blogs/big-data/accelerate-data-insights-with-elastic-and-amazon-kinesis-data-firehose/) |
+| A | Vulnerability scanner | The Cloud Native Vulnerability Management (CNVM) integration uses Cloud Formation & Trivy | [trivy scanner](https://github.com/aquasecurity/trivy) |
+| A | CWP | Container Workload Protection (CWP) brings protection for container runtime environments | [blog post](https://www.elastic.co/blog/march-2023-launch-runtime-security-container-protection) |
+| ES | ELSER | new Elastic Learned Sparse EncodeR (ELSER), Elastic's proprietary transformer for semantic search | [launch post](https://www.elastic.co/blog/may-2023-launch-sparse-encoder-ai-model) |
+| ES | RRF | Simplified hybrid search with Reciprocal Rank Fusion |  |
+| ES | Vector similarity | Filter efficiently by reducing false positives with facets in vector search |  |
+| ES | 2048 dimensions | kNN vector search using the HNSW algorithm with vector up to 2048 dimensions |  |
+| ES | TSDB optim | time_series indices optimized with new encodings for great size reduction |  |
+| ES | Shard capacity | Shard capacity indicator added to the health API to prevent getting close to its maximum capacity | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/health-api.html#health-api-response-details-shards-capacity) |
+| ES | Reroute | New ingest processor to route documents to the right destination or data stream | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/reroute-processor.html) |
+| K | Testing with CI/CD & GitOps | Use synthetic monitoring for unit tests with CI/CD and GitOps optimization | [how to](https://www.elastic.co/blog/uniting-testing-and-monitoring-with-synthetic-monitoring), [npm package](https://www.npmjs.com/package/@elastic/synthetics) |
+| K | SLOs | With Service Level Objectives (SLOs) in Kibana, you can measure and monitor your service quality over time |  |
+| K | Vulnerability findings | All security findings from the new CNVM integration are displayed in the Security solution page |  |
+| K | Execute response | New Endpoint response capability to remotely execute terminal commands on hosts |  |
+| K | Data Quality | Elastic Security brings a dashboard to assess data quality (ECS mapping and storage usage) |  |
+| K | Custom logo | No css hack! you can add your logo on Kibana! |  |
+| K | dark mode | Dark mode can now be set per user |  |
+| K | ML in Discover | You can now run a pattern analysis directly from Discover |  |
+| K | Maintenance window | Schedule maintenance windows to reduce alert noise and suppress notifications |  |
+
+
 ## 8.7
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
