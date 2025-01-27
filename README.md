@@ -14,6 +14,25 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+## 8.11
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 7 November 2023 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-11-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Wiz & Prisma | New data integrations with two popular cloud security technologies: Wiz and Palo Alto Prisma Cloud | [prisma integ](https://www.elastic.co/guide/en/integrations/current/prisma_cloud.html) |
+| A | Okta & Azure AD | Enhance advanced entity analytics with rich identity context from Okta & Azure AD (Entra ID) | [blog post](https://www.elastic.co/blog/elastic-modernizes-secops-advanced-entity-analytics) |
+| ES | ES\|QL | Elasticsearch Query Language (ES\|QL) is the new pipe query language that can search, enrich, transform & aggregate at query time! |  |
+| ES | Bedrock support | The AI Assistant adds support for Amazon Bedrock (and Anthropic’s Claude 2 model) |  |
+| K | Generated ES\|QL | Use natural language to explain a query and have the AI Assistant for Observability provide the ES\|QL syntax |  |
+| K | UP in APM | Universal Profiling is integrated with APM without needing to switch context |  |
+| K | SLOs in dashboards | Service Level Objectives (SLOs) overviews can be added to dashboards |  |
+
+
 ## 8.10
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -75,7 +94,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | New integ | Addition of AWS Kinesis Data Firehose integration | [blog post](https://elastic.co/blog/aws-kinesis-data-firehose-elastic-observability-analytics), [aws blog post](https://aws.amazon.com/blogs/big-data/accelerate-data-insights-with-elastic-and-amazon-kinesis-data-firehose/) |
 | A | Vulnerability scanner | The Cloud Native Vulnerability Management (CNVM) integration uses Cloud Formation & Trivy | [trivy scanner](https://github.com/aquasecurity/trivy) |
 | A | CWP | Container Workload Protection (CWP) brings protection for container runtime environments | [blog post](https://www.elastic.co/blog/march-2023-launch-runtime-security-container-protection) |
-| ES | ELSER | new Elastic Learned Sparse EncodeR (ELSER), Elastic's proprietary transformer for semantic search | [launch post](https://www.elastic.co/blog/may-2023-launch-sparse-encoder-ai-model), [blog post](https://www.elastic.co/search-labs/blog/introducing-elastic-learned-sparse-encoder-elser) |
+| ES | ELSER | new Elastic Learned Sparse EncodeR (ELSER), Elastic's proprietary transformer for semantic search | [launch post](https://www.elastic.co/blog/may-2023-launch-sparse-encoder-ai-model), [blog post](https://www.elastic.co/search-labs/blog/introducing-elastic-learned-sparse-encoder-elser), [doc](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html) |
 | ES | RRF | Simplified hybrid search with Reciprocal Rank Fusion to combine results from keyword-based & vector-based searches |  |
 | ES | Vector similarity | Filter efficiently by reducing false positives with facets in vector search |  |
 | ES | 2048 dimensions | kNN vector search using the HNSW algorithm with vector up to 2048 dimensions |  |
@@ -128,7 +147,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | time_series index | It's a new type of index that is optimized for time series of metrics data  |  |
 | ES | field_caps improved | The field_caps API - that provides information about a field - is 10x faster! |  |
 | ES | Shard balancing | Introducing "desired balance" allocator (used by default in 8.6+) and two additional variables into the balancing computation | [github issue](https://github.com/elastic/elasticsearch/pull/91343) |
-| ES | ESQL | New query language coming soon... :-) | [blog post](https://www.elastic.co/blog/introduction-to-esql-new-query-language-flexible-iterative-analytics) |
+| ES | ES\|QL | New query language coming soon... :-) | [blog post](https://www.elastic.co/blog/introduction-to-esql-new-query-language-flexible-iterative-analytics), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/esql.html) |
 | K | Host observability | Get a comprehensive and customizable view of all your hosts (inc. health & performance) |  |
 | K | Ad hoc data views | Create temporary data views on the fly to explore data, and permanently persist when ready |  |
 | K | APM Dependencies | New tab in the dependencies view showing operations, latency distrib & trace waterfalls | |
