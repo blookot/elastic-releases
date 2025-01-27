@@ -8,17 +8,40 @@ _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a 
 _Note2_: you can also try the official [Elastic Terraform provider](https://www.elastic.co/blog/streamline-configuration-processes-with-official-elastic-stack-terraform-provider) (see [blog post](https://www.elastic.co/blog/using-terraform-with-elastic-cloud) as well)!
 
 _EOL note_: Starting 1st Oct 2022, a new policy applies. 
-* For v8.x, maintenance ends at the latest between 10th Aug 2024 and the v9.0 release date + 6 months. Support ends 6 months after maintenance.
+* For v8.x, maintenance ends at the latest between 10th Aug 2024 and the v9.0 release date + 18 months. Support ends 6 months after maintenance.
 * For v7.x and before please refer to the tables below.
 
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
+
+
+## 8.9
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 25 July 2023 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-9-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | New connectors | Ingest directly into Elasticsearch data from SharePoint, ServiceNow & Dropbox | [connectors list](https://www.elastic.co/guide/en/elasticsearch/reference/8.17/es-connectors.html) |
+| ES | TSDS by default | Time Series Data Stream (TSDS) used by default for metrics integrations for 70% less disk space | [cost savings](https://www.elastic.co/blog/70-percent-storage-savings-for-metrics-with-elastic-observability), [blog post](https://www.elastic.co/blog/elasticsearch-time-series-data-streams-observability-metrics), [guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/tsds.html) |
+| ES | TSDB agg latency | The time series database (TSDB) improved the latency of aggregations that are frequently used with metrics data, reducing time by over 90% |  |
+| ES | Faster CCS | Cross-Cluster Search (CCS) is tens of times faster with fewer network trips in async search and shard skipping in cold & frozen tiers |  |
+| ES | Public search | Users can now create public-facing search endpoints for their Elasticsearch indices |  |
+| ES | ILM Health | Find ILM policies that are stuck with the ILM Health Indicator in the Health Report API |  |
+| K | AI assistant in Observability | The tech preview of Elastic AI Assistant for observability uses genAI to help improve troubleshooting | [k8s errors](https://www.elastic.co/blog/kubernetes-errors-elastic-observability-logs-openai), [APM perf & cost](https://www.elastic.co/blog/chatgpt-elasticsearch-apm-instrumentation-performance-cost-analysis), [video](https://www.youtube.com/watch?v=hQTdErlYepk&list=PLhLSfisesZIvjzLIJ3wPDkueFeo5oJP7X) |
+| K | AI token usage | Avoid surprise generative AI bills by trackking token usage of your LLM (new dashboard in the security app) | [openai tokens](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them) |
+| K | Lateral movement | The Lateral Movement Detection package identifies network and file based threats | [blog post](https://www.elastic.co/guide/en/integrations/current/lmd.html) |
+| K | Detection rule monitoring | New dashboard on the execution of security detection rules |  |
+| K | Upload response | The upload action enables security analysts and administrators to upload files to their hosts |  |
 
 
 ## 8.8
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 25 May 2023 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 25 May 2023 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-8-0)
 
@@ -27,20 +50,21 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | New integ | Addition of AWS Kinesis Data Firehose integration | [blog post](https://elastic.co/blog/aws-kinesis-data-firehose-elastic-observability-analytics), [aws blog post](https://aws.amazon.com/blogs/big-data/accelerate-data-insights-with-elastic-and-amazon-kinesis-data-firehose/) |
 | A | Vulnerability scanner | The Cloud Native Vulnerability Management (CNVM) integration uses Cloud Formation & Trivy | [trivy scanner](https://github.com/aquasecurity/trivy) |
 | A | CWP | Container Workload Protection (CWP) brings protection for container runtime environments | [blog post](https://www.elastic.co/blog/march-2023-launch-runtime-security-container-protection) |
-| ES | ELSER | new Elastic Learned Sparse EncodeR (ELSER), Elastic's proprietary transformer for semantic search | [launch post](https://www.elastic.co/blog/may-2023-launch-sparse-encoder-ai-model) |
-| ES | RRF | Simplified hybrid search with Reciprocal Rank Fusion |  |
+| ES | ELSER | new Elastic Learned Sparse EncodeR (ELSER), Elastic's proprietary transformer for semantic search | [launch post](https://www.elastic.co/blog/may-2023-launch-sparse-encoder-ai-model), [blog post](https://www.elastic.co/search-labs/blog/introducing-elastic-learned-sparse-encoder-elser) |
+| ES | RRF | Simplified hybrid search with Reciprocal Rank Fusion to combine results from keyword-based & vector-based searches |  |
 | ES | Vector similarity | Filter efficiently by reducing false positives with facets in vector search |  |
 | ES | 2048 dimensions | kNN vector search using the HNSW algorithm with vector up to 2048 dimensions |  |
 | ES | TSDB optim | time_series indices optimized with new encodings for great size reduction |  |
 | ES | Shard capacity | Shard capacity indicator added to the health API to prevent getting close to its maximum capacity | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/health-api.html#health-api-response-details-shards-capacity) |
 | ES | Reroute | New ingest processor to route documents to the right destination or data stream | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/reroute-processor.html) |
+| K | AI assistant in Security | The tech preview of Elastic AI Assistant for Security relies on [ESRE](https://www.elastic.co/search-labs/blog/introducing-elasticsearch-relevance-engine-esre) and LLMs to help guide analyst investigation | [blog post](https://www.elastic.co/blog/introducing-elastic-ai-assistant) |
 | K | Testing with CI/CD & GitOps | Use synthetic monitoring for unit tests with CI/CD and GitOps optimization | [how to](https://www.elastic.co/blog/uniting-testing-and-monitoring-with-synthetic-monitoring), [npm package](https://www.npmjs.com/package/@elastic/synthetics) |
 | K | SLOs | With Service Level Objectives (SLOs) in Kibana, you can measure and monitor your service quality over time |  |
 | K | Vulnerability findings | All security findings from the new CNVM integration are displayed in the Security solution page |  |
 | K | Execute response | New Endpoint response capability to remotely execute terminal commands on hosts |  |
 | K | Data Quality | Elastic Security brings a dashboard to assess data quality (ECS mapping and storage usage) |  |
-| K | Custom logo | No css hack! you can add your logo on Kibana! |  |
-| K | dark mode | Dark mode can now be set per user |  |
+| K | Custom logo | No css hack! You can add your logo on Kibana! |  |
+| K | Dark mode | Dark mode can now be set per user |  |
 | K | ML in Discover | You can now run a pattern analysis directly from Discover |  |
 | K | Maintenance window | Schedule maintenance windows to reduce alert noise and suppress notifications |  |
 
@@ -49,7 +73,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 30 March 2023 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 30 March 2023 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-7-0)
 
@@ -69,7 +93,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 10 Jan 2023 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 10 Jan 2023 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-6-0)
 
@@ -93,7 +117,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 1 Nov 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 1 Nov 2022 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-5-0)
 
@@ -113,7 +137,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 24 Aug 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 24 Aug 2022 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-4-0)
 
@@ -140,7 +164,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 28 June 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 28 June 2022 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-3-0)
 
@@ -165,7 +189,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 3 May 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 3 May 2022 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-2-0)
 
@@ -193,7 +217,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 8 Mar 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 8 Mar 2022 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-1-0)
 
@@ -219,7 +243,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 8 Feb 2022 | Max(10/8/2024, v9.0+6m) | EoM+6m |
+| 8 Feb 2022 | Max(10/8/2024, v9.0+18m) | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-0-0) and [beta post](https://www.elastic.co/blog/preview-elastic-8-0-beta-stack-security-by-default-natural-language-processing-and-more)
 
