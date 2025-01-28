@@ -14,6 +14,29 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+## 8.12
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 17 January 2024 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-12-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | Lucene 9.9 | Benefit from support for [scalar quantization](https://www.elastic.co/search-labs/blog/articles/scalar-quantization-in-lucene), query parallelization and massive speedups! | [blog post](https://www.elastic.co/search-labs/blog/articles/apache-lucene-9.9-search-speedups) |
+| ES | Geo in ES\|QL | Added support for the geo_point and point data types via ES\|QL |  |
+| ES | Embedding management | Use the single _inference API endpoint that abstracts the complexity of managing embedding models |  |
+| ES | KB for AI | Integrated knowledge base (KB) for organizations to link their context to train the AI Assistant responses |  |
+| ES | Simulate ingest | New _ingest/_simulate API to test multiple pipelines - including possible reroute processors |  |
+| K | Mobile APM | Several enhancements like pre-built dashboards for viewing service interdependencies, end-to-end trace waterfall and geographic distribution | [blog post](https://www.elastic.co/observability-labs/blog/apm-ios-android-native-apps) |
+| K | Alert insights with AI | Get intuitive, real-time alert insights with natural language interactions from the Elastic AI Assistant for Security |  |
+| K | CSPM for Azure | This integration streamlines the cloud security posture management (CSPM) across all three major cloud providers |  |
+| K | Respond with SentinelOne | Orchestrate response with a two-way integration with the leading EDR provider SentinelOne |  |
+| K | Rules comparison | Before updating, preview and compare Elastic prebuilt rules with a simple diff UI |  |
+| K | ES\QL in dashboards | Added ability to edit ES\|QL queries directly via the dashboard (no need to go back to Discover) |  |
+
+
 ## 8.11
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -26,7 +49,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | --- | --- | --- | --- |
 | A | Wiz & Prisma | New data integrations with two popular cloud security technologies: Wiz and Palo Alto Prisma Cloud | [prisma integ](https://www.elastic.co/guide/en/integrations/current/prisma_cloud.html) |
 | A | Okta & Azure AD | Enhance advanced entity analytics with rich identity context from Okta & Azure AD (Entra ID) | [blog post](https://www.elastic.co/blog/elastic-modernizes-secops-advanced-entity-analytics) |
-| ES | ES\|QL | Elasticsearch Query Language (ES\|QL) is the new pipe query language that can search, enrich, transform & aggregate at query time! |  |
+| ES | ES\|QL | Elasticsearch Query Language (ES\|QL) is the new pipe query language that can search, enrich, transform & aggregate at query time! | [blog post](https://www.elastic.co/blog/esql-elasticsearch-piped-query-language) |
 | ES | Bedrock support | The AI Assistant adds support for Amazon Bedrock (and Anthropic’s Claude 2 model) |  |
 | K | Generated ES\|QL | Use natural language to explain a query and have the AI Assistant for Observability provide the ES\|QL syntax |  |
 | K | UP in APM | Universal Profiling is integrated with APM without needing to switch context |  |
@@ -100,7 +123,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | 2048 dimensions | kNN vector search using the HNSW algorithm with vector up to 2048 dimensions |  |
 | ES | TSDB optim | time_series indices optimized with new encodings for great size reduction |  |
 | ES | Shard capacity | Shard capacity indicator added to the health API to prevent getting close to its maximum capacity | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/health-api.html#health-api-response-details-shards-capacity) |
-| ES | Reroute | New ingest processor to route documents to the right destination or data stream | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/reroute-processor.html) |
+| ES | Reroute | New ingest processor to route documents to the right destination or data stream | [blog post](https://www.elastic.co/blog/simplifying-log-data-management-flexible-routing-elastic), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/reroute-processor.html) |
 | K | AI assistant in Security | The tech preview of Elastic AI Assistant for Security relies on [ESRE](https://www.elastic.co/search-labs/blog/introducing-elasticsearch-relevance-engine-esre) and LLMs to help guide analyst investigation | [blog post](https://www.elastic.co/blog/introducing-elastic-ai-assistant) |
 | K | Testing with CI/CD & GitOps | Use synthetic monitoring for unit tests with CI/CD and GitOps optimization | [how to](https://www.elastic.co/blog/uniting-testing-and-monitoring-with-synthetic-monitoring), [npm package](https://www.npmjs.com/package/@elastic/synthetics) |
 | K | SLOs | With Service Level Objectives (SLOs) in Kibana, you can measure and monitor your service quality over time |  |
@@ -123,6 +146,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
+| A | Android agent | New APM Android agent automatically instruments your application and its dependencies | [blog post](https://www.elastic.co/observability-labs/blog/monitoring-android-applications-apm), [demo app](https://github.com/elastic/sample-app-android-apm), [other post](https://www.elastic.co/observability-labs/blog/apm-ios-android-native-apps) |
 | A | Agent metrics | Display agent metrics (CPU,RAM) in the agent list table & details page |  |
 | ES | Health Reporting | The new health report API is now GA and helps you understand your cluster state at a glance for faster troubleshooting | [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/health-api.html), [blog post](https://www.elastic.co/blog/cluster-health-diagnosis-elasticsearch-health-api) |
 | ES | Time Series Data Streams & Downsampling | While time series was a tech preview in 8.6 it is now GA! Uses on average 70% less disk space for metrics & supports downsampling for longer retention | [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/tsds.html)  |
@@ -244,7 +268,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Custom blocklists | Protect high-risk systems (PoS, MS...) by blocking the execution of specific app at the edge |  |
 | A | Uptime & Cloud | New cloud-based synthetic testing initiated from Elastic Cloud Uptime solution |  |
 | APM | Sampling++ | Tail-based sampling (added to existing head-based) for high volumes of transactions | [blog post](https://www.elastic.co/fr/blog/whats-new-elastic-observability-8-2-0), [image](https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt10f97ccce64381b2/626185a0b87c7b4bf91c552a/Elastic-Observability-Head-tail-based-sampling.png) |
-| ES | Lookup runtime fields | Enrich at query time from another index - Can I call it outer join?! | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/runtime-retrieving-fields.html#lookup-runtime-fields) |
+| ES | Lookup runtime fields | Enrich at query time from another index - Can I call it outer join?! | [blog post](https://www.elastic.co/blog/getting-started-with-elasticsearch-runtime-fields), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/runtime-retrieving-fields.html#lookup-runtime-fields) |
 | ES | Random sampler agg | Exponentially accelerate aggregations (with a slight trade off in accuracy) by randomly sampling docs | [blog post](https://www.elastic.co/blog/aggregate-data-faster-with-new-the-random-sampler-aggregation), [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/search-aggregations-random-sampler-aggregation.html) |
 | ES | JWT support | Authorize and authenticate Elasticsearch's API calls using JSON Web Tokens (JWT) |  |
 | ES | Search UI | New UI (actually a React lib) to quickly implement search experiences | [blog post](https://www.elastic.co/blog/search-ui-1-1-0-makes-building-search-experiences-for-elasticsearch-even-easier), [doc](https://docs.elastic.co/search-ui/overview) |
@@ -360,7 +384,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Private EPR | Self-managed version of Elastic Package Registry (EPR) as a Docker image | [doc](https://www.elastic.co/guide/en/integrations-developer/current/air-gapped.html) |
 | A | In-memory attacks | Prevent memory manipulation (used for process injection via shellcode) | [blog post](https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack) |
 | A | Linux quarantine | Use [eBPF](https://ebpf.io/) to isolate a Linux host from the network | [Cmd](https://www.elastic.co/blog/elastic-and-cmd-join-forces-to-help-you-take-command-of-your-cloud-workloads) and [eBPF blog post](https://www.elastic.co/blog/code-coverage-for-ebpf-programs) |
-| APM | iOS agent | new APM agent for iOS (Swift only) based on OpenTelemetry | [blog post](https://www.elastic.co/blog/elastic-apm-ios-agent-technical-preview-released) |
+| APM | iOS agent | new APM agent for iOS (Swift only) based on OpenTelemetry | [blog post](https://www.elastic.co/blog/elastic-apm-ios-agent-technical-preview-released), [other post](https://www.elastic.co/observability-labs/blog/apm-ios-android-native-apps) |
 | ES | Vector tiles | The vector tiles provides a huge performance improvement when searching geo_points and geo_shapes drawn to a map | [blog post](https://www.elastic.co/blog/introducing-elasticsearch-vector-tile-search-api-for-geospatial) |
 | ES | Field usage | Grab field usage information and statistics |  |
 | ES | Disk usage | Grab disk usage information of each field of an index or data stream | [blog post](https://www.elastic.co/blog/how-to-analyze-and-optimize-the-storage-footprint-of-your-elastic-deployment-disk-usage-api) |
