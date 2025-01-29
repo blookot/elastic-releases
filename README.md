@@ -15,6 +15,35 @@ Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B
 
 
 
+## 8.14
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 5 June 2024 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-14-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | ES\|QL GA | Added CASE statement and ENRICH (lookup) operator | [demo](http://esql.demo.elastic.co/), [blog post](https://www.elastic.co/search-labs/blog/esql-piped-query-language-goes-ga) |
+| ES | Paid GeoIP support | Support for the paid geo databases from MaxMind with the GeoIP ingest processor |  |
+| ES | Enrich with data streams | Enrich policies (and therefore the enrich ES\|QL processor) now support data streams |  |
+| ES | Faster vector search | 6x faster binary comparison, 10x faster numpy vectors indexing with [orjson](https://github.com/ijl/orjson) | [blog post](https://www.elastic.co/search-labs/blog/vector-similarity-computations-ludicrous-speed) |
+| ES | Retrievers | Retrievers added to the _search API to build sophisticated multi-stage retrieval, supporting standard, kNN & RRF | [blog post](https://www.elastic.co/search-labs/blog/retro-relevance-balancing-keyword-semantic-search) |
+| ES | Data Extraction Service | Enable extracting text data from large binary documents, built with Elastic connectors in mind | [doc](https://www.elastic.co/guide/en/enterprise-search/current/connectors-content-extraction.html#connectors-content-extraction-local), [github](https://github.com/elastic/data-extraction-service) |
+| ES | GraphQL connector | Ingest data in ES using the declarative data fetching GraphQL | [doc](https://www.elastic.co/guide/en/enterprise-search/current/connectors-graphql.html) |
+| ES | Connector API | Use the new connector API to build your own custom connector (beyond the many connectors ES provides) | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.14/connector-apis.html) |
+| ES | Write after shrink | Be able to write to an index after ILM shrink with an option to remove the write block after shrinking |  |
+| ES | User in slow logs | Track the calling user information directly in the slow log | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.14/index-modules-slowlog.html#_identifying_search_slow_log_origin) |
+| K | AI assistant upgrades | Elastic AI Assistant for Observability gets a starter prompt, an API and support for Anthropic Claude 3. AI Assistant for Security gets persistent chat, central management and a new UI | [blog post](https://www.elastic.co/blog/ai-assistant-locally-hosted-models), [another post](https://www.elastic.co/blog/ai-security-analytics-integrating-anthropic-claude) |
+| K | SLO improvements | SLOs get CCS support, grouping and SLI on synthetics availability |  |
+| K | Attack discovery | Leveraging genAI and RAG, Attack Discovery transforms a flood of alerts into a clear overview of attack progressions | [demo](https://capture.navattic.com/clvmwn8ce000209la0fssf2eo?g=clvqt3a89001g09jzhdaee3vy&s=0), [blog post](https://www.elastic.co/blog/ai-driven-security-analytics) |
+| K | Playground | Experiment with your indices and refine semantic text queries and export generated code, to help design a conversational search experience |  |
+| K | Doc comparison | In Discover and ES\|QL, select and compare documents or fields |  |
+| K | Embeddable Console | The Embeddable Dev Console is available everywhere in Kibana to jumpstart query development with code snippets & Jupyter notebooks |  |
+| K | .NET profiling | Ability to continuously profile .NET-on-Linux without instrumentation or configuration (using eBPF) |  |
+
+
 ## 8.13
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -48,7 +77,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| ES | Lucene 9.9 | Benefit from support for [scalar quantization](https://www.elastic.co/search-labs/blog/articles/scalar-quantization-in-lucene), query parallelization and massive speedups! | [blog post](https://www.elastic.co/search-labs/blog/articles/apache-lucene-9.9-search-speedups) |
+| L | Logstash on ECK | Elastic Cloud for Kubernetes (ECK) now supports Logstash | [doc](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-logstash.html) |
+| ES | Lucene 9.9 | Benefit from support for scalar quantization, query parallelization and massive speedups! | [scalar quant post 1](https://www.elastic.co/search-labs/blog/scalar-quantization-101), [scalar quant post 2](https://www.elastic.co/search-labs/blog/articles/scalar-quantization-in-lucene), [speedups post](https://www.elastic.co/search-labs/blog/articles/apache-lucene-9.9-search-speedups) |
 | ES | Geo in ES\|QL | Added support for the geo_point and point data types via ES\|QL |  |
 | ES | Embedding management | Use the single _inference API endpoint that abstracts the complexity of managing embedding models |  |
 | ES | KB for AI | Integrated knowledge base (KB) for organizations to link their context to train the AI Assistant responses |  |
@@ -73,9 +103,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | --- | --- | --- | --- |
 | A | Wiz & Prisma | New data integrations with two popular cloud security technologies: Wiz and Palo Alto Prisma Cloud | [prisma integ](https://www.elastic.co/guide/en/integrations/current/prisma_cloud.html) |
 | A | Okta & Azure AD | Enhance advanced entity analytics with rich identity context from Okta & Azure AD (Entra ID) | [blog post](https://www.elastic.co/blog/elastic-modernizes-secops-advanced-entity-analytics) |
-| ES | ES\|QL | Elasticsearch Query Language (ES\|QL) is the new pipe query language that can search, enrich, transform & aggregate at query time! | [blog post](https://www.elastic.co/blog/esql-elasticsearch-piped-query-language) |
+| ES | ES\|QL | Elasticsearch Query Language (ES\|QL) is the new pipe query language that can search, enrich, transform & aggregate at query time! | [blog post](https://www.elastic.co/blog/esql-elasticsearch-piped-query-language), [security use cases](https://www.elastic.co/security-labs/embedding-security-in-llm-workflows) |
 | ES | Data stream lifecycle | Data stream lifecycle (DSL) is a built-in mechanism data streams use to manage their lifecycle | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/current/data-stream-lifecycle.html), [migrate from ILM](https://www.elastic.co/guide/en/elasticsearch/reference/current/tutorial-migrate-data-stream-from-ilm-to-dsl.html) |
-| ES | Bedrock support | The AI Assistant adds support for Amazon Bedrock (and Anthropic’s Claude 2 model) |  |
+| ES | Bedrock support | The AI Assistant adds support for Amazon Bedrock (and Anthropic’s Claude 2 model) | [blog post](https://www.elastic.co/blog/ai-security-analytics-integrating-anthropic-claude) |
 | K | Generated ES\|QL | Use natural language to explain a query and have the AI Assistant for Observability provide the ES\|QL syntax |  |
 | K | UP in APM | Universal Profiling is integrated with APM without needing to switch context |  |
 | K | SLOs in dashboards | Service Level Objectives (SLOs) overviews can be added to dashboards |  |
