@@ -14,6 +14,30 @@ _EOL note_: Starting 1st Oct 2022, a new policy applies.
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
 
+
+## 8.13
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 26 March 2024 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-13-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Security integs | New integrations for CrowdStrike Falcon Intelligence, EclecticIQ, Mandiant Advantage, ThreatConnect, ESET Protect, and Imperva Cloud WAF | [security integrations](https://www.elastic.co/integrations/data-integrations?solution=security) |
+| L | Integration Filter | New filter to transfer the execution of integration-specific pipelines from Elasticsearch to Logstash | [doc](https://www.elastic.co/guide/en/logstash/current/ea-integrations.html) |
+| ES | Redis & Notion | Redis & Notion are added to the catalog of connectors to bring data in. Also added doc-level security for ServiceNow & Salesforce |  |
+| ES | Learning to Rank | Learning to Rank (LTR), ie reranking result sets using a ML model trained with your input | [notebook example](https://github.com/elastic/elasticsearch-labs/blob/main/notebooks/search/08-learning-to-rank.ipynb) |
+| ES | Cohere support | Integrates Cohere embeddings into the ES unified inference API (on top of existing support for OpenAI and HuggingFace) | [tutorial](https://www.elastic.co/guide/en/elasticsearch/reference/master/semantic-search-inference.html) |
+| ES | ES\|QL in Java | Developers can now run ES\|QL queries right from their IDEs when using the Elasticsearch Java client |  |
+| ES | DSL health | New health indicator on Data Stream Lifecycle that will detect data stream backing indices that cannot make progress |  |
+| K | ES\|QL from AI | From within the AI Assistant, users can now display and visualize the results of a generated ES\|QL query (and continue with Lens) |  |
+| K | SLO management | New ability to group SLOs and apply filters, as well as triage burn rate alerts |  | 
+| K | Automated response | Define automated endpoint actions (kill/suspend process or isolate host) with custom detection rules |  |
+| K | ES\|QL in Data Viz | Run your ES\|QL queries in the Data Visualizer (in the ML section) to explore data sets easily |  |
+
+
 ## 8.12
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -50,6 +74,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Wiz & Prisma | New data integrations with two popular cloud security technologies: Wiz and Palo Alto Prisma Cloud | [prisma integ](https://www.elastic.co/guide/en/integrations/current/prisma_cloud.html) |
 | A | Okta & Azure AD | Enhance advanced entity analytics with rich identity context from Okta & Azure AD (Entra ID) | [blog post](https://www.elastic.co/blog/elastic-modernizes-secops-advanced-entity-analytics) |
 | ES | ES\|QL | Elasticsearch Query Language (ES\|QL) is the new pipe query language that can search, enrich, transform & aggregate at query time! | [blog post](https://www.elastic.co/blog/esql-elasticsearch-piped-query-language) |
+| ES | Data stream lifecycle | Data stream lifecycle (DSL) is a built-in mechanism data streams use to manage their lifecycle | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/current/data-stream-lifecycle.html), [migrate from ILM](https://www.elastic.co/guide/en/elasticsearch/reference/current/tutorial-migrate-data-stream-from-ilm-to-dsl.html) |
 | ES | Bedrock support | The AI Assistant adds support for Amazon Bedrock (and Anthropic’s Claude 2 model) |  |
 | K | Generated ES\|QL | Use natural language to explain a query and have the AI Assistant for Observability provide the ES\|QL syntax |  |
 | K | UP in APM | Universal Profiling is integrated with APM without needing to switch context |  |
@@ -66,9 +91,9 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | Kafka output | Elastic Agent users can stream their data to Kafka for further processing |  |
+| A | Kafka output | Elastic Agent users can stream their data to Kafka for further processing | [blog post](https://www.elastic.co/blog/elastic-agent-output-kafka-data-collection-streaming) |
 | ES | CCx improvements | More info on remote cluster health in search results, exclude remote clusters in async search, and new key-based security |  |
-| ES | Parallel kNN | Start each query by parallelizing kNN vector search saving 50% query time |  |
+| ES | Parallel kNN | Start each query by parallelizing kNN vector search saving 50% query time | [blog post](https://www.elastic.co/search-labs/blog/articles/multi-graph-vector-search) |
 | ES | Query rules | Searching with query rules give promotes documents that match defined criteria at the top of the result list | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.10/search-using-query-rules.html) |
 | ES | Synonyms | New single API call manage synonyms (replacing the former multi-step process) | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/8.10/search-with-synonyms.html) |
 | ES | Google Drive connector | New Google Drive connector client including doc-level security support | [KB for support](https://www.elastic.co/enterprise-search/customer-support) |
