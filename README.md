@@ -15,6 +15,33 @@ Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B
 
 
 
+## 8.15
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 8 August 2024 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-15-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | EDOT | The Elastic Distribution for OpenTelemetry (EDOT) Collector offers a seamless solution for collecting logs and metrics |  |
+| A | Azure OpenAI | The Azure OpenAI integration provides comprehensive observability into the performance and usage of the Azure OpenAI Service | [blog post](https://www.elastic.co/observability-labs/blog/llm-observability-azure-openai), [openai obs](https://www.elastic.co/observability-labs/blog/monitor-openai-api-gpt-models-opentelemetry) |
+| L | Agent monitoring GA | Agent-based monitoring of Logstash monitors pipelines or plugins and includes advanced metrics like throughput and worker utilization | [doc](https://www.elastic.co/guide/en/logstash/current/monitoring-with-ea.html) |
+| ES | LogsDB | New LogsDB index mode for logs data streams uses smart index sorting, synthetic source and smarter compression to reduce storage |  |
+| ES | ES\|QL improvements | New funcs (repeat, ip_prefix, cbrt, etc), handle mismatched field types, inject named variables (that will soon link to UI elements) | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/esql-multi-index.html#esql-multi-index-union-types) |
+| ES | Semantic search | New semantic_text field type and corresponding semantic query that unlocks vector search and semantic reranking for text | [blog post](https://www.elastic.co/search-labs/blog/semantic-search-simplified-semantic-text), [reranking post](https://www.elastic.co/search-labs/blog/semantic-reranking-with-retrievers) |
+| ES | 3rd party inference | The inference API now supports Google AI Studio, Vertex AI, Mistral, Bedrock & Anthropic | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-retrievers) |
+| ES | AI API | Introducing several APIs to interact with and configure the Elastic AI Assistant for Security |  |
+| ES | Vector improvements | Scalar quantization improvements, new sparse vector query type, hamming distance and bit-encoded vector support | [blog post](https://www.elastic.co/search-labs/blog/int4-scalar-quantization-in-lucene), [another post](https://www.elastic.co/search-labs/blog/bit-vectors-in-elasticsearch) |
+| K | Automatic import | This feature automates the normalization of security events to create custom integrations in minutes | [blog post](https://www.elastic.co/blog/automatic-import-ai-data-integration-builder) |
+| K | ES\|QL updates | See fields statistics in Discover, list integrations in FROM autocompletion |  |
+| K | Timeout investigation | When search timed out, Kibana presents the partial results and a warning (to be investigated in the cClusters and shards tab of the Inspector) |  |
+| K | Data set quality | The new data set quality (under stack management) allows users to identify and isolate any issues related to logs data quality |  |
+| K | Google Vertex AI support | The Elastic AI Assistant can now take advantage of the Google Vertex AI and use the Gemini family of models |  |
+| K | Scanning response | The Elastic Defend integration can now initiate an on-demand scan of files within a directory through our response console workflow |  |
+
+
 ## 8.14
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -25,7 +52,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| ES | ES\|QL GA | Added CASE statement and ENRICH (lookup) operator | [demo](http://esql.demo.elastic.co/), [blog post](https://www.elastic.co/search-labs/blog/esql-piped-query-language-goes-ga) |
+| ES | ES\|QL GA | Added CASE statement and ENRICH (lookup) operator and geospatial search | [demo](http://esql.demo.elastic.co/), [blog post](https://www.elastic.co/search-labs/blog/esql-piped-query-language-goes-ga), [geosearch post](https://www.elastic.co/search-labs/blog/esql-geospatial-search-part-one) |
 | ES | Paid GeoIP support | Support for the paid geo databases from MaxMind with the GeoIP ingest processor |  |
 | ES | Enrich with data streams | Enrich policies (and therefore the enrich ES\|QL processor) now support data streams |  |
 | ES | Faster vector search | 6x faster binary comparison, 10x faster numpy vectors indexing with [orjson](https://github.com/ijl/orjson) | [blog post](https://www.elastic.co/search-labs/blog/vector-similarity-computations-ludicrous-speed) |
@@ -38,7 +65,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | AI assistant upgrades | Elastic AI Assistant for Observability gets a starter prompt, an API and support for Anthropic Claude 3. AI Assistant for Security gets persistent chat, central management and a new UI | [blog post](https://www.elastic.co/blog/ai-assistant-locally-hosted-models), [another post](https://www.elastic.co/blog/ai-security-analytics-integrating-anthropic-claude) |
 | K | SLO improvements | SLOs get CCS support, grouping and SLI on synthetics availability |  |
 | K | Attack discovery | Leveraging genAI and RAG, Attack Discovery transforms a flood of alerts into a clear overview of attack progressions | [demo](https://capture.navattic.com/clvmwn8ce000209la0fssf2eo?g=clvqt3a89001g09jzhdaee3vy&s=0), [blog post](https://www.elastic.co/blog/ai-driven-security-analytics) |
-| K | Playground | Experiment with your indices and refine semantic text queries and export generated code, to help design a conversational search experience |  |
+| K | Playground | Experiment with your indices and refine semantic text queries and export generated code, to help design a conversational search experience | [blog post](https://www.elastic.co/search-labs/blog/rag-playground-introduction) |
 | K | Doc comparison | In Discover and ES\|QL, select and compare documents or fields |  |
 | K | Embeddable Console | The Embeddable Dev Console is available everywhere in Kibana to jumpstart query development with code snippets & Jupyter notebooks |  |
 | K | .NET profiling | Ability to continuously profile .NET-on-Linux without instrumentation or configuration (using eBPF) |  |
@@ -57,7 +84,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Security integs | New integrations for CrowdStrike Falcon Intelligence, EclecticIQ, Mandiant Advantage, ThreatConnect, ESET Protect, and Imperva Cloud WAF | [security integrations](https://www.elastic.co/integrations/data-integrations?solution=security) |
 | L | Integration Filter | New filter to transfer the execution of integration-specific pipelines from Elasticsearch to Logstash | [doc](https://www.elastic.co/guide/en/logstash/current/ea-integrations.html) |
 | ES | Redis & Notion | Redis & Notion are added to the catalog of connectors to bring data in. Also added doc-level security for ServiceNow & Salesforce |  |
-| ES | Learning to Rank | Learning to Rank (LTR), ie reranking result sets using a ML model trained with your input | [notebook example](https://github.com/elastic/elasticsearch-labs/blob/main/notebooks/search/08-learning-to-rank.ipynb) |
+| ES | Learning to Rank | Learning to Rank (LTR), ie reranking result sets using a ML model trained with your input | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-learning-to-rank-introduction), [notebook example](https://github.com/elastic/elasticsearch-labs/blob/main/notebooks/search/08-learning-to-rank.ipynb) |
 | ES | Cohere support | Integrates Cohere embeddings into the ES unified inference API (on top of existing support for OpenAI and HuggingFace) | [tutorial](https://www.elastic.co/guide/en/elasticsearch/reference/master/semantic-search-inference.html) |
 | ES | ES\|QL in Java | Developers can now run ES\|QL queries right from their IDEs when using the Elasticsearch Java client |  |
 | ES | DSL health | New health indicator on Data Stream Lifecycle that will detect data stream backing indices that cannot make progress |  |
@@ -88,7 +115,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | CSPM for Azure | This integration streamlines the cloud security posture management (CSPM) across all three major cloud providers |  |
 | K | Respond with SentinelOne | Orchestrate response with a two-way integration with the leading EDR provider SentinelOne |  |
 | K | Rules comparison | Before updating, preview and compare Elastic prebuilt rules with a simple diff UI |  |
-| K | ES\QL in dashboards | Added ability to edit ES\|QL queries directly via the dashboard (no need to go back to Discover) |  |
+| K | ES\|QL in dashboards | Added ability to edit ES\|QL queries directly via the dashboard (no need to go back to Discover) |  |
 
 
 ## 8.11
@@ -147,7 +174,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
 | ES | New connectors | Ingest directly into Elasticsearch data from SharePoint, ServiceNow & Dropbox | [connectors list](https://www.elastic.co/guide/en/elasticsearch/reference/8.17/es-connectors.html) |
-| ES | TSDS by default | Time Series Data Stream (TSDS) used by default for metrics integrations for 70% less disk space | [cost savings](https://www.elastic.co/blog/70-percent-storage-savings-for-metrics-with-elastic-observability), [blog post](https://www.elastic.co/blog/elasticsearch-time-series-data-streams-observability-metrics), [guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/tsds.html) |
+| ES | TSDS by default | Time Series Data Stream (TSDS) used by default for metrics integrations for 70% less disk space | [cost savings](https://www.elastic.co/blog/70-percent-storage-savings-for-metrics-with-elastic-observability), [savings again](https://www.elastic.co/search-labs/blog/time-series-data-elasticsearch-storage-wins), [blog post](https://www.elastic.co/blog/elasticsearch-time-series-data-streams-observability-metrics), [guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/tsds.html) |
 | ES | TSDB agg latency | The time series database (TSDB) improved the latency of aggregations that are frequently used with metrics data, reducing time by over 90% |  |
 | ES | Faster CCS | Cross-Cluster Search (CCS) is tens of times faster with fewer network trips in async search and shard skipping in cold & frozen tiers |  |
 | ES | Public search | Users can now create public-facing search endpoints for their Elasticsearch indices |  |
