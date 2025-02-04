@@ -15,6 +15,38 @@ Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B
 
 
 
+## 8.16
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 12 November 2024 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-16-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | OTel for k8s | New flow simplifies the deployment of OpenTelemetry for Kubernetes using Helm, with receivers, processors and dashboards |  |
+| A | EDOT tracing | EDOT Collector eliminates the need for an APM server, allowing trace data to flow directly into Elasticsearch | [doc](https://github.com/elastic/opentelemetry/blob/main/docs/collector-components.md) |
+| A | Bedrock integration | Provides insights into Amazon Bedrock LLM performance and usage, including LangChain tracing data (via OTel) | [blog post](https://www.elastic.co/observability-labs/blog/elastic-opentelemetry-langchain-tracing-langtrace) |
+| A | Atlas & CW metrics | New integrations for MongoDB Atlas and Amazon CloudWatch metrics (through the Amazon Data Firehose integ) |  |
+| A | Agentless CSPM | Agentless integration for both Cloud Security Posture Management and the new Cloud Asset Inventory |  |
+| ES | Local LLM | Use locally hosted LLMs (that provide an OpenAI compatible service) with Elastic AI Assistant |  |
+| ES | start-local | The start-local script get a local deployment of Elasticsearch & Kibana started in minutes | [github](https://github.com/elastic/start-local) |
+| ES | Open crawler | The Open Web Crawler lets users crawl web content and index it into Elasticsearch | [tech preview](https://www.elastic.co/search-labs/blog/elastic-open-crawler-release), [beta release](https://www.elastic.co/search-labs/blog/elastic-open-crawler-beta-release) |
+| ES | BBQ | Better Binary Quantization (BBQ) is a cutting-edge optimization for vector data that achieves up to 32x compression benefits on vector data | [blog post](https://www.elastic.co/search-labs/blog/better-binary-quantization), [another post](https://www.elastic.co/search-labs/blog/better-binary-quantization-lucene-elasticsearch) |
+| ES | data stream retention | New ability to globally set maximum and default retention periods for all data streams |  |
+| K | Per-solution menu | New solution view in the left-menu navigation (in Elastic Cloud only) | [blog post](http://www.elastic.co/blog/elastic-redesigned-navigation-menu-kibana) |
+| K | ES\|QL advanced | Recommended queries in ES\|QL editor, faster sorting by distance, per-aggregation filtering |  |
+| K | Obs inventory | New "Inventory" app in Observability displays hosts, containers, services and pivots to alerting, discover and services |  |
+| K | Playground++ | Playground enhancements with session persistence, PDF/Word upload, support for follow-up questions | [demo](https://www.elastic.co/demo-gallery/ai-playground) |
+| K | AI for search | Built-in Elastic AI Assistant for Search to build RAG-based conversational apps and get help to accelerate Elastic deployment |  |
+| K | Console to py/js | Export Kibana Dev Console requests to Python and JavaScript Code | [blog post](https://www.elastic.co/search-labs/blog/kibana-dev-console-code-export) |
+| K | Synthetics++ | Synthetic monitoring enhancements on alerting and MFA support |  |
+| K | Custom KB | The Elastic AI Assistant now supports custom knowledge sources to enrich LLM queries with custom context | [blog post](https://www.elastic.co/blog/elastic-ai-assistant-custom-knowledge-sources) |
+| K | Rule test, alert del | Manual rule run (to test detection rules) and full alert suppression |  |
+| K | TheHive connector | New Hive case connector allows for seamless case creation and management directly from Elastic | [doc](https://www.elastic.co/guide/en/kibana/8.16/thehive-action-type.html) |
+
+
 ## 8.15
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
