@@ -15,6 +15,21 @@ Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B
 
 
 
+## 8.17
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 12 December 2024 | Max(10/8/2024, v9.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-8-17-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | ES\|QL text search | new MATCH and QSTR (query string) functions in ES\|QL make text searches easier (and a lot faster than RLIKE) |  |
+| ES | Rerank | Reranking models provide a semantic boost to any search experience without requiring a change in the schema | [intro](https://www.elastic.co/search-labs/blog/elastic-semantic-reranker-part-1), [blog post](https://www.elastic.co/search-labs/blog/elastic-rerank-model-introduction), [doc](https://www.elastic.co/guide/en/machine-learning/8.17/ml-nlp-rerank.html) |
+| K | Logs to Discover | Both the Observability Logs Explorer & Logs Stream apps are deprecated (removed in 9.0) in favor of Discover |  |
+
+
 ## 8.16
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -60,7 +75,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | EDOT | The Elastic Distribution for OpenTelemetry (EDOT) Collector offers a seamless solution for collecting logs and metrics |  |
 | A | Azure OpenAI | The Azure OpenAI integration provides comprehensive observability into the performance and usage of the Azure OpenAI Service | [blog post](https://www.elastic.co/observability-labs/blog/llm-observability-azure-openai), [openai obs](https://www.elastic.co/observability-labs/blog/monitor-openai-api-gpt-models-opentelemetry) |
 | L | Agent monitoring GA | Agent-based monitoring of Logstash monitors pipelines or plugins and includes advanced metrics like throughput and worker utilization | [doc](https://www.elastic.co/guide/en/logstash/current/monitoring-with-ea.html) |
-| ES | LogsDB | New LogsDB index mode for logs data streams uses smart index sorting, synthetic source and smarter compression to reduce storage |  |
+| ES | LogsDB | New LogsDB index mode for logs data streams uses smart index sorting, synthetic source and smarter compression to reduce storage | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-logsdb-index-mode) |
 | ES | ES\|QL improvements | New funcs (repeat, ip_prefix, cbrt, etc), handle mismatched field types, inject named variables (that will soon link to UI elements) | [doc](https://www.elastic.co/guide/en/elasticsearch/reference/master/esql-multi-index.html#esql-multi-index-union-types) |
 | ES | Semantic search | New semantic_text field type and corresponding semantic query that unlocks vector search and semantic reranking for text | [blog post](https://www.elastic.co/search-labs/blog/semantic-search-simplified-semantic-text), [reranking post](https://www.elastic.co/search-labs/blog/semantic-reranking-with-retrievers) |
 | ES | 3rd party inference | The inference API now supports Google AI Studio, Vertex AI, Mistral, Bedrock & Anthropic | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-retrievers) |
