@@ -52,6 +52,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | data stream retention | New ability to globally set maximum and default retention periods for all data streams |  |
 | K | Per-solution menu | New solution view in the left-menu navigation (in Elastic Cloud only) | [blog post](http://www.elastic.co/blog/elastic-redesigned-navigation-menu-kibana) |
 | K | ES\|QL advanced | Recommended queries in ES\|QL editor, faster sorting by distance, per-aggregation filtering |  |
+| K | Reusable policies | Integration Policies that can be shared amongst multiple Agent Policies | [doc](https://www.elastic.co/guide/en/fleet/current/agent-policy.html#add-integration) |
 | K | Obs inventory | New "Inventory" app in Observability displays hosts, containers, services and pivots to alerting, discover and services |  |
 | K | Playground++ | Playground enhancements with session persistence, PDF/Word upload, support for follow-up questions | [demo](https://www.elastic.co/demo-gallery/ai-playground) |
 | K | AI for search | Built-in Elastic AI Assistant for Search to build RAG-based conversational apps and get help to accelerate Elastic deployment |  |
