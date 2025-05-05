@@ -37,7 +37,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | Deprecations | Logs Explorer and Logs Stream are removed, in favor of Discover | [blog post](https://www.elastic.co/blog/whats-new-elastic-observability-9-0-0#goodbye-logs-explorer-and-logs-stream-hello-discover) |
 | K | Automatic migration | Provides an AI-driven workflow for migrating legacy SIEM detection rules to Elastic Security |  |
 | K | Rule update | Apply update of detection rules without overwriting any custom changes | [blog post](https://www.elastic.co/blog/security-prebuilt-rules-editing) |
-| K | Endpoint response | Execute third-party (CrowdStrik, Microsoft Defender and SentinelOne) endpoint response actions from Elastic Security |  |
+| K | Endpoint response | Execute third-party (CrowdStrike, Microsoft Defender and SentinelOne) endpoint response actions from Elastic Security |  |
 
 
 ## 8.18
@@ -63,7 +63,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | LLM security | Ability to audit LLMs for malicious behavior such as prompt injections | [blog post](https://www.elastic.co/security-labs/embedding-security-in-llm-workflows) |
 | K | Automatic migration | Provides an AI-driven workflow for migrating legacy SIEM detection rules to Elastic Security |  |
 | K | Rule update | Apply update of detection rules without overwriting any custom changes | [blog post](https://www.elastic.co/blog/security-prebuilt-rules-editing) |
-| K | Endpoint response | Execute third-party (CrowdStrik, Microsoft Defender and SentinelOne) endpoint response actions from Elastic Security |  |
+| K | Endpoint response | Execute third-party (CrowdStrike, Microsoft Defender and SentinelOne) endpoint response actions from Elastic Security |  |
 
 
 ## 8.17
