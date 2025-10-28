@@ -1,16 +1,43 @@
 # Elastic releases
 Listing releases of the Elastic stack with new features and references
 
-Try the official Elasticsearch Service from the creators on [Elastic Cloud](https://www.elastic.co/cloud/) (14-day free trial!).
+Try the official [Elastic Cloud](https://www.elastic.co/cloud/) service, either hosted or serverless!
 
 _Note_: if you are using Kubernetes, OpenShift, AKS, EKS or GKE, you can have a look at Elastic Cloud for Kubernetes (ECK) through the [guide](https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-overview.html), the [release note](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond) and the blog post ([part 1](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-deployment) and [part 2](https://www.elastic.co/blog/getting-started-with-elastic-cloud-on-kubernetes-data-ingestion))
 
-_Note2_: you can also try the official [Elastic Terraform provider](https://www.elastic.co/blog/streamline-configuration-processes-with-official-elastic-stack-terraform-provider) (see [blog post](https://www.elastic.co/blog/using-terraform-with-elastic-cloud) as well)!
+Tip of the day: have a look at our [MCP server](https://www.elastic.co/search-labs/blog/elastic-mcp-server-agent-builder-tools) and the [Elasticsearch CLI](https://github.com/Anaethelion/escli-rs)!
 
 Products below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
-Finally, you should check out our [MCP server](https://github.com/elastic/mcp-server-elasticsearch), with [standard integration](https://www.elastic.co/search-labs/blog/model-context-protocol-elasticsearch) or [custom one](https://www.elastic.co/search-labs/blog/how-to-build-mcp-server)!
+You should also subscribe to our blogs [Obserability Labs](https://www.elastic.co/observability-labs), [Search Labs](https://www.elastic.co/search-labs) and [Security Labs](https://www.elastic.co/security-labs) for more references.
 
+
+
+## 9.2
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 23 October 2025 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-2-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | OTLP metrics | New OTLP metrics endpoint boosts ingest throughput by up to 60% |  |
+| ES | DiskBBQ | Vector storage approach that partitions and searches compact clusters directly from disk | [blog post](https://www.elastic.co/search-labs/blog/diskbbq-elasticsearch-introduction), [benchmark](https://www.elastic.co/search-labs/blog/elasticsearch-latency-low-memory-diskbbq-hnswbbq-benchmark) |
+| ES | Vectors optim | By default, vectors excluded from source for newly created indices, reducing storage and improving indexing performance | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-exclude-vectors-from-source) |
+| ES | Improved Joins | ES\|QL LOOPKUP JOIN supports CCS, matches on multiple fields and expressions, supports CSV upload and performs up to 90x faster when filtered | [blog post](https://www.elastic.co/search-labs/blog/elastic-discover-context-evolution) |
+| ES | ES\|QL for TS | The 'TS' (time series) source command enables TS semantics and adds support for TS agg fungs over time | [blog post](https://www.elastic.co/observability-labs/blog/metrics-explore-analyze-with-esql-discover) |
+| ES | Query history | Store up to 200-300 ES\|QL queries and search them |  |
+| K | Agent Builder | AI-powered capabilities to natively chat with ES data and simplify the development of custom AI agents | [intro post](https://www.elastic.co/search-labs/blog/elastic-ai-agent-builder-context-engineering-introduction), [MCP server](https://www.elastic.co/search-labs/blog/elastic-mcp-server-agent-builder-tools), [agentic](https://www.elastic.co/search-labs/blog/ai-agentic-workflows-elastic-ai-agent-builder), [another post](https://www.elastic.co/search-labs/blog/ai-agent-builder-elasticsearch) |
+| K | Streams | A set of AI-driven capabilities that help parsing, compressing, and surfacing insights | [blog post](https://www.elastic.co/observability-labs/blog/elastic-observability-streams-ai-logs-investigations), [other one](https://www.elastic.co/observability-labs/blog/reimagine-observability-elastic-streams) |
+| K | Discover tabs | Discover Tabs lets you run multiple explorations in one view | [blog post](https://www.elastic.co/search-labs/blog/elastic-discover-context-evolution) |
+| K | Navigation refresh | On-hover menu access, a visible menu in collapsed mode, and icon-driven navigation | [blog post](https://www.elastic.co/search-labs/blog/elastic-kibana-9.2-navigation-refresh) |
+| K | Device Control | define and enforce Elastic Defend policies that govern the use of storage devices |  |
+| K | EDR dashboard | Elastic Defend D&R dashboard provides visibility into endpoint detection activity |  |
+| K | Chat sharing | Share AI Assistant conversations - while ensuring proper attribution and security controls |  |
+| K | Splunk migration | Automatic Migration for Dashboards significantly reduces onboarding time by helping users migrate custom dashboards from Splunk |  |
+| K | Webhook enhanced | The webhook connector now supports OAuth 2.0 authentication and headers encryption |  |
 
 
 ## 9.1
@@ -27,7 +54,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Azure AI Foundry | New integration centralizes observability (logs and metrics) from any AI model on Azure AI Foundry | [blog post](https://www.elastic.co/observability-labs/blog/llm-observability-azure-ai-foundry) |
 | A | Crawler | The Open Web Crawler supports HTML5, new selectors, per-domain auth, and logging | [doc](https://github.com/elastic/crawler), [blog post](https://www.elastic.co/search-labs/blog/elastic-open-crawler-in-windows-with-docker) |
 | ES | LogsDB optim | The logsdb index mode now saves up to 75% of disk storage for only 5% ingestion overhead | [blog post](https://www.elastic.co/search-labs/blog/elastic-logsdb-tsds-enhancements) |
-| ES | Failure store | Data stream option to use a "failure store" to hold documents that fail to be ingested | [doc](https://www.elastic.co/docs/manage-data/data-store/data-streams/failure-store) |
+| ES | Failure store | Data stream option to use a "failure store" to hold documents that fail to be ingested | [blog post](https://www.elastic.co/search-labs/blog/elastic-failure-store), [doc](https://www.elastic.co/docs/manage-data/data-store/data-streams/failure-store) |
 | ES | CSS for ES\|QL | ES\|QL on cross-cluster search (CCS), now with a re-engineered, resilient architecture | [blog post](https://www.elastic.co/search-labs/blog/esql-cross-cluster-search) |
 | ES | ES\|QL addons | Fork operator that allows multiple branches of execution. Sample to reduce data volume | [blog post](https://www.elastic.co/search-labs/blog/esql-elasticsearch-8-19-9-1), [history of improvements](https://www.elastic.co/search-labs/blog/esql-timeline-of-improvements) |
 | ES | BBQ by default | 32x compression for dense vectors without compromising relevance through BBQ |  |
@@ -35,7 +62,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | Fleet mngt | Fleet supports multiple clusters, auto upgrades, integrations bulk upgrades... and space awareness! |  |
 | K | Streams | Easier ingest processing and retention configuration for data streams |  |
 | K | Scheduled exports | Exports scheduling and email notification with export attachment |  |
-| K | Dashboard sections | Abaility to create sections that can be collapsed/expanded |  |
+| K | Alerting upgrade | Improved related alert grouping, linking dashboards to alert rules, and embedding investigation guides into alerts | [blog post](https://www.elastic.co/observability-labs/blog/elastic-stack-observability-alerting-upgrade) |
+| K | Dashboard sections | Ability to create sections that can be collapsed/expanded |  |
 | K | AI for o11y | The AI Assistant for o11y supports multilingual & anonymization, as well as conversations sharing and archiving |  |
 | K | Synthetics mngt | Many improvements to Synthetics: redesigned overview, maintenance windows, space-awareness and more |  |
 | K | Security rules | Rule management (compare, preview, revert), ES\|QL rule improvements |  |
@@ -55,7 +83,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | APM | OpenAI O11y | First GenAI instrumentation capability in the EDOT language SDKs: OpenAI (Python, Node.js and Java support) |  |
 | L | Kafka auth | The Kafka integration now supports OAuth and SASL |  |
 | ES | Lucene 10 | Elasticsearch 9.0 now runs on Lucene 10, bringing significant performance improvements | [blog post](https://www.elastic.co/search-labs/blog/apache-lucene-10-release-highlights) |
-| ES | Joins!! | Joining between two indices is now finally possible with ES\|QL LOOKUP JOIN | [blog post](https://www.elastic.co/search-labs/blog/esql-joins-are-here-yes-joins), [another one](https://www.elastic.co/blog/esql-lookup-join-elasticsearch), [in o11y](https://www.elastic.co/observability-labs/blog/elastic-esql-join-observability) and [a last one](https://www.elastic.co/search-labs/blog/elasticsearch-join-two-indexes) |
+| ES | Joins!! | Joining between two indices is now finally possible with ES\|QL LOOKUP JOIN | [blog post](https://www.elastic.co/search-labs/blog/esql-joins-are-here-yes-joins), [another one](https://www.elastic.co/blog/esql-lookup-join-elasticsearch), [in o11y](https://www.elastic.co/observability-labs/blog/elastic-esql-join-observability), [join for dedup](https://www.elastic.co/blog/log-deduplication-esql-lookup-join) and [a last one](https://www.elastic.co/search-labs/blog/elasticsearch-join-two-indexes) |
 | ES | Logsdb by default | Elasticsearch logsdb index mode is now enabled by default for logs-* data streams |  |
 | ES | Data stream reindex | This API simplifies the process of upgrading backing indices for data streams | [doc](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-indices-migrate-reindex) |
 | ES | KQL filter | Employ the familiar KQL (Kibana Query Language) inside an ES\|QL query |  |
@@ -63,6 +91,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | ES\|QL search | Adding support for scoring, semantic search, more configuration options for the match function | [blog post](https://www.elastic.co/search-labs/blog/esql-introducing-scoring-semantic-search) |
 | ES | Hash in ES\|QL | Specific MD5, SHA1, and SHA256 functions to calculate the hash of a field |  |
 | ES | JinaAI & Watsonx | Added integration in our open inference API to use JinaAI (embeddings & reranking) or Watsonx.ai (reranking) | [jina post](https://www.elastic.co/search-labs/blog/jina-ai-embeddings-rerank-model-open-inference-api), [watson post](https://www.elastic.co/search-labs/blog/ibm-watsonx-elasticsearch-inference-api-rerank-models) |
+| ES | Deprecation | App Search and Enterprise Search solutions have been discontinued | [blog post](https://www.elastic.co/blog/app-search-to-elasticsearch), [another post](https://www.elastic.co/search-labs/blog/elastic-app-search-data-elasticsearch-9) |
 | K | AI Assistant for logs | AI-driven insights help surface critical log patterns and troubleshooting recommendations in Discover |  |
 | K | LLM security | Ability to audit LLMs for malicious behavior such as prompt injections | [blog post](https://www.elastic.co/security-labs/embedding-security-in-llm-workflows) |
 | K | Deprecations | Logs Explorer and Logs Stream are removed, in favor of Discover | [blog post](https://www.elastic.co/blog/whats-new-elastic-observability-9-0-0#goodbye-logs-explorer-and-logs-stream-hello-discover) |
@@ -86,7 +115,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Azure AI Foundry | New integration centralizes observability (logs and metrics) from any AI model on Azure AI Foundry | [blog post](https://www.elastic.co/observability-labs/blog/llm-observability-azure-ai-foundry) |
 | A | Crawler | The Open Web Crawler supports HTML5, new selectors, per-domain auth, and logging | [doc](https://github.com/elastic/crawler), [blog post](https://www.elastic.co/search-labs/blog/elastic-open-crawler-in-windows-with-docker) |
 | ES | LogsDB optim | The logsdb index mode now saves up to 75% of disk storage for only 10% ingestion overhead | [blog post](https://www.elastic.co/search-labs/blog/elastic-logsdb-tsds-enhancements) |
-| ES | Failure store | Data stream option to use a "failure store" to hold documents that fail to be ingested | [doc](https://www.elastic.co/docs/manage-data/data-store/data-streams/failure-store) |
+| ES | Failure store | Data stream option to use a "failure store" to hold documents that fail to be ingested | [blog post](https://www.elastic.co/search-labs/blog/elastic-failure-store), [doc](https://www.elastic.co/docs/manage-data/data-store/data-streams/failure-store) |
 | ES | CSS for ES\|QL | ES\|QL on cross-cluster search (CCS), now with a re-engineered, resilient architecture | [blog post](https://www.elastic.co/search-labs/blog/esql-cross-cluster-search) |
 | ES | ES\|QL addons | Fork operator that allows multiple branches of execution. Sample to reduce data volume | [blog post](https://www.elastic.co/search-labs/blog/esql-elasticsearch-8-19-9-1), [history of improvements](https://www.elastic.co/search-labs/blog/esql-timeline-of-improvements) |
 | ES | BBQ by default | 32x compression for dense vectors without compromising relevance through BBQ |  |
@@ -94,7 +123,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | Fleet mngt | Fleet supports multiple clusters, auto upgrades, integrations bulk upgrades... and space awareness! |  |
 | K | Streams | Easier ingest processing and retention configuration for data streams |  |
 | K | Scheduled exports | Exports scheduling and email notification with export attachment |  |
-| K | Dashboard sections | Abaility to create sections that can be collapsed/expanded |  |
+| K | Alerting upgrade | Improved related alert grouping, linking dashboards to alert rules, and embedding investigation guides into alerts | [blog post](https://www.elastic.co/observability-labs/blog/elastic-stack-observability-alerting-upgrade) |
+| K | Dashboard sections | Ability to create sections that can be collapsed/expanded |  |
 | K | AI for o11y | The AI Assistant for o11y supports multilingual & anonymization, as well as conversations sharing and archiving |  |
 | K | Synthetics mngt | Many improvements to Synthetics: redesigned overview, maintenance windows, space-awareness and more |  |
 | K | Security rules | Rule management (compare, preview, revert), ES\|QL rule improvements |  |
