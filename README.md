@@ -134,7 +134,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 15 April 2025 | 9.2 release | 15 July 2027 |
+| 15 April 2025 | 23 October 2025 | 15 July 2027 |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-0-0)
 
