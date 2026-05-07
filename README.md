@@ -1,7 +1,7 @@
 # Elastic releases
 Listing releases of the Elastic stack with new features and references
 
-Try the official [Elastic Cloud](https://www.elastic.co/cloud/) service, either hosted or [serverless](https://www.elastic.co/cloud/serverless)!
+Try the official [Elastic Cloud](https://www.elastic.co/cloud/) service, either hosted or [serverless](https://www.elastic.co/cloud/serverless), or [AutoOps](https://www.elastic.co/blog/autoops-free) for easier monitoring!
 
 New (amazing!) stuff: have a look at our [MCP server](https://www.elastic.co/search-labs/blog/elastic-mcp-server-agent-builder-tools) and the [Elasticsearch CLI](https://github.com/Anaethelion/escli-rs)!
 
@@ -9,6 +9,33 @@ You should also subscribe to our blogs [Obserability Labs](https://www.elastic.c
 
 Products referenced below are: A ([Elastic Agent](https://www.elastic.co/elastic-agent)), B ([Beats](https://www.elastic.co/beats)), APM ([APM agents](https://www.elastic.co/apm/)), L ([Logstash](https://www.elastic.co/logstash)), ES ([Elasticsearch](https://www.elastic.co/elasticsearch)), ML ([Machine Learning](https://www.elastic.co/what-is/elastic-stack-machine-learning)) and K ([Kibana](https://www.elastic.co/kibana)).
 
+
+
+## 9.4
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 5 May 2026 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-4-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| ES | TSDB efficiency | TSDB efficiency improvements (2.6x more efficient than Prometheus) |  |
+| ES | ES\|QL addons | ES\|QL can run & combine subqueries, query on any field without explicit mapping, run PromQL syntax and define logical views | [subqueries](https://www.elastic.co/search-labs/blog/esql-subquery-from), [promQL](https://www.elastic.co/observability-labs/blog/elasticsearch-supports-promql), [views](https://www.elastic.co/search-labs/blog/elasticsearch-esql-logical-views) |
+| ES | Prometheus endpoint | Prometheus-compatible `/_prometheus/api/` REST endpoint for query, range, series and labels | [blog post](https://www.elastic.co/observability-labs/blog/prometheus-remote-write-elasticsearch-architecture), [another](https://www.elastic.co/observability-labs/blog/prometheus-remote-write-elasticsearch) |
+| ES | GPU vectorization | Support for GPU-accelerated vector indexing powered by NVIDIA cuVS (up to a 12x in indexing throughput) | [blog post](https://www.elastic.co/blog/elastic-nvidia-cuvs-integration), [with Dell](https://www.elastic.co/blog/dell-ai-data-platform-nvidia), [with RedHat](https://www.elastic.co/blog/elastic-red-hat-openshift-ai-nvidia) |
+| ES | DiskBBQ enhancement | Query latency has improved by 3x for queries with restrictive filters, as well as the performance of vector comparisons | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-vector-search-simdvec-engine) |
+| ES | Search Analytics Logs | This extends the audit trail to DSL and ES\|QL queries, capturing latency, request origin, and full query body |  |
+| K | AI-generated dashboard | AI-Powered Dashboard Creation lets users describe what they want to see and watch Kibana build it |  |
+| K | Dashboard as code | New dashboard spec enables version control and code-reviewable assets deployed through CI/CD |  |
+| K | PromQL support | Native PromQL support in Kibana means existing queries, dashboards, and alert rules work without modification | [blog post](https://www.elastic.co/observability-labs/blog/promql-queries-run-in-kibana) |
+| K | k8s MCP app | New Kubernetes observability MCP app brings Kubernetes-specific skills into your MCP client | [github](https://github.com/elastic/example-mcp-app-observability) |
+| K | Context in AB | Agent Builder features new support for Skills, Attachments, Connectors, and Plugins | [blog post](https://www.elastic.co/search-labs/blog/elastic-agent-builder-ai-agents-context-management), [skills blog post](https://www.elastic.co/search-labs/blog/agent-skills-elastic), [skill github repo](https://github.com/elastic/agent-skills), [skills for observability](https://www.elastic.co/observability-labs/blog/elastic-agent-skills-observability-workflows), [skills for security](https://www.elastic.co/security-labs/skills-elastic-security-9-4) |
+| K | Query activity | Instant visibility into query activity with its origin and the ability to cancel it | [blog post](https://www.elastic.co/search-labs/blog/kibana-query-activity-long-running-searches) |
+| K | UEBA capabilities | 4 new capabilities give analysts one authoritative record per person | [blog post](https://www.elastic.co/security-labs/ueba-entity-record-quality-analytics), [dynamic watchlist](https://www.elastic.co/security-labs/entity-analytics-watchlists), [hunting leads](https://www.elastic.co/security-labs/proactive-threat-hunting-ai-generated-leads) |
+| K | Forensics | Extends the depth of endpoint investigation: remote script execution, cross-platform memory forensics and redesigned Osquery workflows | [blog post](https://www.elastic.co/security-labs/dfir-osquery-elastic-security) |
+| K | SIEM readiness | Visibility Health and Data Coverage evaluates coverage, quality, continuity and retention | [blog post](https://www.elastic.co/blog/siem-readiness) |
 
 
 ## 9.3
@@ -25,8 +52,8 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | ES | pattern_text | Pattern-based compression for log messages (using 'pattern_text' field type) reduces the storage footprint by up to 50% | [doc](https://www.elastic.co/docs/reference/elasticsearch/mapping-reference/pattern-text) |
 | ES | ES\|QL | New support for subqueries and inline stats as well as advanced time-series functions and full-text lookup joins |  |
 | ES | ES\|QL for metrics | Improvements on ES\|QL for metrics with up to a 5x reduction in query latency as well as richer analytics | [blog post](https://www.elastic.co/observability-labs/blog/elastic-metrics-analytics) |
-| K | Workflows | Create workflows for orchestration that integrate with Agent Builder to create truly agentic workflows for both investigations and root cause analysis | [blog post](https://www.elastic.co/blog/elastic-workflows-technical-preview), [another](https://www.elastic.co/search-labs/blog/elastic-workflows-automation) |
-| K | Streams parsing | Streams uses an agentic workflow to parse logs directly from the message field in a log document | [blog post](https://www.elastic.co/observability-labs/blog/elastic-observability-streams-ai-logs-investigations) |
+| K | Workflows | Create workflows for orchestration that integrate with Agent Builder to create truly agentic workflows for both investigations and root cause analysis | [blog post](https://www.elastic.co/blog/elastic-workflows-technical-preview), [another](https://www.elastic.co/search-labs/blog/elastic-workflows-automation), [workflows for security](https://www.elastic.co/security-labs/elastic-workflows-ga-9-4), [SOAR use case](https://www.elastic.co/blog/workflows-soar), [github repo](https://github.com/elastic/workflows) |
+| K | Streams parsing | Streams uses an agentic workflow to parse logs directly from the message field in a log document | [blog post](https://www.elastic.co/observability-labs/blog/elastic-observability-streams-ai-logs-investigations), [processing failures](https://www.elastic.co/observability-labs/blog/elastic-streams-failure-store-processing) |
 | K | Entity AI Summary | AI generated summary of entity risk scores with clear recommended actions |  |
 | K | QRadar migration | Automate migration of rules from QRadar SIEM | [doc](https://www.elastic.co/docs/solutions/security/get-started/automatic-migration) |
 
@@ -35,21 +62,21 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 23 October 2025 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+| 23 October 2025 | 5 May 2026 | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-2-0)
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | Hybrid agent | The Elastic agent now also contains an EDOT collector for OTel/OTLP support | [example on nginx](https://www.elastic.co/observability-labs/blog/hybrid-elastic-agent-opentelemetry-integration) |
+| A | Hybrid agent | The Elastic agent now also contains an EDOT collector for OTel/OTLP support | [blog post](https://www.elastic.co/observability-labs/blog/centrally-managed-otel-collectors-with-elastic-fleet), [example on nginx](https://www.elastic.co/observability-labs/blog/hybrid-elastic-agent-opentelemetry-integration) |
 | ES | OTLP metrics | New OTLP metrics endpoint boosts ingest throughput by up to 60% |  |
 | ES | DiskBBQ | Vector storage approach that partitions and searches compact clusters directly from disk | [blog post](https://www.elastic.co/search-labs/blog/diskbbq-elasticsearch-introduction), [benchmark](https://www.elastic.co/search-labs/blog/elasticsearch-latency-low-memory-diskbbq-hnswbbq-benchmark) |
 | ES | Vectors optim | By default, vectors excluded from source for newly created indices, reducing storage and improving indexing performance | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-exclude-vectors-from-source) |
 | ES | Improved Joins | ES\|QL LOOPKUP JOIN supports CCS, matches on multiple fields and expressions, supports CSV upload and performs up to 90x faster when filtered | [blog post](https://www.elastic.co/search-labs/blog/elastic-discover-context-evolution), [multi-field joins](https://www.elastic.co/search-labs/blog/esql-elasticsearch-9-2-multi-field-joins-ts-command) |
-| ES | ES\|QL for TS | The 'TS' (time series) source command enables TS semantics and adds support for TS agg fungs over time | [blog post](https://www.elastic.co/observability-labs/blog/metrics-explore-analyze-with-esql-discover) |
+| ES | ES\|QL for TS | The 'TS' (time series) source command enables TS semantics and adds support for TS agg fungs over time | [blog post](https://www.elastic.co/observability-labs/blog/metrics-explore-analyze-with-esql-discover), [another](https://www.elastic.co/observability-labs/blog/exploring-metrics-new-data-source-discover) |
 | ES | Query history | Store up to 200-300 ES\|QL queries and search them |  |
-| K | Agent Builder | AI-powered capabilities to natively chat with ES data and simplify the development of custom AI agents | [intro post](https://www.elastic.co/search-labs/blog/elastic-ai-agent-builder-context-engineering-introduction), [MCP server](https://www.elastic.co/search-labs/blog/elastic-mcp-server-agent-builder-tools), [agentic](https://www.elastic.co/search-labs/blog/ai-agentic-workflows-elastic-ai-agent-builder), [another post](https://www.elastic.co/search-labs/blog/ai-agent-builder-elasticsearch), [diff with AI assistants](https://www.elastic.co/docs/explore-analyze/ai-features/ai-chat-experiences/ai-agent-or-ai-assistant) |
-| K | Streams | A set of AI-driven capabilities that help parsing, compressing, and surfacing insights | [blog post](https://www.elastic.co/observability-labs/blog/elastic-observability-streams-ai-logs-investigations), [other one](https://www.elastic.co/observability-labs/blog/reimagine-observability-elastic-streams), [another](https://www.elastic.co/observability-labs/blog/elastic-streams-processing) |
+| K | Agent Builder | AI-powered capabilities to natively chat with ES data and simplify the development of custom AI agents | [intro post](https://www.elastic.co/search-labs/blog/elastic-ai-agent-builder-context-engineering-introduction), [MCP server](https://www.elastic.co/search-labs/blog/elastic-mcp-server-agent-builder-tools), [agentic](https://www.elastic.co/search-labs/blog/ai-agentic-workflows-elastic-ai-agent-builder), [Cursor to MCP](https://www.elastic.co/observability-labs/blog/elastic-mcp-server-cursor-production-logs), [another post](https://www.elastic.co/search-labs/blog/ai-agent-builder-elasticsearch), [diff with AI assistants](https://www.elastic.co/docs/explore-analyze/ai-features/ai-chat-experiences/ai-agent-or-ai-assistant) |
+| K | Streams | A set of AI-driven capabilities that help parsing, compressing, and surfacing insights | [blog post](https://www.elastic.co/observability-labs/blog/elastic-observability-streams-ai-logs-investigations), [other one](https://www.elastic.co/observability-labs/blog/reimagine-observability-elastic-streams), [another](https://www.elastic.co/observability-labs/blog/elastic-streams-processing), [last one](https://www.elastic.co/observability-labs/blog/elastic-streams-ai-pipeline-generation) |
 | K | Discover tabs | Discover Tabs lets you run multiple explorations in one view | [blog post](https://www.elastic.co/search-labs/blog/elastic-discover-context-evolution) |
 | K | Navigation refresh | On-hover menu access, a visible menu in collapsed mode, and icon-driven navigation | [blog post](https://www.elastic.co/search-labs/blog/elastic-kibana-9.2-navigation-refresh) |
 | K | Device Control | define and enforce Elastic Defend policies that govern the use of storage devices |  |
@@ -63,7 +90,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 29 July 2025 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+| 29 July 2025 | 3 February 2026 | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-1-0)
 
@@ -72,7 +99,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | A | Vuln context | New integrations for vulnerability management tools (Qualys, Tenable, Rapid7) to add context in threat investigations |  |
 | A | Azure AI Foundry | New integration centralizes observability (logs and metrics) from any AI model on Azure AI Foundry | [blog post](https://www.elastic.co/observability-labs/blog/llm-observability-azure-ai-foundry) |
 | A | Crawler | The Open Web Crawler supports HTML5, new selectors, per-domain auth, and logging | [doc](https://github.com/elastic/crawler), [blog post](https://www.elastic.co/search-labs/blog/elastic-open-crawler-in-windows-with-docker) |
-| ES | LogsDB optim | The logsdb index mode now saves up to 75% of disk storage for only 5% ingestion overhead | [blog post](https://www.elastic.co/search-labs/blog/elastic-logsdb-tsds-enhancements) |
+| ES | LogsDB optim | The logsdb index mode now saves up to 75% of disk storage for only 5% ingestion overhead | [blog post](https://www.elastic.co/observability-labs/blog/elasticsearch-logsdb-index-mode-storage-savings), [another](https://www.elastic.co/search-labs/blog/elastic-logsdb-tsds-enhancements) |
 | ES | Failure store | Data stream option to use a "failure store" to hold documents that fail to be ingested | [blog post](https://www.elastic.co/search-labs/blog/elastic-failure-store), [doc](https://www.elastic.co/docs/manage-data/data-store/data-streams/failure-store) |
 | ES | CSS for ES\|QL | ES\|QL on cross-cluster search (CCS), now with a re-engineered, resilient architecture | [blog post](https://www.elastic.co/search-labs/blog/esql-cross-cluster-search) |
 | ES | ES\|QL addons | Fork operator that allows multiple branches of execution. Sample to reduce data volume | [blog post](https://www.elastic.co/search-labs/blog/esql-elasticsearch-8-19-9-1), [history of improvements](https://www.elastic.co/search-labs/blog/esql-timeline-of-improvements) |
@@ -92,7 +119,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 15 April 2025 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+| 15 April 2025 | 23 October 2025 | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-0-0)
 
