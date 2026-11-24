@@ -11,6 +11,32 @@ Products referenced below are: A ([Elastic Agent](https://www.elastic.co/elastic
 
 
 
+## 9.6
+
+| Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
+| --- | --- | --- |
+| 23 November 2026 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+
+Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-6-0)
+
+| Product | Feature | Description | References |
+| --- | --- | --- | --- |
+| A | Anti-Ransomware for Linux | Elastic Defend is bringing ransomware protection to Linux |  |
+| ES | ES\|QL Data Federation | Elasticsearch now queries and searches data (in Parquet, CSV, TSV, and NDJSON formats) from Amazon S3 | [blog post](https://www.elastic.co/search-labs/blog/esql-data-federation-query-s3-elasticsearch), [another post](https://www.elastic.co/search-labs/blog/query-parquet-ndjson-csv-s3-esql), [doc](https://www.elastic.co/docs/reference/query-languages/esql/esql-data-federation) |
+| ES | Prompt caching | Opt-in prompt caching reduces cost and latency for multi-turn agentic workflows (including Agent Builder) |  |
+| ES | PromQL++ | PromQL now covers 90% of the queries used in the top 100 Grafana dashboards | [blog post](https://www.elastic.co/search-labs/blog/promql-elasticsearch-compute-engine) |
+| ES | Jina OCR | processes complex layouts, tables, handwriting, and math - available across 100+ languages | [blog post](https://www.elastic.co/search-labs/blog/ocr-model-jina-ocr-v1-document-parsing) |
+| ES | PDF OCR | New `document_extraction` inference task type to extract PDFs into markdown using Jina OCR | [blog post](https://www.elastic.co/search-labs/blog/document-extraction-pdf-markdown-elasticsearch) |
+| K | Universal Alerting | Every alert stored as searchable data (it runs alongside classic alerting, so there is nothing to migrate) | [blog post](https://www.elastic.co/observability-labs/blog/kibana-universal-alerting), [doc](https://www.elastic.co/docs/explore-analyze/alerting/system-overview) |
+| K | Contextual service map | New compact dependency map with support for large environments |  |
+| K | Service flyout | Click a service name on a trace in Discover or a service on the service map to open the new service flyout | [blog post](https://www.elastic.co/observability-labs/blog/apm-root-cause-analysis-ai-agent-service-map) |
+| K | LLM tracing | A GenAI tab on span details (in APM and Discover) shows the system prompt, messages, model provider and token usage | [blog post](https://www.elastic.co/observability-labs/blog/llm-tracing-elastic-apm-genai-spans), [agent o11y with oTel](https://www.elastic.co/observability-labs/blog/ai-agent-observability-opentelemetry), [claude o11y](https://www.elastic.co/observability-labs/blog/ai-agent-observability-claude-platform-opentelemetry) |
+| K | Nightshift | The AI SRE detects and investigates across signals, finding what alerts miss and delivering evidence-backed answers | [blog post](https://www.elastic.co/observability-labs/blog/ai-sre-elastic-nightshift) |
+| K | AlertZero | Four agents, called Watches (Triage, Hunt, Detection, and Forensics), to facilitate alert coverage in SOCs | [blog post](https://www.elastic.co/security-labs/blog/ai-soc-automation-alertzero), [blog post](https://www.elastic.co/security-labs/agentic-soc-alert-triage-alertzero), [another](https://www.elastic.co/security-labs/blog/ai-soc-agents-alertzero-workers) |
+| K | Kibana Chat | Multi-user chat (where teams can share conversations) and custom panels (to easily create visuals from text prompts) | [chat blog post](https://www.elastic.co/search-labs/blog/agent-builder-conversation-sharing), [custom panels blog post](http://elastic.co/search-labs/blog/kibana-custom-panels-ai-dashboard-visuals) |
+| K | AI detection rules | 143 added detection rules for AI agents and LLM platforms | [blog post](https://www.elastic.co/security-labs/blog/ai-security-detection-rules-coding-agents-mcp) |
+
+
 ## 9.5
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
@@ -24,30 +50,29 @@ Big news: Jina models (reader, embedding and reranking) now run fully air-gapped
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | New k8s integration | Ships with preconfigured dashboards, alerts, SLOs, and ML jobs | [blog post](https://www.elastic.co/observability-labs/blog/kubernetes-dashboards-alerts-anomaly-detection), [CrashLoopBackOff RCA example](https://www.elastic.co/observability-labs/blog/crashloopbackoff-root-cause-kubernetes) |
+| A | New k8s integration | Ships with preconfigured dashboards, alerts, SLOs, and ML jobs | [blog post](https://www.elastic.co/observability-labs/blog/kubernetes-dashboards-alerts-anomaly-detection), [k8s o11y](https://www.elastic.co/observability-labs/blog/kubernetes-observability-slo-error-budget-templates), [CrashLoopBackOff RCA example](https://www.elastic.co/observability-labs/blog/crashloopbackoff-root-cause-kubernetes) |
 | A | Anthropic integration | New Anthropic integ ingests telemetry from the Claude API platform (token usage, cost, and rate limit) | [blog post](https://www.elastic.co/observability-labs/blog/anthropic-claude-api-monitoring), [claude acivity](https://www.elastic.co/blog/monitor-claude-activity-in-elastic-security) |
 | A | Enhanced protection | New endpoint capabilities for stronger protection: check vulnerable drivers with adhoc YARA rules, and full ARM support | [blog post](https://www.elastic.co/security-labs/vulnerable-driver-detection-elastic-defend-byovd) |
 | A | OTel tail sampling | In OTel tracing, cut tail sampling memory by 65% with disk- backed trace storage | [blog post](https://www.elastic.co/observability-labs/blog/tail-sampling-memory-opentelemetry) |
-| ES | Columnar mode | ES as a columnar DB for faster indexing & search and smaller storage footprint | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-columnar-storage), [the how](https://www.elastic.co/search-labs/blog/elasticsearch-metrics-columnar-engine) |
+| ES | Columnar mode | ES as a columnar DB for faster indexing & search and smaller storage footprint | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-columnar-storage), [the how](https://www.elastic.co/search-labs/blog/elasticsearch-metrics-columnar-engine), [another one](https://www.elastic.co/search-labs/blog/columnar-storage-elasticsearch-index-modes), [history](https://www.elastic.co/search-labs/blog/elasticsearch-doc-values-columnar-database) |
 | ES | VectorDB index mode | Applies defaults already optimized for vectors, tuning quantization, merge policy, and cache loading |  |
 | ES | Auto-calibration | Auto-calibration for DiskBBQ vector search auto configures quantization depth, preconditioning and oversampling | [blog post](https://www.elastic.co/search-labs/blog/vector-quantization-auto-calibration-diskbbq), [another](https://www.elastic.co/search-labs/blog/vector-quantization-auto-calibration-elasticsearch) |
 | ES | Multimodal semantic | Multimodal semantic search makes image search as easy as text search | [blog post](https://www.elastic.co/search-labs/blog/semantic-field-multimodal-search-elasticsearch) |
 | K | O11y migration | Helps bring Grafana and Datadog dashboards and alerts into Elastic | [blog post](https://www.elastic.co/observability-labs/blog/migrate-datadog-grafana-dashboards-alerts-to-kibana), [datadog migration](https://www.elastic.co/observability-labs/blog/datadog-kubernetes-dashboard-migration), [grafana migration](https://www.elastic.co/observability-labs/blog/grafana-elastic-kubernetes-dashboard-migration), [backend for grafana](https://www.elastic.co/observability-labs/blog/query-prometheus-metrics-grafana-elasticsearch), [grafana es plugin](https://www.elastic.co/observability-labs/blog/esql-grafana-elasticsearch-plugin) |
-| K | AB o11y | Agent Builder Observability and Monitoring traces LLM calls, tool invocations, and reasoning steps using OpenTelemetry | [blog post](https://www.elastic.co/search-labs/blog/opentelemetry-tracing-agent-builder) |
-| K | HitL | Human-in-the-loop approvals in Agent Builder gate sensitive actions and record each decision in an audit trail |  |
+| K | AB o11y | Agent Builder observability and monitoring traces LLM calls, tool invocations, and reasoning steps using OpenTelemetry | [blog post](https://www.elastic.co/search-labs/blog/opentelemetry-tracing-agent-builder), [another](https://www.elastic.co/observability-labs/blog/ai-agent-observability-audit-trail) |
+| K | HitL | Human-in-the-loop approvals in Agent Builder gate sensitive actions and record each decision in an audit trail | [blog post](https://www.elastic.co/observability-labs/blog/incident-response-automation-human-approval-gate) |
 | K | AI-native Kibana | Create queries, viz, dashboards, skills and workflows (using natural language authoring) directly from chat by describing the needed capability | |
 | K | workflows upgrades | Added versioning (diff & rollback), visual mode (as a graph), HitL and auto generation and more! | [blog post](https://www.elastic.co/search-labs/blog/ai-workflow-automation-natural-language) |
-| K | Service Map revamped | The APM service map now runs 6x faster and shows alerts, SLOs and anomalies with filtering | [blog post](https://www.elastic.co/observability-labs/blog/apm-service-map-react-flow-migration) |
+| K | Service Map revamped | The APM service map now runs 6x faster and shows alerts, SLOs and anomalies with filtering | [blog post](https://www.elastic.co/observability-labs/blog/apm-service-map-react-flow-migration), [design story](https://www.elastic.co/observability-labs/blog/apm-service-map-design-process) |
 | K | Dependency analysis | APM dependency analysis introduces a faster route to triage by surfacing service maps directly in an alert or custom dashboard | [blog post](https://www.elastic.co/observability-labs/blog/service-map-apm-dependency-analysis) |
 | K | Anomaly spotting | Better surfacing of anomalies in APM service health views makes ML-based degradation signals easier to spot | [blog post](https://www.elastic.co/observability-labs/blog/red-metrics-trace-breakdown-discover) |
-| K | Alert Zero | A queue of Security alerts worked down (via Attack Discovery) to a short list of validated attacks, and more | [blog post](https://www.elastic.co/security-labs/agentic-soc-alert-triage-alertzero) |
 | K | Sentinel migration | Automatically translate Sentinel detection rules into Elastic Security | [blog post](https://www.elastic.co/security-labs/sentinel-detection-rules-migration) |
 
 ## 9.4
 
 | Release date | [End of Maintenance](https://www.elastic.co/support/eol) | [End of Support](https://www.elastic.co/support/eol) |
 | --- | --- | --- |
-| 5 May 2026 | Max(15/10/2027, v10.0+18m) | EoM+6m |
+| 5 May 2026 | 23 November 2026 | EoM+6m |
 
 Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elastic-9-4-0)
 
@@ -64,7 +89,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 | K | PromQL support | Native PromQL support in Kibana means existing queries, dashboards, and alert rules work without modification | [blog post](https://www.elastic.co/observability-labs/blog/promql-queries-run-in-kibana), [k8s RCA example](https://www.elastic.co/observability-labs/blog/promql-investigate-kubernetes-infrastructure) |
 | K | k8s MCP app | New Kubernetes observability MCP app brings Kubernetes-specific skills into your MCP client | [github](https://github.com/elastic/example-mcp-app-observability) |
 | K | Context in AB | Agent Builder features new support for Skills, Attachments, Connectors, and Plugins | [blog post](https://www.elastic.co/search-labs/blog/elastic-agent-builder-ai-agents-context-management), [skills blog post](https://www.elastic.co/search-labs/blog/agent-skills-elastic), [skill github repo](https://github.com/elastic/agent-skills), [skills for observability](https://www.elastic.co/observability-labs/blog/elastic-agent-skills-observability-workflows), [skills for security](https://www.elastic.co/security-labs/skills-elastic-security-9-4), [skills for custom integrations](https://www.elastic.co/blog/elasticsearch-custom-integrations-automatic-import) |
-| K | Query activity | Instant visibility into query activity with its origin and the ability to cancel it | [blog post](https://www.elastic.co/search-labs/blog/kibana-query-activity-long-running-searches) |
+| K | Query activity | Instant visibility into query activity with its origin and the ability to cancel it | [blog post](https://www.elastic.co/search-labs/blog/kibana-query-activity-long-running-searches), [activity logs](https://www.elastic.co/search-labs/blog/dashboard-activity-logs-kibana) |
 | K | Security MCP app | Lets any MCP client return an interactive UI alongside its text response | [blog post](https://www.elastic.co/security-labs/elastic-security-mcp-app), [github repo](https://github.com/elastic/example-mcp-app-security) |
 | K | UEBA capabilities | 4 new capabilities give analysts one authoritative record per person | [blog post](https://www.elastic.co/security-labs/ueba-entity-record-quality-analytics), [dynamic watchlist](https://www.elastic.co/security-labs/entity-analytics-watchlists), [hunting leads](https://www.elastic.co/security-labs/proactive-threat-hunting-ai-generated-leads) |
 | K | Forensics | Extends the depth of endpoint investigation: remote script execution, cross-platform memory forensics and redesigned Osquery workflows | [blog post](https://www.elastic.co/security-labs/dfir-osquery-elastic-security) |
@@ -101,7 +126,7 @@ Version-level references: [Blog post](https://www.elastic.co/blog/whats-new-elas
 
 | Product | Feature | Description | References |
 | --- | --- | --- | --- |
-| A | Hybrid agent | The Elastic agent now also contains an EDOT collector for OTel/OTLP support | [blog post](https://www.elastic.co/observability-labs/blog/centrally-managed-otel-collectors-with-elastic-fleet), [example on nginx](https://www.elastic.co/observability-labs/blog/hybrid-elastic-agent-opentelemetry-integration) |
+| A | Hybrid agent | The Elastic agent now also contains an EDOT collector for OTel/OTLP support | [blog post](https://www.elastic.co/observability-labs/blog/centrally-managed-otel-collectors-with-elastic-fleet), [another](https://www.elastic.co/observability-labs/blog/opentelemetry-collector-elastic-agent), [example on nginx](https://www.elastic.co/observability-labs/blog/hybrid-elastic-agent-opentelemetry-integration) |
 | ES | OTLP metrics | New OTLP metrics endpoint boosts ingest throughput by up to 60% |  |
 | ES | DiskBBQ | Vector storage approach that partitions and searches compact clusters directly from disk | [blog post](https://www.elastic.co/search-labs/blog/diskbbq-elasticsearch-introduction), [benchmark](https://www.elastic.co/search-labs/blog/elasticsearch-latency-low-memory-diskbbq-hnswbbq-benchmark) |
 | ES | Vectors optim | By default, vectors excluded from source for newly created indices, reducing storage and improving indexing performance | [blog post](https://www.elastic.co/search-labs/blog/elasticsearch-exclude-vectors-from-source) |
